@@ -1,0 +1,9 @@
+.heading{
+    margin-top: 0px;
+    height: 7vh;
+    background-color: darkblue;
+    font-size: large;
+    font-weight: bolder;
+    color: white;
+    align-items: center;
+}
