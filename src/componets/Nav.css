@@ -1,13 +1,17 @@
 nav{
     height: 4vh;
     background-color: blue;
-    display: flex;
-    flex-grow: 1;
+
 
 }
 
 .navbarright a{
     color: white;
     font-size: medium;
+    font-weight: 700;
     padding-inline: 20px;
+    float: right;
+}
+.navbarright a:hover{
+    color: rgb(23, 22, 22);
 }
