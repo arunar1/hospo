@@ -1,0 +1,18 @@
+.registration{
+    width: 50vw;
+    height: 11vh;
+    background-color: blue;
+    align-items: center;
+    margin-inline: 50vh;
+    border-radius: 260px;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+.registration button{
+    align-items: center;
+    margin-inline: 60px;
+    text-align: center;
+    width: 200px;
+    font-size: 30px;
+    border-radius: 10px;
+}
