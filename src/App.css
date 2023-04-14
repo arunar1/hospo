@@ -4,6 +4,12 @@
 *{
   box-sizing: border-box;
 }
+.bar{
+  height: 5px;
+  color: black;
+  margin-top: 5px;
+  background-color: brown;
+}
 
 .App-logo {
   height: 40vmin;

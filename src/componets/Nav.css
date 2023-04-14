@@ -1,4 +1,13 @@
 nav{
-    height: 3vh;
+    height: 4vh;
     background-color: blue;
+    display: flex;
+    flex-grow: 1;
+
+}
+
+.navbarright a{
+    color: white;
+    font-size: medium;
+    padding-inline: 20px;
 }

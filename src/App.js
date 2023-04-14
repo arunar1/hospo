@@ -8,6 +8,7 @@ function App() {
   return (
     <div className="App">
       <Nav/>
+      <div  className='bar'/>
       <Head/>
       <Login/>
 
