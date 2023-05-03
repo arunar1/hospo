@@ -1,19 +1,21 @@
-import React,{Component} from 'react';
+import React from "react";
+import Header from "./components/Header";
+import Main from "./components/Main1.js";
+import Footer from "./components/Footer1.js";
+
 import './App.css';
-import Login from './componets/Login';
-import Nav from './componets/Nav';
-import Head from './componets/Head';
 
 function App() {
   return (
-    <div className="App">
-      <Nav/>
-      <div  className='bar'/>
-      <Head/>
-      <Login/>
-
+    <div>
+      <Router>
+        <Header />
+        <Main />
+        <Footer />
+        
+      </Router>
     </div>
-  );
+  )
 }
 
 export default App;
