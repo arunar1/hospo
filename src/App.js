@@ -17,7 +17,7 @@ function App() {
             <Main />
             <Footer />
           </Route>
-          <Link to='/register '>
+          <Link to='/registration '>
             <Register/>
           </Link>
         </Switch>

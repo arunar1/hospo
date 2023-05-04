@@ -1,13 +1,13 @@
 import React from 'react'
-import Header1 from '../Header'
-import Footer1 from '../Footer1';
-import './Register.css'
+import Header1 from './Header1'
+import './Header1.css'
+import RegisterMain from './RegisterMain';
 
 function Register() {
   return (
     <div>
         <Header1/>
-        <Footer1/>
+        <RegisterMain/>
     </div>
   )
 }

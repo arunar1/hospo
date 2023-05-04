@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 import './Main1.css';
 
@@ -10,7 +11,7 @@ export default function Main1() {
           <div className='reg-info'>
             <h2>Welcome to Hospo</h2>
             <p>Hospital Appointment Scheduler developed by Hospo team</p>
-            <a href='/register'>Registration</a>
+            <Link class='a' to='/registration'>Registration</Link>
           </div>
         </div>
         < div className='loginForm'>
