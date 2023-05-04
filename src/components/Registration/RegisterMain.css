@@ -20,6 +20,11 @@ main1 .reg-button button{
     height: 27px;
 
 }
+main1 .reg-button button:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
 *{
     padding: 0;
     margin: 0;

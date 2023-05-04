@@ -66,62 +66,62 @@ export default function RegisterMain() {
         </div>
         <div className='displayForm1 displayForm11'>
         <div className='form1'>
-          <form>
+          <form action="" autocomplete="off">
             <caption>Register as Patient</caption>
             <div className='formReg'><label>Name</label>
-              <input type='text'></input>
+              <input type='text' required></input>
             </div>
             <div className='formReg'><label>Phone No</label>
-              <input type='tel'></input></div>
+              <input type='tel' required></input></div>
             <div className='formReg'><label>Age</label>
-              <input type='number'></input></div>
+              <input type='number' required></input></div>
             <div className='formReg'><label>Gender</label>
-              <select>
+              <select required>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
               </select></div>
               <div className='formReg'><label>Email</label>
-              <input type='email'></input></div>
+              <input type='email' required></input></div>
               <div className='formReg'><label>Password</label>
-              <input type='password'></input></div>
+              <input type='password' required></input></div>
             <div className='formReg'><label>HouseName</label>
-              <input type='text'></input></div>
+              <input type='text' required></input></div>
             <div className='formReg'><label>StreetName</label>
-              <input type='text'></input></div>
+              <input type='text' required></input></div>
             <div className='formReg'><label>District</label>
-              <input type='text'></input></div>
+              <input type='text' required></input></div>
             <div className='formReg'><label>Pincode</label>
-              <input type='number'></input></div>
+              <input type='number' required></input></div>
             <div className='formReg'>
-              <input className='sub1' type='submit'></input>
+              <input className='sub1' type='submit' required></input>
             </div>
           </form>
         </div>
         </div>
         <div className='displayForm2'>
         <div className='form1'>
-        <form>
+        <form action="" autocomplete="off">
             <caption>Register as Hospital</caption>
             <div className='formReg'><label>Hospital Name</label>
-              <input type='text'></input>
+              <input type='text' required></input>
             </div>
             <div className='formReg'><label>Phone No</label>
-              <input type='tel'></input></div>
+              <input type='tel' required></input></div>
               <div className='formReg'><label>Email</label>
-              <input type='email'></input></div>
+              <input type='email' required></input></div>
               <div className='formReg'><label>Password</label>
-              <input type='password'></input></div>
+              <input type='password' required></input></div>
               <div className='formReg'><label>Hospital Type</label>
-              <select>
+              <select required>
                 <option value="Government">Government</option>
                 <option value="private">Private</option>
               </select></div>
               <div className='formReg'><label>StreetName</label>
-              <input type='text'></input></div>
+              <input type='text' required></input></div>
             <div className='formReg'><label>Pincode</label>
-              <input type='number'></input></div>
+              <input type='number' required></input></div>
             <div className='formReg'>
-              <input className='sub1' type='submit'></input>
+              <input className='sub1' type='submit' required></input>
             </div>
           </form>
         </div>
@@ -130,7 +130,7 @@ export default function RegisterMain() {
         
         <div className='displayForm3'> 
         <div className='form1'>
-        <form>
+        <form action="" autocomplete="off">
             <caption>Register as Private consultant</caption>
             <div className='formReg'><label>Name</label>
               <input type='text'></input>
@@ -149,13 +149,13 @@ export default function RegisterMain() {
               <div className='formReg'><label>Password</label>
               <input type='password'></input></div>
             <div className='formReg'><label>StreetName</label>
-              <input type='text'></input></div>
+              <input type='text'/></div>
             <div className='formReg'><label>District</label>
-              <input type='text'></input></div>
+              <input type='text'/></div>
             <div className='formReg'><label>Pincode</label>
-              <input type='number'></input></div>
+              <input type='number'/></div>
             <div className='formReg'>
-              <input className='sub1' type='submit'></input>
+              <input className='sub1' type='submit'/>
             </div>
           </form>
         </div>
