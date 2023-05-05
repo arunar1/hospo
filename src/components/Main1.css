@@ -74,7 +74,7 @@ main .Registration{
    
 
 }
-.loginForm .input-group input{
+.loginForm .input-group input,button{
     border: none;
     padding: 7px;
     outline: none;
@@ -98,7 +98,7 @@ main .Registration{
 }
 
 
-.loginForm .submit-btn input{
+.loginForm .submit-btn input,button{
     background-color: aqua;
     border: none;
     padding: 10px;
@@ -113,7 +113,9 @@ main .Registration{
     justify-content: center;
     align-items: center;
 }
-.loginForm .submit-btn input:hover{
-    box-shadow: 0px 3px 6px silver;
-    background-color: rgb(99, 99, 139);
+.loginForm .submit-btn button:hover{
+    box-shadow: 0px 3px 6px rgb(85, 69, 69);
+    background-color: rgba(143, 143, 220, 0.15);
+    color: white;
+    
 }

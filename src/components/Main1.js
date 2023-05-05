@@ -18,15 +18,15 @@ export default function Main1() {
           <form action="" autocomplete="off">
             <caption>Login</caption>
             <div class="input-group">
-              <input type="text" id="name" required />
-              <label for="name">Username</label>
+              <input type="tel" id="name" required />
+              <label for="name">User ID</label>
             </div>
             <div class="input-group">
               <input type="password" id="password" required/>
                 <label for="password">Password</label>
             </div>
             <div class="submit-btn">
-              <input type="submit" class="submit" />
+              <button  class="submit">Log in</button>
             </div>
           </form>
       </div>
