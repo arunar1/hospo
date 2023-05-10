@@ -12,35 +12,33 @@ main.main1 .reg-button{
     top:10vh;
 }
 main.main1 .reg-button button{
-    background-color: white;
     color: black;
     margin: 30px;
-    border-radius: 15px;
+    border-radius: 5px;
     width: 150px;
     height: 27px;
+    font-weight: 600;
+    padding-bottom: 25px;
 
 }
 main.main1 .reg-button button:hover{
     background-color: black;
     color: white;
     cursor: pointer;
+    outline: 1px solid white;
 }
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
-main.main1 .patient{
-    width:100px;
-    height: 100px;
-    background-color: rgb(192, 192, 107);
+    font-family: 'Times New Roman';
 }
 main.main1 form{
     position: relative;
     top:10vh;
     border: 2px solid white;
     width: 470px;
-    margin-left: 50px;
+    margin-left: 60px;
     border-radius:20px;
     padding:10px 0;
     padding-bottom: 30px;
@@ -57,17 +55,22 @@ main.main1 .form1 .formReg{
     margin: 15px;
     position: relative;
     margin-left: 10vh;
-    /* top:30vh; */
     color:white;
 }
 
-main.main1 .form1 .formReg input,select,.sub1{
+main.main1 .form1 .formReg input,select{
     position: absolute;
     left: 120px;
     border-radius: 5px;
     height: 30px;
     margin:5px;
     width: 165px;
+    background-color: transparent;
+    color: white;
+
+}
+main.main1 .form1 .formReg select option{
+    color: black;
 
 }
 
@@ -75,16 +78,26 @@ main.main1 .form1 .formReg label{
     position: relative;
     font-size: 20px;
     top: 8px;
+    left: -10px;
     
 }
 main.main1 .form1 .formReg .sub1{
+    
     background-color: rgb(170, 107, 229);
     width: 60px;
+    position: relative;
+    margin-top: 25px;
+    
 }
 main.main1 .form1 .formReg .sub1:hover{
     background-color: rgb(26, 14, 14);
     color: white;
     cursor: pointer;
+}
+
+main.main1 .form1 .formReg .sub1.clear{
+   margin-right: 42px;
+
 }
 marquee{
     position: relative;
@@ -94,6 +107,7 @@ marquee{
     font-size: 20px;
     margin-left: 50px;
 }
+
 .displayForm1,.displayForm2,.displayForm3{
     display: none;
 }
@@ -106,6 +120,7 @@ marquee{
 .displayForm33{
     display: block;
 }
-.reg-button .active{
-    background-color: rgb(205, 135, 135);
+main.main1 .reg-button button.active{
+    background-color: rgb(141, 80, 80);
+    
 }

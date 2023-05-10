@@ -35,9 +35,9 @@ main .Registration{
     border-radius: 25px;
     padding: 20px;
     height: 200px;
-
     color: white;
 }
+
     
 
 .main .loginForm{
@@ -50,13 +50,26 @@ main .Registration{
     justify-content: center;
     align-items: center;
     background-color:rgba(10, 8, 8,.45) ;
+    padding-inline: 20px;
 }
 .main .loginForm caption{
+    margin-top: 16px;
     font-size: 22px;
     font-weight: 500;
     color: white;
+    margin-bottom: 5px;
+    font-weight: 900;
     
 }
+
+main .main .reg-info .a:hover{
+    background-color: black;
+}
+main .main .reg-info .a,h2,p{
+    font-weight: 900;
+    /* transition: 2s ease; */
+}
+
 .loginForm .input-group{
     width: 300px;
     margin: 30px auto;
@@ -65,7 +78,7 @@ main .Registration{
     position: relative;
 }
 .loginForm .input-group label{
-    color: rgb(165,165,165);
+    color: rgb(112, 109, 109);
     font-size: 14px;
     position: absolute;
     top: 5px;
@@ -79,6 +92,7 @@ main .Registration{
     padding: 7px;
     outline: none;
     border-bottom: 1px solid #c9c98a;
+    font-weight: 900;
 }
 
 .loginForm .input-group input:focus ~label,

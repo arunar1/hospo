@@ -11,9 +11,10 @@ function Header() {
         </div>
         <div className="nav">
         <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><Link to="/" className='link'>Home</Link></li>
+            <li><a href="#" className='link'>About</a></li>
+            <li><a href="#" className='link'>Contact</a></li>
+            <li><Link class='a' to='/registration' className='link'>SignUp</Link></li>
         </ul>
         </div>
         
