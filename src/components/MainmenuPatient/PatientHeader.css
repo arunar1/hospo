@@ -1,0 +1,125 @@
+.patientHeader{
+    display: flex;
+    height:100vh;
+    font-family: 'Times New Roman';
+}
+.patientHeader ul{
+    list-style-type: none;
+}
+*{
+    margin:0;
+    padding: 0;
+}
+.MainMeanuButton{
+    
+    flex-grow: 1;
+    background-color: rgb(153, 168, 239);
+}
+.navBar{
+    flex-grow: 20;
+    position: relative;
+    background-color: lightblue;
+    overflow: hidden;
+    border-left: 10px solid white;
+    
+}
+.navBar ul{
+    background-color:white ;
+    height: 80px;
+}
+.mainSection{
+    width:100vw;
+    height:100vh;
+    background-color: beige;
+    position: absolute;
+    top:90px;
+    left:10px;
+    
+}
+.headerPatient{
+    height: 70px;
+    color:rgb(38, 21, 102);
+    font-size: 30px;
+}
+.menubar ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 50px;
+    padding: 30px 0px;
+
+}
+
+.menubar ul li{
+    padding: 50px 0px;
+}
+
+.navBar .topNav{
+    height:95px;
+    background-color: rgb(153, 168, 239);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: cursive;
+    color:rgb(2, 2, 5);
+    border-bottom: 5px solid white;
+}
+.navBar .topNav .setting{
+    display: flex;
+    position: relative;
+    left:60px;
+    align-items: center;
+}
+.navBar .topNav h1{
+    position: relative;
+    left:20px;
+}
+.navBar .topNav .setting ul{
+    display: flex;
+    background-color: transparent;
+    align-items: center;
+    position: relative;
+    left: -40px;
+    
+}
+
+.navBar .topNav .setting ul li{
+    margin: 50px;
+}
+.patientHeader .selection{
+    overflow: hidden;
+}
+.patientHeader .selection ul{
+    height:80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+}
+.patientHeader .selection li{
+    margin-left: 25px;
+}
+.MainMeanuButton .headerPatient{
+    display: flex;
+    justify-content: center;
+    /* background-color: black; */
+    height: 95px;
+    border-bottom: 5px solid white;
+}
+
+.patientHeader .selection .selctionbutton{
+    text-decoration: none;
+    color:wheat;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(168, 98, 98);
+    border-radius: 15px;
+    padding: 7px 18px;
+    width: 150px;
+
+}
+.patientHeader .selection .selctionbutton:hover{
+    background-color: red;
+    cursor: pointer;
+}

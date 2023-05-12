@@ -1,0 +1,20 @@
+.appointment .takeappointment{
+    height: 100vh;
+    background-color: lightblue;
+    
+
+}
+.takeappointment .header{
+    height: 95px;
+    background-color: rgb(153, 168, 239);
+    display: flex;
+    align-items: center;
+}
+.takeappointment .header h1{
+    margin-left: 20px;
+}
+.appointment .selectsection{
+    width: 500px;
+    height: 500px;
+    background-color: rgb(20, 19, 16);
+}

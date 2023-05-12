@@ -12,9 +12,9 @@ function Header() {
         <div className="nav">
         <ul>
             <li><Link to="/" className='link'>Home</Link></li>
-            <li><a href="#" className='link'>About</a></li>
-            <li><a href="#" className='link'>Contact</a></li>
-            <li><Link class='a' to='/registration' className='link'>SignUp</Link></li>
+            <li><Link to='/about' className='link'>About</Link></li>
+            <li><Link to='/contacts' className='link'>Contact</Link></li>
+            <li><Link to='/registration' className='link'>SignUp</Link></li>
         </ul>
         </div>
         
