@@ -13,24 +13,24 @@
 .MainMeanuButton{
     
     flex-grow: 1;
-    background-color: rgb(153, 168, 239);
+    background-color: rgb(103, 66, 66);
+    /* border: 5px solid white; */
 }
 .navBar{
     flex-grow: 20;
     position: relative;
-    background-color: lightblue;
+    background-color:lightblue;
     overflow: hidden;
-    border-left: 10px solid white;
+    /* border-left: 5px solid white; */
     
 }
 .navBar ul{
-    background-color:white ;
     height: 80px;
 }
 .mainSection{
     width:100vw;
     height:100vh;
-    background-color: beige;
+    background-color:rgb(75, 141, 163);
     position: absolute;
     top:90px;
     left:10px;
@@ -38,8 +38,10 @@
 }
 .headerPatient{
     height: 70px;
-    color:rgb(38, 21, 102);
+    color:white;
+    background-color: rgb(58, 45, 45);
     font-size: 30px;
+    /* border-bottom: 5px solid white; */
 }
 .menubar ul{
     list-style-type: none;
@@ -48,22 +50,26 @@
     justify-content: space-around;
     margin-left: 50px;
     padding: 30px 0px;
+    
 
 }
+
+
 
 .menubar ul li{
     padding: 50px 0px;
 }
 
 .navBar .topNav{
-    height:95px;
-    background-color: rgb(153, 168, 239);
+    height:75px;
+    background-color: rgb(103, 66, 66);
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-family: cursive;
-    color:rgb(2, 2, 5);
-    border-bottom: 5px solid white;
+    color:white;
+    /* border-bottom: 5px solid white; */
 }
 .navBar .topNav .setting{
     display: flex;
@@ -73,7 +79,7 @@
 }
 .navBar .topNav h1{
     position: relative;
-    left:20px;
+    left:60px;
 }
 .navBar .topNav .setting ul{
     display: flex;
@@ -103,13 +109,13 @@
     display: flex;
     justify-content: center;
     /* background-color: black; */
-    height: 95px;
-    border-bottom: 5px solid white;
+    height: 75px;
+    /* border-bottom: 5px solid white; */
 }
 
 .patientHeader .selection .selctionbutton{
     text-decoration: none;
-    color:wheat;
+    color:white;
     display: flex;
     align-items: center;
     text-align: center;

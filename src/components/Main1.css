@@ -57,7 +57,7 @@ main .Registration{
     font-size: 22px;
     font-weight: 500;
     color: white;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     font-weight: 900;
     
 }
@@ -72,17 +72,17 @@ main .main .reg-info .a,h2,p{
 
 .loginForm .input-group{
     width: 300px;
-    margin: 30px auto;
+    margin: 40px auto;
     display: flex;
     flex-direction: column;
     position: relative;
 }
 .loginForm .input-group label{
-    color: rgb(112, 109, 109);
+    color: black;
     font-size: 14px;
     position: absolute;
     top: 5px;
-    padding-left: 5px;
+    padding-left: 11px;
     transition: 0.5s ease-in-out;
    
 
@@ -93,6 +93,20 @@ main .main .reg-info .a,h2,p{
     outline: none;
     border-bottom: 1px solid #c9c98a;
     font-weight: 900;
+}
+.loginForm .input-group .loginselction{
+    padding: 8px;
+    outline: none;
+    border-bottom: 1px solid #c9c98a;
+    font-weight: 900;
+    background-color: white;
+    position: absolute;
+    top:-45px;
+    left: -3px;
+    border-radius: 0px;
+    margin-top: 20px;
+    color: black;
+    padding: 2px;
 }
 
 .loginForm .input-group input:focus ~label,
@@ -112,11 +126,11 @@ main .main .reg-info .a,h2,p{
 }
 
 
-.loginForm .submit-btn input,button{
+.loginForm .submit-btn input,button,.loginselction{
     background-color: aqua;
     border: none;
     padding: 10px;
-    margin-top: 15px;
+    /* margin-top: 15px; */
     border-radius: 5px;
     width: 300px;
     cursor: pointer;

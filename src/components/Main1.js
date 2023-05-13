@@ -18,6 +18,14 @@ export default function Main1() {
           <form action="" autocomplete="off">
             <caption>Login</caption>
             <div class="input-group">
+              <select required className='loginselction'>
+                <option>Account Type</option>
+                <option value='patient'>Patient</option>
+                <option value='hospital'>Hospital</option>
+                <option value='privateconsultant'>Private Consultant</option>
+              </select>
+            </div>
+            <div class="input-group">
               <input type="tel" id="name" required />
               <label for="name">User ID</label>
             </div>

@@ -1,20 +1,69 @@
-.appointment .takeappointment{
+.appointment{
     height: 100vh;
     background-color: lightblue;
-    
-
 }
 .takeappointment .header{
-    height: 95px;
-    background-color: rgb(153, 168, 239);
+    height: 75px;
+    background-color: rgb(103, 66, 66);
     display: flex;
     align-items: center;
 }
 .takeappointment .header h1{
-    margin-left: 20px;
+    margin-left: 30px;
+    color: white;
 }
-.appointment .selectsection{
-    width: 500px;
-    height: 500px;
-    background-color: rgb(20, 19, 16);
+.selectsection{
+    position: relative;
+    top:10vh;
+    left:20vw;
+}
+.selectsection label{
+    font-size: 20px;
+    position: relative;
+    top: 5px;
+
+}
+.selectsection select{
+    position: absolute;
+    left:150px;
+    background-color: transparent;
+    height: 20px;
+    border-radius: 5px;
+    height: 30px;
+    margin:5px;
+    width: 265px;
+    color: black;
+    border: 1px solid black;
+}
+.selectsection input{
+    position: absolute;
+    left:150px;
+    background-color: transparent;
+    height: 20px;
+    border-radius: 5px;
+    height: 30px;
+    margin:5px;
+    width: 265px;
+    border: 1px solid black;
+}
+
+.selectsection{
+   height: 400px;
+   width: 600px;
+}
+
+.selectsection .apointmentform{
+    
+    height:400px ;
+   /* background-color: red; */
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+}
+.apointmentform .appointmentcheck .appobtn{
+    background-color: blue;
+    color: white;
+    width: 80px;
+    position: absolute;
+    right:180px;
 }
