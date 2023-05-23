@@ -20,7 +20,8 @@
 .selectsection label{
     font-size: 20px;
     position: relative;
-    top: 5px;
+    top: 7px;
+    left: -80px;
 
 }
 .selectsection select{
@@ -36,8 +37,6 @@
     border: 1px solid black;
 }
 .selectsection input{
-    position: absolute;
-    left:150px;
     background-color: transparent;
     height: 20px;
     border-radius: 5px;
@@ -57,13 +56,22 @@
     height:400px ;
    /* background-color: red; */
    display: flex;
-   flex-direction: column;
    justify-content: space-around;
 }
 .apointmentform .appointmentcheck .appobtn{
     background-color: blue;
     color: white;
     width: 80px;
-    position: absolute;
-    right:180px;
+    position: relative;
+    top: 5px;
+    height: 30px;
+    margin-left: 80px;
+}
+.apointmentform .appointmentcheck .appobtn:hover{
+    background-color: black;
+    color: white;
+}
+.appointmentform1{
+    display: none;
+
 }

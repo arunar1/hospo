@@ -1,7 +1,23 @@
 import React from 'react'
 import './TakeAppointment.css';
+import { useState } from 'react';
 
 export default function TakeAppointment() {
+  let [selectType,activeType]=useState("")
+  let formPopup=useState("Click")
+let[btnclick,btnsetForm]=formPopup
+  //create state
+const createClass=()=>{
+  btnsetForm((prevState)=>{
+    if(prevState=='Click'){
+      return "Clicked"
+    }
+    else{
+      return "Click"
+    }
+  })
+}
+
   return (
     <div className='appointment'>
       <div className='takeappointment'>
@@ -11,50 +27,24 @@ export default function TakeAppointment() {
       </div>
       <div className='selectsection'>
  
-        <form className='apointmentform'>
+        <div className='apointmentform'>
         <div>
           <label>Hospital Type</label>
           <select className='SelectType' required>
             <option></option>
-            <option value="Governemt">Governemt</option>
-            <option value="Private">Female</option>
+            <option value="Governemt">Governemt Hospital</option>
+            <option value="Private">Private Hospital</option>
+            <option value="Private">Private Consultant</option>
           </select>
-          {/* <button></button> */}
         </div>
-          <div>
-            <label>Hospital Name</label>
-            <input type=''></input>
-          </div>
-          <div>
-            <label>Date</label>
-            <input type='date'></input>
-          </div>
           <div className='appointmentcheck'>
-            <button className='appobtn'>Check</button>
+            <button onClick={createClass} className='appobtn'>{btnclick}</button>
           </div>
-        </form>
-        {/* <form className='apointmentform'>
-
-          <div>
-            <label>Hospital Name</label>
-            <input type=''></input>
-          </div>
-          <div>
-            <label>Date</label>
-            <input type='date'></input>
-          </div>
-        </form>
-        <form className='apointmentform'>
-        
-        <div>
-          <label>Hospital Name</label>
-          <input type=''></input>
         </div>
         <div>
-          <label>Date</label>
-          <input type='date'></input>
+          <form className={`form1 ${selectType}`}>
+          </form>
         </div>
-      </form> */}
 
       </div>
     </div>
