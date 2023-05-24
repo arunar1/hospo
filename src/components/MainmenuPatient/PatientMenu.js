@@ -3,8 +3,10 @@ import { BrowserRouter as Router,Routes,Route, Switch,Link } from 'react-router-
 
 import PatientHeader from './PatientHeader'
 import TakeAppointment from '../TakeAppointment/TakeAppointment';
-
-export default function PatientMenu() {
+import Rescheduleappointment from '../Reschedule/Rescheduleappointment';
+import AppointmentHistory from '../History/AppointmentHistory';
+import CancelAppointment from '../Cancel/CancelAppointment';
+export default function patientMenu() {
   return (
     <div>
       
@@ -12,18 +14,23 @@ export default function PatientMenu() {
         <Switch>
           <Route exact path='/about'>
           <PatientHeader/>
+
           </Route>
           <Route path='/takeappointment'>
             <TakeAppointment/>
           </Route>
           <Route path='/appointmenthistory'>
+            <AppointmentHistory/>
           </Route>
           <Route path='/rescheduleappointment'>
+            <Rescheduleappointment/>
           </Route>
           <Route path='/cancelappointment'>
+            <CancelAppointment/>
           </Route>
         </Switch>
       </Router>
     </div>
   )
 }
+

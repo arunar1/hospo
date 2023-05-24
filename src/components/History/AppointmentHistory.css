@@ -1,0 +1,27 @@
+body{
+    background-color: lightblue;
+}
+.History .HistoryHeader{
+    height: 75px;
+    background-color: rgb(103, 66, 66);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.History .HistoryHeader h1{
+    margin-left: 30px;
+    color: white;
+}
+.History .HistoryHeader ul{
+   
+    list-style-type: none;
+}
+.History .HistoryHeader ul li .linker{
+    text-decoration: none;
+    position: relative;
+    right: 30px;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+
+}

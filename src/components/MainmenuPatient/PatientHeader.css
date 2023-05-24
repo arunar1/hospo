@@ -17,6 +17,7 @@
     /* border: 5px solid white; */
 }
 .navBar{
+
     flex-grow: 20;
     position: relative;
     background-color:lightblue;
@@ -79,7 +80,7 @@
 }
 .navBar .topNav h1{
     position: relative;
-    left:60px;
+    left:70px;
 }
 .navBar .topNav .setting ul{
     display: flex;
@@ -126,6 +127,7 @@
 
 }
 .patientHeader .selection .selctionbutton:hover{
-    background-color: red;
+    background-color:lightblue;
     cursor: pointer;
+    color: black;
 }

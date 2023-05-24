@@ -1,17 +1,16 @@
-.appointment{
-    height: 100vh;
-    background-color: lightblue;
-}
+
 .takeappointment .header{
     height: 75px;
     background-color: rgb(103, 66, 66);
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 .takeappointment .header h1{
     margin-left: 30px;
     color: white;
 }
+
 .selectsection{
     position: relative;
     top:10vh;
@@ -25,8 +24,8 @@
 
 }
 .selectsection select{
-    position: absolute;
-    left:150px;
+    /* position: absolute;
+    left:150px; */
     background-color: transparent;
     height: 20px;
     border-radius: 5px;
@@ -44,19 +43,21 @@
     margin:5px;
     width: 265px;
     border: 1px solid black;
+    position: absolute;
+    left:120px;
 }
 
 .selectsection{
-   height: 400px;
+   height: 200px;
    width: 600px;
 }
 
 .selectsection .apointmentform{
     
-    height:400px ;
+    height:100px ;
    /* background-color: red; */
    display: flex;
-   justify-content: space-around;
+   /* justify-content: space-around; */
 }
 .apointmentform .appointmentcheck .appobtn{
     background-color: blue;
@@ -65,7 +66,7 @@
     position: relative;
     top: 5px;
     height: 30px;
-    margin-left: 80px;
+    margin-left: 280px;
 }
 .apointmentform .appointmentcheck .appobtn:hover{
     background-color: black;
@@ -73,5 +74,48 @@
 }
 .appointmentform1{
     display: none;
+
+}
+.selectsection label{
+    position: relative;
+    
+    right: 0px;
+}
+.selectsection .hos{
+   padding:40px;
+
+}
+
+.selectsection select{
+    position: absolute;
+    left: 120px;
+}
+.selectsection .hos .subbtn{
+    background-color: rgb(109, 88, 88);
+    width: 60px;
+    color: wheat;
+    cursor: pointer;
+}
+.selectsection .hos .subbtn:hover{
+    background-color: black;
+}
+.background{
+    background-color: lightblue;
+    height: 100vh;
+}
+.selectsection .form2,.form3{
+    display: none;
+}
+.takeappointment .header ul{
+   
+    list-style-type: none;
+}
+.takeappointment .header ul li .linker{
+    text-decoration: none;
+    position: relative;
+    right: 30px;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
 
 }
