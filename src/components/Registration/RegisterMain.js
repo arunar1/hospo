@@ -170,7 +170,7 @@ export default function RegisterMain() {
                   <option value="private">Private</option>
                 </select></div>
               <div className='formReg'><label>Licence Id</label>
-                <input type='text' required onChange={handleClickhos} name='license' value={inputshos.licence||""}/>
+                <input type='text' required onChange={handleClickhos} name='licence' value={inputshos.licence||""}/>
               </div>
               <div className='formReg'><label>Street Name</label>
                 <input type='text' required onChange={handleClickhos} name='streetname' value={inputshos.streetname||""} /></div>
