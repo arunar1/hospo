@@ -1,0 +1,54 @@
+
+.containerSlot{
+    
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+.wrapper{
+    position: absolute;
+    right: 50px;
+    bottom: 80px;
+    height: 60vh;
+    width: 30vw;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns:2fr 2fr 2fr 2fr;
+    grid-template-rows: 2fr 2fr;
+    grid-template-areas: 'slotA slotB slotC slotD'
+                         'slotE slotF slotG slotH';
+
+}
+.slot{
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    color: white;
+}
+
+.slotA{
+    grid-area: slotA;
+}
+.slotB{
+    grid-area: slotB;
+}
+.slotC{
+    grid-area: slotC;
+}
+.slotD{
+    grid-area: slotD;
+}
+.slotE{
+    grid-area: slotE;
+}
+.slotF{
+    grid-area: slotF;
+}
+.slotG{
+    grid-area: slotG;
+}
+.slotH{
+    grid-area: slotH;
+}

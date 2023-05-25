@@ -6,6 +6,7 @@ import TakeAppointment from '../TakeAppointment/TakeAppointment';
 import Rescheduleappointment from '../Reschedule/Rescheduleappointment';
 import AppointmentHistory from '../History/AppointmentHistory';
 import CancelAppointment from '../Cancel/CancelAppointment';
+import Slot from '../TakeAppointment/Slot';
 export default function patientMenu() {
   return (
     <div>
@@ -14,7 +15,6 @@ export default function patientMenu() {
         <Switch>
           <Route exact path='/about'>
           <PatientHeader/>
-
           </Route>
           <Route path='/takeappointment'>
             <TakeAppointment/>

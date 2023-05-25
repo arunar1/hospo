@@ -60,8 +60,8 @@
    /* justify-content: space-around; */
 }
 .apointmentform .appointmentcheck .appobtn{
-    background-color: blue;
-    color: white;
+    background-color: rgb(109, 88, 88);
+    color: wheat;
     width: 80px;
     position: relative;
     top: 5px;
@@ -103,9 +103,7 @@
     background-color: lightblue;
     height: 100vh;
 }
-.selectsection .form2,.form3{
-    display: none;
-}
+
 .takeappointment .header ul{
    
     list-style-type: none;
@@ -118,4 +116,16 @@
     font-weight: 500;
     font-size: 20px;
 
+}
+.selectsection .form1,.form2,.form3{
+    display: none;
+}
+.selectsection .Government{
+    display: block;
+}
+.selectsection .Private{
+    display: block;
+}
+.selectsection .Private1{
+    display: block;
 }
