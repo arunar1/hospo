@@ -13,7 +13,7 @@ export default function patientMenu() {
       
       <Router>
         <Switch>
-          <Route exact path='/about'>
+          <Route exact path='/home'>
           <PatientHeader/>
           </Route>
           <Route path='/takeappointment'>

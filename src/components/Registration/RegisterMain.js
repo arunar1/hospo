@@ -1,7 +1,7 @@
 import React from 'react'
 import './RegisterMain.css'
-import Axios from 'axios'
 import { useState } from 'react'
+import axios from 'axios'
 
 
 
@@ -65,19 +65,48 @@ export default function RegisterMain() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(inputs);
+  // console.log(JSON.stringify(Object.entries99+(inputs)))
+  // try{
+  //    axios.post("http://localhost:8000/registration",{
+  //     inputs
+  //   })
+  //   .then(res=>{
+  //     if(res.data=='exist'){
+  //       alert("already")
+  //     }
+  //     else{
+  //       alert("error")
+  //     }
 
+  //   }).catch(e=>{
+  //     alert("wrong")
+  //   })
+  // }
+  // catch(e){
+  //   console.log(e)
+
+  // }
+  console.log(inputs);
+  let goli="hello";
+  axios.post("http://localhost:8000/registration",{goli})
+  .then(res=>{
+    console.log("response",res);
+  })
   }
+  
   const handleSubmithos = (e) => {
     e.preventDefault()
     console.log(inputshos);
+    // let {pname,pphone,page,pemail,ppassword,phousename,pstreetname,ppincode}=inputshos;
 
   }
   const handleSubmitpri = (e) => {
     e.preventDefault()
     console.log(inputspri);
+    // let {pname,pphone,page,pemail,ppassword,phousename,pstreetname,ppincode}=inputspri;
 
   }
+
   const handleClick = (event) => {
     const name = event.target.name;
     const value = event.target.value;
@@ -93,13 +122,25 @@ export default function RegisterMain() {
     const value = event.target.value;
     setinputspri(values => ({ ...values, [name]: value }))
   }
-
   const clears = () => {
     setinputs(inputs = {})
     setinputshos(inputshos = {})
     setinputspri(inputspri = {})
   }
 
+  // fetch("http://localhost:5000/registration",{
+  //   method:'POST',
+  //   crossDomain:true,
+  //   headers:{
+  //     'content-type':"application/jason",
+  //     Accept:"application/json",
+  //     "Access-Control_Allow_Origin":"*"
+  //   },
+  //   body:JSON.stringify(Object.entries(inputs)),
+  // }).then((res)=>res.json())
+  // .then((data)=>{
+  //   console.log(data,"patient Registered")
+  // });
 
 
 
@@ -122,33 +163,33 @@ export default function RegisterMain() {
 
         <div className='displayForm1 displayForm11'>
           <div className='form1'>
-            <form onSubmit={handleSubmit} autocomplete="off">
+            <form onSubmit={handleSubmit} autocomplete="off" action='POST'>
               <caption>Register as Patient</caption>
               <div className='formReg' ><label>Name</label>
-                <input type='text' required onChange={handleClick} name='name' value={inputs.name || ''} />
+                <input type='text' required onChange={handleClick} name='pname' value={inputs.pname || ''} />
               </div>
               <div className='formReg'><label>Phone No</label>
-                <input type='tel' required onChange={handleClick} name='phone' value={inputs.phone || ""} /></div>
+                <input type='tel' required onChange={handleClick} name='pphone' value={inputs.pphone || ""} /></div>
               <div className='formReg'><label>Age</label>
-                <input type='number' required onChange={handleClick} name='age' value={inputs.age || ""} /></div>
+                <input type='number' required onChange={handleClick} name='page' value={inputs.page || ""} /></div>
               <div className='formReg'><label>Gender</label>
-                <select required onChange={handleClick} name='gender' value={inputs.gneder}>
+                <select required onChange={handleClick} name='pgender' value={inputs.pgneder}>
                   <option></option>
                   <option value="Male">Male</option>
                   <option value="Female">Female</option>
                 </select></div>
               <div className='formReg'><label>Email Id</label>
-                <input type='email' onChange={handleClick} name='email' value={inputs.email} /></div>
+                <input type='email' onChange={handleClick} name='pemail' value={inputs.pemail} /></div>
               <div className='formReg'><label>Password</label>
-                <input type='password' required onChange={handleClick} name='password' value={inputs.password} /></div>
+                <input type='password' required onChange={handleClick} name='ppassword' value={inputs.ppassword} /></div>
               <div className='formReg'><label>House Name</label>
-                <input type='text' required onChange={handleClick} name='housename' value={inputs.housename || ""} /></div>
+                <input type='text' required onChange={handleClick} name='phousename' value={inputs.phousename || ""} /></div>
               <div className='formReg'><label>Street Name</label>
-                <input type='text' required onChange={handleClick} name='streetname' value={inputs.streetname || ""} /></div>
+                <input type='text' required onChange={handleClick} name='pstreetname' value={inputs.pstreetname || ""} /></div>
               <div className='formReg'><label>District</label>
-                <input type='text' required onChange={handleClick} name='district' value={inputs.district || ""} /></div>
+                <input type='text' required onChange={handleClick} name='pdistrict' value={inputs.pdistrict || ""} /></div>
               <div className='formReg'><label>Pincode</label>
-                <input type='number' required onChange={handleClick} name='pincode' value={inputs.pincode || ""} /></div>
+                <input type='number' required onChange={handleClick} name='ppincode' value={inputs.ppincode || ""} /></div>
               <div className='formReg'>
                 <input className='sub1 clear' type='reset' value='Clear' onClick={clears} />
                 <input className='sub1' type='submit' />
@@ -161,7 +202,7 @@ export default function RegisterMain() {
 
         <div className='displayForm2'>
           <div className='form1'>
-            <form action="" onSubmit={handleSubmithos} autocomplete="off">
+            <form  onSubmit={handleSubmithos} autocomplete="off" action='POST'>
               <caption>Register as Hospital</caption>
               <div className='formReg'><label>Hospital Name</label>
                 <input type='text' required onChange={handleClickhos} name='hospitalname' value={inputshos.hospitalname || ''} />
@@ -196,7 +237,7 @@ export default function RegisterMain() {
 
         <div className='displayForm3'>
           <div className='form1'>
-            <form action="" autocomplete="off" onSubmit={handleSubmitpri}>
+            <form action='POST' autocomplete="off" onSubmit={handleSubmitpri}>
               <caption>Register as Private consultant</caption>
               <div className='formReg'><label>Name</label>
                 <input type='text' required onChange={handleClickpri} name='consultantname' value={inputspri.consultantname || ''} />

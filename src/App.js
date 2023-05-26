@@ -20,7 +20,7 @@ function App() {
           <Route path='/registration'>
             <Register/>
           </Route>
-          <Route path='/about'>
+          <Route path='/home'>
             <PatientMenu/>
           </Route>
         </Switch>

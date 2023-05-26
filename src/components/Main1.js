@@ -1,9 +1,48 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
-
+import React, { useState } from 'react'
+import {Link } from 'react-router-dom';
 import './Main1.css';
+import axios from 'axios';
+import { Route, Router } from 'react-router-dom/cjs/react-router-dom.min';
+import patientMenu from './MainmenuPatient/patientMenu';
 
 export default function Main1() {
+
+  
+
+  const [email,setEmail]=useState('');
+  const [password,setPassword]=useState('')
+  async function submit(e){
+    e.preventDefault();
+    try{
+      await axios.post('http://localhost:8000/',{
+        email,password
+      })
+      .then(res=>{
+        if(res.data=='exist'){
+       
+          <Router>
+            <switch>
+            <Route to='/home'>
+              <patientMenu/>
+            </Route>
+            </switch>
+          </Router>
+        }
+        else{
+          alert("error")
+        }
+
+      }).catch(e=>{
+        alert("wrong")
+      })
+
+    }catch(e){
+      console.log(e)
+    }
+
+  }
+
+
   return (
     <main>
       <div className='main'>
@@ -15,10 +54,10 @@ export default function Main1() {
           </div>
         </div>
         < div className='loginForm'>
-          <form action="" autocomplete="off">
+          <form action="POST" autocomplete="off">
             <caption>Login</caption>
             <div class="input-group">
-              <select required className='loginselction'>
+              <select required className='loginselction' >
                 <option>Account Type</option>
                 <option value='patient'>Patient</option>
                 <option value='hospital'>Hospital</option>
@@ -26,15 +65,15 @@ export default function Main1() {
               </select>
             </div>
             <div class="input-group">
-              <input type="tel" id="name" required />
+              <input type="email" id="name" required onChange={(e)=>(setEmail(e.target.value))}/>
               <label for="name">User ID</label>
             </div>
             <div class="input-group">
-              <input type="password" id="password" required/>
+              <input type="password" id="password" required onChange={(e)=>(setPassword(e.target.value))}/>
                 <label for="password">Password</label>
             </div>
             <div class="submit-btn">
-              <button  class="submit">Log in</button>
+              <button  class="submit" onClick={submit}>Log in</button>
             </div>
           </form>
       </div>
