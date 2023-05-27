@@ -65,46 +65,46 @@ export default function RegisterMain() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-  // console.log(JSON.stringify(Object.entries99+(inputs)))
-  // try{
-  //    axios.post("http://localhost:8000/registration",{
-  //     inputs
-  //   })
-  //   .then(res=>{
-  //     if(res.data=='exist'){
-  //       alert("already")
-  //     }
-  //     else{
-  //       alert("error")
-  //     }
+  try{
+     axios.post("http://localhost:5000/registration",inputs)
+     .then((data)=>{
+      console.log(data)
 
-  //   }).catch(e=>{
-  //     alert("wrong")
-  //   })
-  // }
-  // catch(e){
-  //   console.log(e)
+     });
+    }
+  catch(e){
+    console.log(e)
 
-  // }
-  console.log(inputs);
-  let goli="hello";
-  axios.post("http://localhost:8000/registration",{goli})
-  .then(res=>{
-    console.log("response",res);
-  })
+  }
   }
   
   const handleSubmithos = (e) => {
     e.preventDefault()
-    console.log(inputshos);
-    // let {pname,pphone,page,pemail,ppassword,phousename,pstreetname,ppincode}=inputshos;
-
+    try{
+      axios.post("http://localhost:5000/registration",inputshos)
+      .then((data)=>{
+       console.log(data.data)
+ 
+      });
+     }
+   catch(e){
+     console.log(e)
+ 
+   }
   }
   const handleSubmitpri = (e) => {
     e.preventDefault()
     console.log(inputspri);
-    // let {pname,pphone,page,pemail,ppassword,phousename,pstreetname,ppincode}=inputspri;
-
+    try{
+      axios.post("http://localhost:5000/registration",inputspri)
+      .then(res=>{
+        console.log(res)
+      })
+     }
+   catch(e){
+     console.log(e)
+ 
+   }
   }
 
   const handleClick = (event) => {
@@ -224,8 +224,12 @@ export default function RegisterMain() {
               </div>
               <div className='formReg'><label>Street Name</label>
                 <input type='text' required onChange={handleClickhos} name='streetname' value={inputshos.streetname || ""} /></div>
+                <div className='formReg'><label>District</label>
+                <input type='text' required onChange={handleClickhos} name='licence' value={inputshos.licence || ""} />
+              </div>
               <div className='formReg'><label>Pincode</label>
                 <input type='number' required onChange={handleClickhos} name='pincode' value={inputshos.pincode || ""} /></div>
+                
               <div className='formReg'>
                 <input className='sub1 clear' type='reset' value='Clear' onClick={clears} />
                 <input className='sub1' type='submit' />

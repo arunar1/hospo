@@ -9,31 +9,19 @@ export default function Main1() {
 
   
 
-  const [email,setEmail]=useState('');
+  const [userid,setuserid]=useState('');
   const [password,setPassword]=useState('')
   async function submit(e){
     e.preventDefault();
     try{
-      await axios.post('http://localhost:8000/',{
-        email,password
-      })
-      .then(res=>{
-        if(res.data=='exist'){
-       
-          <Router>
-            <switch>
-            <Route to='/home'>
-              <patientMenu/>
-            </Route>
-            </switch>
-          </Router>
-        }
-        else{
-          alert("error")
-        }
-
-      }).catch(e=>{
-        alert("wrong")
+      await axios.post('http://localhost:5000/',{
+        userid,password
+      }).then(res=>{
+        console.log(res.data)
+        
+        
+      }).catch(err=>{
+        console.log("Some error")
       })
 
     }catch(e){
@@ -41,6 +29,7 @@ export default function Main1() {
     }
 
   }
+  
 
 
   return (
@@ -65,7 +54,7 @@ export default function Main1() {
               </select>
             </div>
             <div class="input-group">
-              <input type="email" id="name" required onChange={(e)=>(setEmail(e.target.value))}/>
+              <input type="text" id="name" required onChange={(e)=>(setuserid(e.target.value))}/>
               <label for="name">User ID</label>
             </div>
             <div class="input-group">
