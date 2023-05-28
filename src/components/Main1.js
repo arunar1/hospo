@@ -3,8 +3,7 @@ import {Link } from 'react-router-dom';
 import './Main1.css';
 import axios from 'axios';
 import { Route, Router } from 'react-router-dom/cjs/react-router-dom.min';
-import patientMenu from './MainmenuPatient/patientMenu';
-
+import PatientMenu from './MainmenuPatient/PatientMenu';
 export default function Main1() {
 
   
@@ -18,6 +17,13 @@ export default function Main1() {
         userid,password
       }).then(res=>{
         console.log(res.data)
+        console.log(res.data.status)
+        if(res.data.status=='ok'){
+          alert("login successful")
+          console.log(res.data.data)
+          window.localStorage.setItem("token",res.data.data);
+          window.location.href='./home'
+        }
         
         
       }).catch(err=>{

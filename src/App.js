@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Main from "./components/Main1.js";
 import Footer from "./components/Footer1.js";
 import Register from "./components/Registration/Register";
-import PatientMenu from './components/MainmenuPatient/patientMenu';
+import PatientMenu from './components/MainmenuPatient/PatientMenu';
 import './App.css';
 
 function App() {

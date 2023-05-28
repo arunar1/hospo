@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import './PatientHeader.css'
 
 import ProfileCard from './ProfileCard';
-export default function PatientHeader() {
+export default function PatientHeader(props) {
+  let detail=props.details
   return (
     <div>
       
@@ -14,10 +15,10 @@ export default function PatientHeader() {
             </div>
             <div className='selection'>
               <ul>
-                <li><Link to='/takeappointment' className='selctionbutton'>Take Appointment</Link></li>
-                <li><Link to='/appointmenthistory' className='selctionbutton'>Appointment Histroy</Link></li>
-                <li><Link to='/rescheduleappointment' className='selctionbutton'>Reschedule Apppointment</Link></li>
-                <li><Link to='cancelappointment' className='selctionbutton'>Cancel Appointment</Link></li>
+                <li><Link to='/home/takeappointment' className='selctionbutton'>Take Appointment</Link></li>
+                <li><Link to='/home/appointmenthistory' className='selctionbutton'>Appointment Histroy</Link></li>
+                <li><Link to='/home/rescheduleappointment' className='selctionbutton'>Reschedule Apppointment</Link></li>
+                <li><Link to='/home/cancelappointment' className='selctionbutton'>Cancel Appointment</Link></li>
               </ul>
             </div>
         </div>
@@ -26,12 +27,12 @@ export default function PatientHeader() {
             <div className='profile'><h1>Profile</h1></div>
             <div className='setting'>
               <ul>
-                <li>User ID</li>
+                <li>User ID </li>
                 <li>settings</li>
               </ul>
             </div>
           </div>
-          <ProfileCard/>
+          <ProfileCard data={detail}/>
         
         </div>
       </div>
