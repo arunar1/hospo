@@ -12,7 +12,7 @@ export default function RegisterMain() {
     let active1 = document.querySelector('.patient');
     active1.classList.add('active');
     let active2 = document.querySelector('.hospital');
-    active2.classList.remove('active');
+    active2.classList.remove('active'); 
     let active3 = document.querySelector('.consultant');
     active3.classList.remove('active');
 
@@ -65,6 +65,8 @@ export default function RegisterMain() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    inputs.type='patient';
+    console.log(inputs)
   try{
      axios.post("http://localhost:5000/registration",inputs)
      .then((data)=>{
@@ -80,31 +82,38 @@ export default function RegisterMain() {
   
   const handleSubmithos = (e) => {
     e.preventDefault()
-    try{
-      axios.post("http://localhost:5000/registration",inputshos)
-      .then((data)=>{
-       console.log(data.data)
- 
-      });
-     }
-   catch(e){
-     console.log(e)
- 
-   }
+
+    inputshos.type='hospital';
+    console.log(inputshos)
+    
+  try{
+     axios.post("http://localhost:5000/registration",inputshos)
+     .then((data)=>{
+      console.log(data)
+
+     });
+    }
+  catch(e){
+    console.log(e)
+
+  }
+    
   }
   const handleSubmitpri = (e) => {
     e.preventDefault()
-    console.log(inputspri);
-    try{
-      axios.post("http://localhost:5000/registration",inputspri)
-      .then(res=>{
-        console.log(res)
-      })
-     }
-   catch(e){
-     console.log(e)
- 
-   }
+    inputspri.type='privateconsultant';
+  try{
+     axios.post("http://localhost:5000/registration",inputspri)
+     .then((data)=>{
+      console.log(data)
+
+     });
+    }
+  catch(e){
+    console.log(e)
+
+  }
+   
   }
 
   const handleClick = (event) => {
@@ -165,6 +174,8 @@ export default function RegisterMain() {
           <div className='form1'>
             <form onSubmit={handleSubmit} autocomplete="off" action='POST'>
               <caption>Register as Patient</caption>
+
+              
               <div className='formReg' ><label>Name</label>
                 <input type='text' required onChange={handleClick} name='pname' value={inputs.pname || ''} />
               </div>
@@ -179,7 +190,7 @@ export default function RegisterMain() {
                   <option value="Female">Female</option>
                 </select></div>
               <div className='formReg'><label>Email Id</label>
-                <input type='email' onChange={handleClick} name='pemail' value={inputs.pemail} /></div>
+                <input type='email' onChange={handleClick} name='pemail' value={inputs.pemail } /></div>
               <div className='formReg'><label>Password</label>
                 <input type='password' required onChange={handleClick} name='ppassword' value={inputs.ppassword} /></div>
               <div className='formReg'><label>House Name</label>
@@ -204,31 +215,34 @@ export default function RegisterMain() {
           <div className='form1'>
             <form  onSubmit={handleSubmithos} autocomplete="off" action='POST'>
               <caption>Register as Hospital</caption>
+
+            
+
               <div className='formReg'><label>Hospital Name</label>
-                <input type='text' required onChange={handleClickhos} name='hospitalname' value={inputshos.hospitalname || ''} />
+                <input type='text' required onChange={handleClickhos} name='hname' value={inputshos.hname || ''} />
               </div>
               <div className='formReg'><label>Phone No</label>
-                <input type='tel' required onChange={handleClickhos} name='phone' value={inputshos.phone || ""} /></div>
+                <input type='tel' required onChange={handleClickhos} name='hphone' value={inputshos.hphone || ""} /></div>
               <div className='formReg'><label>Email Id</label>
-                <input type='email' required onChange={handleClickhos} name='email' value={inputshos.email} /></div>
+                <input type='email' required onChange={handleClickhos} name='hemail' value={inputshos.hemail} /></div>
               <div className='formReg'><label>Password</label>
-                <input type='password' required onChange={handleClickhos} name='password' value={inputshos.password} /></div>
+                <input type='password' required onChange={handleClickhos} name='hpassword' value={inputshos.hpassword} /></div>
               <div className='formReg'><label>Hospital Type</label>
-                <select required name='hospitaltype' value={inputs.hospitaltype}>
+                <select required name='htype'  onChange={handleClickhos} value={inputshos.htype}>
                   <option></option>
                   <option value="Government">Government</option>
                   <option value="private">Private</option>
                 </select></div>
               <div className='formReg'><label>Licence Id</label>
-                <input type='text' required onChange={handleClickhos} name='licence' value={inputshos.licence || ""} />
+                <input type='text' required onChange={handleClickhos} name='hlicence' value={inputshos.hlicence || ""} />
               </div>
               <div className='formReg'><label>Street Name</label>
-                <input type='text' required onChange={handleClickhos} name='streetname' value={inputshos.streetname || ""} /></div>
+                <input type='text' required onChange={handleClickhos} name='hstreetname' value={inputshos.hstreetname || ""} /></div>
                 <div className='formReg'><label>District</label>
-                <input type='text' required onChange={handleClickhos} name='licence' value={inputshos.licence || ""} />
+                <input type='text' required onChange={handleClickhos} name='hdistrict' value={inputshos.hdistrict || ""} />
               </div>
               <div className='formReg'><label>Pincode</label>
-                <input type='number' required onChange={handleClickhos} name='pincode' value={inputshos.pincode || ""} /></div>
+                <input type='number' required onChange={handleClickhos} name='hpincode' value={inputshos.hpincode || ""} /></div>
                 
               <div className='formReg'>
                 <input className='sub1 clear' type='reset' value='Clear' onClick={clears} />
@@ -243,32 +257,36 @@ export default function RegisterMain() {
           <div className='form1'>
             <form action='POST' autocomplete="off" onSubmit={handleSubmitpri}>
               <caption>Register as Private consultant</caption>
+
+
+
+
               <div className='formReg'><label>Name</label>
-                <input type='text' required onChange={handleClickpri} name='consultantname' value={inputspri.consultantname || ''} />
+                <input type='text' required onChange={handleClickpri} name='cname' value={inputspri.cname || ''} />
               </div>
               <div className='formReg'><label>Phone No</label>
-                <input type='tel' required onChange={handleClickpri} name='phone' value={inputspri.phone || ""} /></div>
+                <input type='tel' required onChange={handleClickpri} name='cphone' value={inputspri.cphone || ""} /></div>
               <div className='formReg'><label>Experience(Yrs)</label>
-                <input type='number' required onChange={handleClickpri} name='experience' value={inputspri.experience || ""} /></div>
+                <input type='number' required onChange={handleClickpri} name='cexperience' value={inputspri.cexperience || ""} /></div>
               <div className='formReg'><label>Licence Id</label>
-                <input type='text' required onChange={handleClickpri} name='licence' value={inputspri.licence || ""} />
+                <input type='text' required onChange={handleClickpri} name='clicence' value={inputspri.clicence || ""} />
               </div>
               <div className='formReg'><label>Gender</label>
-                <select required onChange={handleClickpri} name='gender' value={inputspri.gneder}>
+                <select required onChange={handleClickpri} name='cgender' value={inputspri.cgneder}>
                   <option></option>
                   <option value="Male">Male</option>
                   <option value="Female">Female</option>
                 </select></div>
               <div className='formReg'><label>Email</label>
-                <input type='email' required onChange={handleClickpri} name='email' value={inputspri.email} /></div>
+                <input type='email' required onChange={handleClickpri} name='cemail' value={inputspri.cemail} /></div>
               <div className='formReg' ><label>Password</label>
-                <input type='password' required onChange={handleClickpri} name='password' value={inputspri.password} /></div>
+                <input type='password' required onChange={handleClickpri} name='cpassword' value={inputspri.cpassword} /></div>
               <div className='formReg'><label>Street Name</label>
-                <input type='text' required onChange={handleClickpri} name='streetname' value={inputspri.streetname || ""} /></div>
+                <input type='text' required onChange={handleClickpri} name='cstreetname' value={inputspri.cstreetname || ""} /></div>
               <div className='formReg'><label>District</label>
-                <input type='text' required onChange={handleClickpri} name='district' value={inputspri.district || ""} /></div>
+                <input type='text' required onChange={handleClickpri} name='cdistrict' value={inputspri.cdistrict || ""} /></div>
               <div className='formReg'><label>Pincode</label>
-                <input type='number' required onChange={handleClickpri} name='pincode' value={inputspri.pincode || ""} /></div>
+                <input type='number' required onChange={handleClickpri} name='cpincode' value={inputspri.cpincode || ""} /></div>
               <div className='formReg'>
                 <input className='sub1 clear' type='reset' value='Clear' onClick={clears} />
                 <input className='sub1' type='submit' />

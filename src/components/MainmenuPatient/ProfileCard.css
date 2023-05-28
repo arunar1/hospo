@@ -2,7 +2,7 @@
    width:500px;
    height: 400px;
    position: absolute;
-   top: 20vh;
+   top: 15vh;
    left: 10vw;
    font-family: 'Times New Roman';
 }
@@ -15,6 +15,6 @@
 }
 .profileCard ul li span{
     position: absolute;
-    left: 120px;
+    left: 130px;
     font-weight: 500;
 }

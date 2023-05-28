@@ -4,12 +4,15 @@ import './ProfileCard.css'
 export default function ProfileCard() {
  
   const user=JSON.parse(window.localStorage.getItem("userid"))
+  let usertype=user.usertype ;
+  usertype=usertype.toUpperCase()
 
 
   return (
     <div>
         <div className='profileCard'>
             <ul>
+                <li>Account Type <span>: {usertype}</span></li>
                 <li>Name <span>: {user.name}</span></li>
                 <li>Age <span>:{user.age}</span></li>
                 <li>Gender <span>: {user.gender}</span></li>

@@ -6,7 +6,7 @@ import { Route, Router } from 'react-router-dom/cjs/react-router-dom.min';
 import PatientMenu from './MainmenuPatient/PatientMenu';
 export default function Main1() {
 
-  const [details,setdetails]=useState();
+  const [usertype,setuserType]=useState();
 
   const [userid,setuserid]=useState('');
   const [password,setPassword]=useState('')
@@ -14,7 +14,7 @@ export default function Main1() {
     e.preventDefault();
     try{
       await axios.post('http://localhost:5000/',{
-        userid,password
+        usertype,userid,password
       }).then(res=>{
         console.log(res.data)
         console.log(res.data.details)
@@ -25,6 +25,9 @@ export default function Main1() {
           console.log()
           window.localStorage.setItem("userid",JSON.stringify(res.data.details));
           window.location.href='./home'
+        }
+        else{
+          alert("invalid credentials")
         }
         
         
@@ -54,7 +57,7 @@ export default function Main1() {
           <form action="POST" autocomplete="off">
             <caption>Login</caption>
             <div class="input-group">
-              <select required className='loginselction' >
+              <select required className='loginselction'  onChange={(e)=>(setuserType(e.target.value))} >
                 <option>Account Type</option>
                 <option value='patient'>Patient</option>
                 <option value='hospital'>Hospital</option>

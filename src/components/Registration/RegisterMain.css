@@ -41,7 +41,7 @@ main.main1 form{
     margin-left: 60px;
     border-radius:20px;
     padding:10px 0;
-    padding-bottom: 30px;
+    padding-bottom: 0px;
 }
 main.main1 form caption{
     color: white;
@@ -69,6 +69,16 @@ main.main1 .form1 .formReg input,select{
     color: white;
 
 }
+
+main.main1 .form1 .formtype{
+    margin-bottom: 40px;
+    position: relative;
+    color: black;
+}
+main.main1 .form1 .formtype select{
+    background-color: black;
+}
+
 main.main1 .form1 .formReg select option{
     color: black;
 
