@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 import './PatientHeader.css'
 
 import ProfileCard from './ProfileCard';
-export default function PatientHeader(props) {
-  let detail=props.details
+export default function PatientHeader() {
+  const user=JSON.parse(window.localStorage.getItem("userid"))
+
   return (
     <div>
       
@@ -27,12 +28,12 @@ export default function PatientHeader(props) {
             <div className='profile'><h1>Profile</h1></div>
             <div className='setting'>
               <ul>
-                <li>User ID </li>
+                <li>User ID :{user.userId}</li>
                 <li>settings</li>
               </ul>
             </div>
           </div>
-          <ProfileCard data={detail}/>
+          <ProfileCard/>
         
         </div>
       </div>

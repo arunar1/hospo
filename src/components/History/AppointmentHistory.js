@@ -8,7 +8,7 @@ export default function AppointmentHistory() {
         <div className='HistoryHeader'>
             <h1>Appointment History</h1>
             <ul>
-              <li><Link to="/about" className='linker'>back</Link></li>
+              <li><Link to="/home" className='linker'>back</Link></li>
             </ul>
         </div>
       </div>

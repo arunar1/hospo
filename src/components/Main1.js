@@ -6,7 +6,7 @@ import { Route, Router } from 'react-router-dom/cjs/react-router-dom.min';
 import PatientMenu from './MainmenuPatient/PatientMenu';
 export default function Main1() {
 
-  
+  const [details,setdetails]=useState();
 
   const [userid,setuserid]=useState('');
   const [password,setPassword]=useState('')
@@ -17,11 +17,13 @@ export default function Main1() {
         userid,password
       }).then(res=>{
         console.log(res.data)
-        console.log(res.data.status)
+        console.log(res.data.details)
         if(res.data.status=='ok'){
           alert("login successful")
           console.log(res.data.data)
           window.localStorage.setItem("token",res.data.data);
+          console.log()
+          window.localStorage.setItem("userid",JSON.stringify(res.data.details));
           window.location.href='./home'
         }
         

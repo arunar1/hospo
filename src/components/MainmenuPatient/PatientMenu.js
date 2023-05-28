@@ -10,9 +10,9 @@ import CancelAppointment from '../Cancel/CancelAppointment';
 import Slot from '../TakeAppointment/Slot';
 export default function PatientMenu() {
   const [datas,setdatas]=useState();
-  useEffect(async()=>{
+  useEffect(()=>{
     try{
-        await axios.post('http://localhost:5000/home',{
+         axios.post('http://localhost:5000/home',{
           token:window.localStorage.getItem("token")
         }).then(res=>{
 
@@ -30,8 +30,14 @@ export default function PatientMenu() {
         console.log(e)
       }
     
-  },[])
-  console.log(datas);
+  },[setdatas])
+
+  
+  
+  
+
+  console.log(datas)
+  
  
 
   return (
@@ -39,8 +45,8 @@ export default function PatientMenu() {
       
       <Router>
         <Switch>
-          <Route exact path='/home'>
-          <PatientHeader details={datas}/>
+          <Route  exact path='/home' >
+          <PatientHeader />
           </Route>
           <Route path='/home/takeappointment'>
             <TakeAppointment/>

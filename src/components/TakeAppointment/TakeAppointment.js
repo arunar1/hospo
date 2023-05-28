@@ -58,7 +58,7 @@ export default function TakeAppointment() {
           <div className='header'>
             <h1>Take Appointment</h1>
             <ul>
-              <li><Link to="/about" className='linker'>back</Link></li>
+              <li><Link to="/home" className='linker'>back</Link></li>
             </ul>
           </div>
         </div>

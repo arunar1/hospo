@@ -8,7 +8,7 @@ export default function Rescheduleappointment() {
         <div className='RescheduleHeader'>
             <h1>Reschedule Appointment</h1>
             <ul>
-              <li><Link to="/about" className='linker'>back</Link></li>
+              <li><Link to="/home" className='linker'>back</Link></li>
             </ul>
         </div>
       </div>
