@@ -80,7 +80,10 @@
 }
 .navBar .topNav h1{
     position: relative;
-    left:150px;
+    /* left:150px; */
+}
+.navBar .topNav{
+    padding-left: 150px;
 }
 .navBar .topNav .setting ul{
     display: flex;
@@ -130,4 +133,12 @@
     background-color:lightblue;
     cursor: pointer;
     color: black;
+}
+.navBar .topNav .setting .logoutbtn{
+    width:auto;
+}
+.navBar .topNav .setting .logoutbtn:hover{
+    background-color: blueviolet;
+    color: wheat;
+    cursor: pointer;
 }

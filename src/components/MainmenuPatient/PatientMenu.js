@@ -15,6 +15,8 @@ export default function PatientMenu() {
          axios.post('http://localhost:5000/home',{
           token:window.localStorage.getItem("token")
         }).then(res=>{
+          // window.localStorage.setItem("userid",JSON.stringify(res.data.data));
+
 
           setdatas(res.data.data)
           if(res.data.status=='ok'){
@@ -45,13 +47,13 @@ export default function PatientMenu() {
       
       <Router>
         <Switch>
-          <Route  exact path='/home' >
-          <PatientHeader />
-          </Route>
-          <Route path='/home/takeappointment'>
+          <Route  exact path='/home' component={PatientHeader} />
+         
+      
+          <Route exact path='/home/takeappointment'>
             <TakeAppointment/>
           </Route>
-          <Route path='/home/appointmenthistory'>
+          <Route exact path='/home/appointmenthistory'>
             <AppointmentHistory/>
           </Route>
           <Route path='/home/rescheduleappointment'>
@@ -60,6 +62,7 @@ export default function PatientMenu() {
           <Route path='/home/cancelappointment'>
             <CancelAppointment/>
           </Route>
+          <Route path='/home/takeappointment/slot' component={Slot}/>
         </Switch>
       </Router>
     </div>

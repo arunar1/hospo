@@ -4,7 +4,13 @@ import './PatientHeader.css'
 
 import ProfileCard from './ProfileCard';
 export default function PatientHeader() {
-  const user=JSON.parse(window.localStorage.getItem("userid"))
+const user=JSON.parse(window.localStorage.getItem("userid"))
+
+const logout=()=>{
+  window.localStorage.clear();
+  window.location.href='./'
+}
+
 
   return (
     <div>
@@ -30,11 +36,11 @@ export default function PatientHeader() {
               <ul>
                 <li>User ID :{user.userId}</li>
                 <li>settings</li>
+                <li><button  onClick={logout} className='logoutbtn'>LogOut</button></li>
               </ul>
             </div>
           </div>
           <ProfileCard/>
-        
         </div>
       </div>
     </div>

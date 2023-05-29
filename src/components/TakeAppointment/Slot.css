@@ -1,23 +1,24 @@
 
 .containerSlot{
     
-    /* display: flex;
+    display: flex;
     justify-content: center;
-    align-items: center; */
+    height: 100vh;
+    width: 100%;
+    align-items: center;
 }
+
 .wrapper{
-    position: absolute;
-    right: 50px;
-    bottom: 80px;
+
     height: 60vh;
-    width: 30vw;
+    width: 60vw;
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 50px;
     grid-template-columns:2fr 2fr 2fr 2fr;
     grid-template-rows: 2fr 2fr;
     grid-template-areas: 'slotA slotB slotC slotD'
                          'slotE slotF slotG slotH';
-
+    
 }
 .slot{
     border-radius: 20px;
@@ -51,4 +52,37 @@
 }
 .slotH{
     grid-area: slotH;
+}
+body{
+    background-color: lightblue;
+}
+.sloter{
+    position: absolute;
+    width: 100%;
+}
+.sloter .slotHeader{
+    
+    height: 75px;
+    
+    background-color: rgb(103, 66, 66);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sloter .slotHeader h1{
+    margin-left: 30px;
+    color: white;
+}
+.sloter .slotHeader ul{
+   
+    list-style-type: none;
+}
+.sloter .slotHeader ul li .linker{
+    text-decoration: none;
+    position: relative;
+    right: 30px;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+
 }
