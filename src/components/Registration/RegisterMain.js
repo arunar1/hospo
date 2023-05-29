@@ -62,15 +62,24 @@ export default function RegisterMain() {
   let [inputs, setinputs] = useState({})
   let [inputshos, setinputshos] = useState({})
   let [inputspri, setinputspri] = useState({})
-
+  
   const handleSubmit = (e) => {
     e.preventDefault()
+    if((inputs.pphone).length==10){
+    if((inputs.ppassword).length>=8){
     inputs.type='patient';
     console.log(inputs)
+    
   try{
      axios.post("http://localhost:5000/registration",inputs)
      .then((data)=>{
-      console.log(data)
+      if(data.data.error){
+        alert(data.data.error)
+      }
+      else{
+        alert("registered")
+      }
+      
 
      });
     }
@@ -79,42 +88,84 @@ export default function RegisterMain() {
 
   }
   }
-  
+  else{
+    alert("Enter strong password characters greater then 8")
+  }
+}
+
+  else
+{
+  alert("invalid phoneno")
+}
+}
+
   const handleSubmithos = (e) => {
     e.preventDefault()
-
-    inputshos.type='hospital';
-    console.log(inputshos)
+    if((inputshos.hphone).length==10){
+      if((inputshos.hpassword).length>=8){
+        inputshos.type='hospital';
+        console.log(inputshos)
+        try{
+          axios.post("http://localhost:5000/registration",inputshos)
+          .then((data)=>{
+            if(data.data.error){
+              alert(data.data.error)
+            }
+            else{
+              alert("Registered")
+            }
+     
+          });
+         }
+       catch(e){
+         console.log(e)
+     
+       }
     
-  try{
-     axios.post("http://localhost:5000/registration",inputshos)
-     .then((data)=>{
-      console.log(data)
-
-     });
     }
-  catch(e){
-    console.log(e)
-
+    else{
+      alert("Enter strong password characters greater then 8")
+    }
   }
-    
+  
+    else
+  {
+    alert("invalid phoneno")
   }
+}
   const handleSubmitpri = (e) => {
     e.preventDefault()
     inputspri.type='privateconsultant';
-  try{
-     axios.post("http://localhost:5000/registration",inputspri)
-     .then((data)=>{
-      console.log(data)
-
-     });
+    if((inputspri.cphone).length==10){
+      if((inputspri.cpassword).length>=8){
+      try{
+         axios.post("http://localhost:5000/registration",inputspri)
+         .then((data)=>{
+          
+          if(data.data.error){
+            alert(data.data.error)
+          }
+          else{
+            alert("Registered")
+          }
+    
+         });
+        }
+      catch(e){
+        console.log(e)
+    
+      }
+    
     }
-  catch(e){
-    console.log(e)
-
+    else{
+      alert("Enter strong password characters greater then 8")
+    }
   }
-   
+    else
+  {
+    alert("invalid phoneno") 
   }
+}
 
   const handleClick = (event) => {
     const name = event.target.name;
@@ -180,7 +231,7 @@ export default function RegisterMain() {
                 <input type='text' required onChange={handleClick} name='pname' value={inputs.pname || ''} />
               </div>
               <div className='formReg'><label>Phone No</label>
-                <input type='tel' required onChange={handleClick} name='pphone' value={inputs.pphone || ""} /></div>
+                <input type='number' required onChange={handleClick} name='pphone' value={inputs.pphone || ""} /></div>
               <div className='formReg'><label>Age</label>
                 <input type='number' required onChange={handleClick} name='page' value={inputs.page || ""} /></div>
               <div className='formReg'><label>Gender</label>
@@ -222,7 +273,7 @@ export default function RegisterMain() {
                 <input type='text' required onChange={handleClickhos} name='hname' value={inputshos.hname || ''} />
               </div>
               <div className='formReg'><label>Phone No</label>
-                <input type='tel' required onChange={handleClickhos} name='hphone' value={inputshos.hphone || ""} /></div>
+                <input type='number' required onChange={handleClickhos} name='hphone' value={inputshos.hphone || ""} /></div>
               <div className='formReg'><label>Email Id</label>
                 <input type='email' required onChange={handleClickhos} name='hemail' value={inputshos.hemail} /></div>
               <div className='formReg'><label>Password</label>
@@ -265,7 +316,7 @@ export default function RegisterMain() {
                 <input type='text' required onChange={handleClickpri} name='cname' value={inputspri.cname || ''} />
               </div>
               <div className='formReg'><label>Phone No</label>
-                <input type='tel' required onChange={handleClickpri} name='cphone' value={inputspri.cphone || ""} /></div>
+                <input type='number' required onChange={handleClickpri} name='cphone' value={inputspri.cphone || ""} /></div>
               <div className='formReg'><label>Experience(Yrs)</label>
                 <input type='number' required onChange={handleClickpri} name='cexperience' value={inputspri.cexperience || ""} /></div>
               <div className='formReg'><label>Licence Id</label>

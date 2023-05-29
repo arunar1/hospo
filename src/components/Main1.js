@@ -17,6 +17,11 @@ export default function Main1() {
         usertype,userid,password
       }).then(res=>{
         console.log(res.data)
+        if(res.data.message=='choose account type')
+        {
+          alert(res.data.message)
+        }
+       
         console.log(res.data.details)
         if(res.data.status=='ok'){
           alert("login successful")
