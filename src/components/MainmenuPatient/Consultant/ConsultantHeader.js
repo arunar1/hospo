@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-
+import ConprofileCard from './ConprofileCard';
 export default function ConsultantHeader() {
 const user=JSON.parse(window.localStorage.getItem("userid"))
-console.log(user)
+
 
 
 const logout=()=>{
@@ -20,8 +20,8 @@ const logout=()=>{
             </div>
             <div className='selection'>
               <ul>
-                <li><Link to='/home/takeappointment' className='selctionbutton'>Show Appointment</Link></li>
-                <li><Link to='/home/appointmenthistory' className='selctionbutton'>Edit Appointment</Link></li>
+                <li><Link to='/home/' className='selctionbutton'>Show Appointment</Link></li>
+                <li><Link to='/home/' className='selctionbutton'>Edit Appointment</Link></li>
               </ul>
             </div>
         </div>
@@ -37,6 +37,7 @@ const logout=()=>{
               </ul>
             </div>
           </div>
+          <ConprofileCard/>
         </div>
       </div>
     </div>
