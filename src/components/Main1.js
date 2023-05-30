@@ -28,7 +28,19 @@ export default function Main1() {
           console.log(res.data.data)
           window.localStorage.setItem("token",res.data.data);
           window.localStorage.setItem("userid",JSON.stringify(res.data.details));
+          if(res.data.details.usertype=='patient')
+          {
           window.location.href='./home'
+          }
+          else if(res.data.details.usertype=='hospital')
+          {
+            window.location.href='./hospitalhome'
+
+          }
+          else if(res.data.details.usertype=='privateconsultant'){
+            window.location.href='./consultanthome'
+
+          }
         }
         else{
           alert("invalid credentials")

@@ -1,7 +1,29 @@
-import React from 'react'
+import React, { useState,useEffect } from 'react'
 import './Slot.css'
 import { Link, Route, Router, Switch } from "react-router-dom";
 export default function Slot() {
+  const [selected, setselected] = useState({
+    "slotA": 0,
+    "slotB": 0,
+    "slotC": 0,
+    "slotD": 0,
+    "slotE": 0,
+    "slotF": 0,
+    "slotG": 0,
+    "slotH": 0,
+
+
+  })
+  const select = (e) => {
+    setselected(()=>{
+    })
+  }
+  const selectA = (selected) => {
+    setselected(selected+1)
+    
+  }
+  console.log(selected)
+  
   return (
     <>
       <div className='sloter'>
@@ -14,14 +36,14 @@ export default function Slot() {
       </div>
       <div className='containerSlot'>
         <div className='wrapper'>
-          <div className='slot slotA'>09:00-09:30</div>
-          <div className='slot slotB'>09:30-10:00</div>
-          <div className='slot slotC'>10:00-10:30</div>
-          <div className='slot slotD'>10:30-11:00</div>
-          <div className='slot slotE'>11:00-11:30</div>
-          <div className='slot slotF'>11:30-12:00</div>
-          <div className='slot slotG'>12:00-12:30</div>
-          <div className='slot slotH'>12:30-01:00</div>
+          <div><button onClick={selectA} className='slot slotA'>{selected.slotA}/10</button></div>
+          <div><button onClick={select} className='slot slotB'>{selected.slotB}/10</button></div>
+          <div><button onClick={select} className='slot slotC'>{selected.slotA}/10</button></div>
+          <div><button onClick={select} className='slot slotD'>{selected.slotA}/10</button></div>
+          <div><button onClick={select} className='slot slotE'>{selected.slotA}/10</button></div>
+          <div><button onClick={select} className='slot slotF'>{selected.slotA}/10</button></div>
+          <div><button onClick={select} className='slot slotG'>{selected.slotA}/10</button></div>
+          <div><button onClick={select} className='slot slotH'>{selected.slotA}/10</button></div>
         </div>
       </div>
     </>

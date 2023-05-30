@@ -44,13 +44,17 @@ export default function TakeAppointment() {
     }
   
   
-  console.log(form11)
-  console.log(form22)
-  console.log(form33)
-  const checkslot=()=>{
-    window.location.href='./takeappointment/slot'
+  // console.log(form11)
+  // console.log(form22)
+  // console.log(form33)
+  const checkslot=(e)=>{
+    windowChange()
+    
   }
-  
+  const windowChange=()=>{
+    window.location.href='./takeappointment/slot'
+
+  }
 
 
   return (
@@ -136,7 +140,7 @@ export default function TakeAppointment() {
                 <input type='date' required></input>
               </div>
               <div className='hos'>
-                <input type='submit' className='subbtn'></input>
+                <input type='submit' className='subbtn' onClick={checkslot}></input>
               </div>
 
             </form>
@@ -164,7 +168,7 @@ export default function TakeAppointment() {
                 <input type='date' required></input>
               </div>
               <div className='hos'>
-                <input type='submit' className='subbtn'></input>
+                <input type='submit' className='subbtn' onClick={checkslot}></input>
               </div>
             </form>
           </div>

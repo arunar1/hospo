@@ -99,6 +99,7 @@
 }
 .patientHeader .selection{
     overflow: hidden;
+    font-weight: 500;
 }
 .patientHeader .selection ul{
     height:80vh;

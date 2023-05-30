@@ -1,19 +1,15 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-import './PatientHeader.css'
 
-import ProfileCard from './ProfileCard';
-export default function PatientHeader(props) {
-  console.log(props)
+export default function ConsultantHeader() {
 const user=JSON.parse(window.localStorage.getItem("userid"))
+console.log(user)
 
 
 const logout=()=>{
   window.localStorage.clear();
   window.location.href='./'
 }
-
-
   return (
     <div>
       
@@ -24,26 +20,23 @@ const logout=()=>{
             </div>
             <div className='selection'>
               <ul>
-                <li><Link to='/home/takeappointment' className='selctionbutton'>Take Appointment</Link></li>
-                <li><Link to='/home/appointmenthistory' className='selctionbutton'>Appointment Histroy</Link></li>
-                <li><Link to='/home/rescheduleappointment' className='selctionbutton'>Reschedule Apppointment</Link></li>
-                <li><Link to='/home/cancelappointment' className='selctionbutton'>Cancel Appointment</Link></li>
+                <li><Link to='/home/takeappointment' className='selctionbutton'>Show Appointment</Link></li>
+                <li><Link to='/home/appointmenthistory' className='selctionbutton'>Edit Appointment</Link></li>
               </ul>
             </div>
         </div>
         <div className='navBar'>
           <div className='topNav'>
-            <div className='profile'><h1>Profile</h1></div>
+            <div className='profile'><h1>Consultant Profile</h1></div>
             <div className='setting'>
               <ul>
-                <li>Account Type : Patient</li>
+                <li>Account Type : Private Consultant</li>
                 <li>User ID :{user.userId}</li>
                 <li>settings</li>
                 <li><button  onClick={logout} className='logoutbtn'>LogOut</button></li>
               </ul>
             </div>
           </div>
-          <ProfileCard/>
         </div>
       </div>
     </div>

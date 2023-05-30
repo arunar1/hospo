@@ -8,32 +8,39 @@ import Rescheduleappointment from '../Reschedule/Rescheduleappointment';
 import AppointmentHistory from '../History/AppointmentHistory';
 import CancelAppointment from '../Cancel/CancelAppointment';
 import Slot from '../TakeAppointment/Slot';
+import Consultant from './Consultant/Consultant';
+import Hospital from './Hospital/Hospital';
+import HospitalHeader from './Hospital/HospitalHeader';
+
 export default function PatientMenu() {
-  const [datas,setdatas]=useState();
+  const [datas,setdatas]=useState({});
   useEffect(()=>{
     try{
          axios.post('http://localhost:5000/home',{
           token:window.localStorage.getItem("token")
         }).then(res=>{
-          // window.localStorage.setItem("userid",JSON.stringify(res.data.data));
+          
 
-
-          setdatas(res.data.data)
+          
+          
           if(res.data.status=='ok'){
-            console("hello")
+            // window.localStorage.setItem("userid",JSON.stringify(res.data.data));
+            // window.location.href='./home'
+            console.log("success")
+            setdatas(res.data.data)
           }
           
           
         }).catch(err=>{
-          console.log("Some error")
+          console.log(err)
         })
   
       }catch(e){
         console.log(e)
       }
     
-  },[setdatas])
-
+  },[])
+  
   
   
   
@@ -47,9 +54,15 @@ export default function PatientMenu() {
       
       <Router>
         <Switch>
-          <Route  exact path='/home' component={PatientHeader} />
-         
-      
+          <Route  exact path='/home' >
+           <PatientHeader />
+          </Route>
+          <Route  exact path='/hospitalhome' >
+           <Hospital />
+          </Route>
+          <Route  exact path='/consultantlhome' >
+           <Consultant/>
+          </Route>
           <Route exact path='/home/takeappointment'>
             <TakeAppointment/>
           </Route>
@@ -62,7 +75,7 @@ export default function PatientMenu() {
           <Route path='/home/cancelappointment'>
             <CancelAppointment/>
           </Route>
-          <Route path='/home/takeappointment/slot' component={Slot}/>
+          <Route  path='/home/takeappointment/slot' component={Slot}/>
         </Switch>
       </Router>
     </div>
