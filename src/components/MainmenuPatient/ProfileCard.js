@@ -1,10 +1,10 @@
 import React from 'react'
 import './ProfileCard.css'
 
-export default function ProfileCard() {
+export default function ProfileCard(props) {
  
-  const user=JSON.parse(window.localStorage.getItem("userid"))
-  
+console.log(props)  
+const user=props.data;
 
   return (
     <div>

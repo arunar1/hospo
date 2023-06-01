@@ -1,10 +1,9 @@
 import React from 'react'
 import './ConprofileCard.css'
 
-export default function ConprofileCard() {
+export default function ConprofileCard(props) {
  
-  const user=JSON.parse(window.localStorage.getItem("userid"))
-  
+  const user=props.data;  
 
   return (
     <div>

@@ -1,9 +1,9 @@
 import React from 'react'
 import './HosprofileCard.css'
 
-export default function HosprofileCard() {
+export default function HosprofileCard(props) {
  
-  const user=JSON.parse(window.localStorage.getItem("userid"))
+  const user=props.data;
   
 
   return (

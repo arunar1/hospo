@@ -4,8 +4,8 @@ import './PatientHeader.css'
 
 import ProfileCard from './ProfileCard';
 export default function PatientHeader(props) {
-  console.log(props)
-const user=JSON.parse(window.localStorage.getItem("userid"))
+  console.log(props.data)
+// const user=JSON.parse(window.localStorage.getItem("userid"))
 
 
 const logout=()=>{
@@ -37,13 +37,13 @@ const logout=()=>{
             <div className='setting'>
               <ul>
                 <li>Account Type : Patient</li>
-                <li>User ID :{user.userId}</li>
+                <li>User ID :{props.data.userId}</li>
                 <li>settings</li>
                 <li><button  onClick={logout} className='logoutbtn'>LogOut</button></li>
               </ul>
             </div>
           </div>
-          <ProfileCard/>
+          <ProfileCard data={props.data}/>
         </div>
       </div>
     </div>

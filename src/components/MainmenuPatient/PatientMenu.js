@@ -8,9 +8,8 @@ import Rescheduleappointment from '../Reschedule/Rescheduleappointment';
 import AppointmentHistory from '../History/AppointmentHistory';
 import CancelAppointment from '../Cancel/CancelAppointment';
 import Slot from '../TakeAppointment/Slot';
-import Consultant from './Consultant/Consultant';
-import Hospital from './Hospital/Hospital';
-import HospitalHeader from './Hospital/HospitalHeader';
+import TakeAppo from '../TakeAppointment/TakeAppo';
+
 
 export default function PatientMenu() {
   const [datas,setdatas]=useState({});
@@ -23,9 +22,7 @@ export default function PatientMenu() {
 
           
           
-          if(res.data.status=='ok'){
-            // window.localStorage.setItem("userid",JSON.stringify(res.data.data));
-            // window.location.href='./home'
+          if(res.data.status=='ok'){            
             console.log("success")
             setdatas(res.data.data)
           }
@@ -40,6 +37,8 @@ export default function PatientMenu() {
       }
     
   },[])
+console.log(datas.usertype)
+
   
   
   
@@ -55,16 +54,10 @@ export default function PatientMenu() {
       <Router>
         <Switch>
           <Route  exact path='/home' >
-           <PatientHeader />
+           <PatientHeader data={datas} />
           </Route>
-          <Route  exact path='/hospitalhome' >
-           <Hospital />
-          </Route>
-          <Route  exact path='/consultantlhome' >
-           <Consultant/>
-          </Route>
-          <Route exact path='/home/takeappointment'>
-            <TakeAppointment/>
+          <Route exact path='/takeappointment'>
+            <TakeAppo/>
           </Route>
           <Route exact path='/home/appointmenthistory'>
             <AppointmentHistory/>

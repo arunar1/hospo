@@ -4,9 +4,8 @@ import { Link } from "react-router-dom";
 import HosprofileCard from './HosprofileCard';
 import './HosprofileCard.css'
 
-export default function HospitalHeader() {
-const user=JSON.parse(window.localStorage.getItem("userid"))
-console.log(user)
+export default function HospitalHeader(props) {
+
 
 
 const logout=()=>{
@@ -34,13 +33,13 @@ const logout=()=>{
             <div className='setting'>
               <ul>
                 <li>Account Type : Hospital</li>
-                <li>User ID :{user.userId}</li>
+                <li>User ID :{props.data.userId}</li>
                 <li>settings</li>
                 <li><button  onClick={logout} className='logoutbtn'>LogOut</button></li>
               </ul>
             </div>
           </div>
-          <HosprofileCard/>
+          <HosprofileCard data={props.data}/>
         </div>
         
       </div>

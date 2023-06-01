@@ -1,10 +1,9 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import ConprofileCard from './ConprofileCard';
-export default function ConsultantHeader() {
-const user=JSON.parse(window.localStorage.getItem("userid"))
+export default function ConsultantHeader(props) {
 
-
+  
 
 const logout=()=>{
   window.localStorage.clear();
@@ -31,13 +30,13 @@ const logout=()=>{
             <div className='setting'>
               <ul>
                 <li>Account Type : Private Consultant</li>
-                <li>User ID :{user.userId}</li>
+                <li>User ID :{props.data.userId}</li>
                 <li>settings</li>
                 <li><button  onClick={logout} className='logoutbtn'>LogOut</button></li>
               </ul>
             </div>
           </div>
-          <ConprofileCard/>
+          <ConprofileCard data={props.data}/>
         </div>
       </div>
     </div>

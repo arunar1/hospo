@@ -5,41 +5,40 @@ import { BrowserRouter as Router,Routes,Route, Switch,Link } from 'react-router-
 
 import { useEffect,useState } from 'react'
 export default function Consultant() {
-    useEffect(()=>{
-        try{
-             axios.post('http://localhost:5000/consultanthome',{
-              token:window.localStorage.getItem("token")
-            }).then(res=>{
-              
-    
-              
-              
-              if(res.data.status=='ok'){
-                // window.localStorage.setItem("userid",JSON.stringify(res.data.data));
-                // window.location.href='./home'
-                console.log("success")
-    
-              }
-              
-              
-            }).catch(err=>{
-              console.log(err)
-            })
-      
-          }catch(e){
-            console.log(e)
-          }
-        
-      },[])
+  const [datas,setdatas]=useState({});
+  useEffect(()=>{
+    try{
+         axios.post('http://localhost:5000/consultanthome',{
+          token:window.localStorage.getItem("token")
+        }).then(res=>{
+          
 
-      console.log("success")
+          
+          
+          if(res.data.status=='ok'){            
+            console.log("success")
+            setdatas(res.data.data)
+          }
+          
+          
+        }).catch(err=>{
+          console.log(err)
+        })
+  
+      }catch(e){
+        console.log(e)
+      }
+    
+  },[])
+
+      console.log(datas)
     
   return (
     <div>
         <Router>
         <Switch>
           <Route  exact path='/consultanthome' >
-           <ConsultantHeader />
+           <ConsultantHeader data={datas} />
           </Route>
         </Switch>
         </Router>
