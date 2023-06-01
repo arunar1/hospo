@@ -8,7 +8,6 @@ import Rescheduleappointment from '../Reschedule/Rescheduleappointment';
 import AppointmentHistory from '../History/AppointmentHistory';
 import CancelAppointment from '../Cancel/CancelAppointment';
 import Slot from '../TakeAppointment/Slot';
-import TakeAppo from '../TakeAppointment/TakeAppo';
 
 
 export default function PatientMenu() {
@@ -56,8 +55,8 @@ console.log(datas.usertype)
           <Route  exact path='/home' >
            <PatientHeader data={datas} />
           </Route>
-          <Route exact path='/takeappointment'>
-            <TakeAppo/>
+          <Route exact path='/home/takeappointment'>
+            <TakeAppointment/>
           </Route>
           <Route exact path='/home/appointmenthistory'>
             <AppointmentHistory/>
@@ -68,7 +67,7 @@ console.log(datas.usertype)
           <Route path='/home/cancelappointment'>
             <CancelAppointment/>
           </Route>
-          <Route  path='/home/takeappointment/slot' component={Slot}/>
+          <Route  exact path='/home/takeappointment/slot' component={Slot}/>
         </Switch>
       </Router>
     </div>
