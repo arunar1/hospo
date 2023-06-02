@@ -1,7 +1,7 @@
 import React from 'react'
 import './RegisterMain.css'
 import { useState } from 'react'
-import axios from 'axios'
+import axios from 'axios';
 
 
 
@@ -71,7 +71,7 @@ export default function RegisterMain() {
     console.log(inputs)
     
   try{
-     axios.post("http://localhost:5000/registration",inputs)
+     axios.post("https://hospo-backend.vercel.app/registration",inputs)
      .then((data)=>{
       if(data.data.error){
         alert(data.data.error)
