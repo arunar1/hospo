@@ -51,7 +51,6 @@ console.log(datas.usertype)
     <div>
       
       <Router>
-        <Switch>
           <Route  exact path='/home' >
            <PatientHeader data={datas} />
           </Route>
@@ -67,8 +66,9 @@ console.log(datas.usertype)
           <Route path='/home/cancelappointment'>
             <CancelAppointment/>
           </Route>
-          <Route  exact path='/home/takeappointment/slot' component={Slot}/>
-        </Switch>
+          <Route  exact path='/home/takeappointment/slot'>
+          <Slot/>
+          </Route>
       </Router>
     </div>
   )
