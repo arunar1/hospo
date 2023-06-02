@@ -318,7 +318,7 @@ export default function RegisterMain() {
               <div className='formReg'><label>Phone No</label>
                 <input type='number' required onChange={handleClickpri} name='cphone' value={inputspri.cphone || ""} /></div>
               <div className='formReg'><label>Category</label>
-                <input type='string' required onChange={handleClickpri} name='ccategory' value={inputspri.cexperience || ""} /></div>
+                <input type='text' required onChange={handleClickpri} name='ccategory' value={inputspri.ccategory || ""} /></div>
               <div className='formReg'><label>Licence Id</label>
                 <input type='text' required onChange={handleClickpri} name='clicence' value={inputspri.clicence || ""} />
               </div>
