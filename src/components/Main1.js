@@ -13,7 +13,7 @@ export default function Main1() {
   async function submit(e){
     e.preventDefault();
     try{
-      await axios.post('http://localhost:5000/',{
+      await axios.post('https://hospo-backend.vercel.app/',{
         usertype,userid,password
       }).then(res=>{
         console.log(res.data)

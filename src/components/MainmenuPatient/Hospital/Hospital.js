@@ -8,7 +8,7 @@ export default function Hospital() {
   const [datas,setdatas]=useState({});
   useEffect(()=>{
     try{
-         axios.post('http://localhost:5000/hospitalhome',{
+         axios.post('https://hospo-backend.vercel.app/hospitalhome',{
           token:window.localStorage.getItem("token")
         }).then(res=>{
           

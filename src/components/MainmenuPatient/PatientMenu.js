@@ -14,7 +14,7 @@ export default function PatientMenu() {
   const [datas,setdatas]=useState({});
   useEffect(()=>{
     try{
-         axios.post('http://localhost:5000/home',{
+         axios.post('https://hospo-backend.vercel.app/home',{
           token:window.localStorage.getItem("token")
         }).then(res=>{
           
