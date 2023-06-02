@@ -51,7 +51,6 @@ console.log(datas.usertype)
     <div>
       
       <Router>
-        {/* <path></path> */}
           <Route  exact path='/home' >
            <PatientHeader data={datas} />
           </Route>
