@@ -2,65 +2,31 @@
 .containerSlot{
     
     display: flex;
-    justify-content: center;
-    height: 100vh;
-    width: 70%;
+    /* justify-content: space-evenly; */
     align-items: center;
-}
-
-.wrapper{
-
-    height: 60vh;
-    width: 60vw;
-    display: grid;
-    grid-gap: 50px;
-    grid-template-columns:2fr 2fr 2fr 2fr;
-    grid-template-rows: 2fr 2fr;
-    grid-template-areas: 'slotA slotB slotC slotD'
-                         'slotE slotF slotG slotH';
-    
 }
 .slot{
     border-radius: 20px;
     display: flex;
-    justify-content: center;
+    width: 200px;
+    height: 50px;
+    margin: 20px;
     align-items: center;
     background-color: blue;
     color: white;
-    font-size: 50px;
+    font-size: 10px;
+}
+.wrapper{
+    display: flex;
+    width: 50vw;
+    flex-wrap: wrap;
+    padding-top: 20vh;
 }
 
-.slotA{
-    grid-area: slotA;
-}
-.slotB{
-    grid-area: slotB;
-}
-.slotC{
-    grid-area: slotC;
-}
-.slotD{
-    grid-area: slotD;
-}
-.slotE{
-    grid-area: slotE;
-}
-.slotF{
-    grid-area: slotF;
-}
-.slotG{
-    grid-area: slotG;
-}
-.slotH{
-    grid-area: slotH;
-}
 body{
     background-color: lightblue;
 }
-.sloter{
-    position: absolute;
-    width: 100%;
-}
+
 .sloter .slotHeader{
     
     height: 75px;
@@ -80,10 +46,51 @@ body{
 }
 .sloter .slotHeader ul li .linker{
     text-decoration: none;
-    position: relative;
-    right: 30px;
+    padding-right: 40px;
     color: white;
     font-weight: 500;
     font-size: 20px;
 
+}
+
+.formcontainer{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    width: 50vw;
+    font-size: 17px;
+}
+
+.formcontainer .formapp{
+    margin: 30px;
+    position: relative;
+   
+
+}
+.formapp button{
+    background-color: rgb(122, 82, 94);
+    width: 130px;
+}
+.formcontainer .formapp input{
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    left: 130px;
+    top: 2px;
+    font-size: 17px;
+    font-weight: 560;
+    color: blue;
+}
+.formcontainer .formapp label{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+}
+.formcontainer form{
+    border: 2px solid black;
+    position: relative;
+    top: 20vh;
+    width: 400px;
+    padding-left: 30px;
+    border-radius: 10px;
+    
 }
