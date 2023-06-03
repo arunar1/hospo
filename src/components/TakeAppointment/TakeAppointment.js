@@ -1,13 +1,26 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './TakeAppointment.css';
 import { Link,Route,Router,Switch } from "react-router-dom";
 import { useState } from 'react';
 import Slot from './Slot';
+import axios from 'axios';
 export default function TakeAppointment() {
-  let [inputs, setinputs] = useState({})
+  let [inputs, setinputs] = useState();
+  useEffect(async()=>{
+    const getDistrict=await axios.get('http://localhost:5000/districtinfo')
+    .then(res=>{
+      console.log(res.data)
+    })
+  },[])
+
+
 
   let [inputs2, setinputs2] = useState({})
   let [inputs3, setinputs3] = useState({})
+
+
+  const [district,setdistrict]=useState([]);
+
 
 
 
@@ -43,9 +56,7 @@ export default function TakeAppointment() {
     setinputs(values => ({ ...values, [name]: value }))
   }
 
-const checkslot=()=>{
 
-}
 const handleClick2 = (event) => {
   const name = event.target.name;
   const value = event.target.value;
@@ -113,10 +124,12 @@ const handleClick3= (event) => {
                 <option value="Private1">Private Consultant</option>
               </select>
             </div>
+            
             {/* <div className='appointmentcheck'>
               <button onClick={createClass} className='appobtn'>{btnclick}</button>
             </div> */}
           </div>
+          
           <div>
             <form className={`form1 ${form11}`} onSubmit={handleSubmit} required>
               <diV className='hos'>

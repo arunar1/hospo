@@ -8,7 +8,7 @@ export default function Consultant() {
   const [datas,setdatas]=useState({});
   useEffect(()=>{
     try{
-         axios.post('https://hospo-backend.vercel.app/consultanthome',{
+         axios.post('http://localhost:5000/consultanthome',{
           token:window.localStorage.getItem("token")
         }).then(res=>{
           

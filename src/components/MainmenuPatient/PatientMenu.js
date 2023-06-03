@@ -8,6 +8,7 @@ import Rescheduleappointment from '../Reschedule/Rescheduleappointment';
 import AppointmentHistory from '../History/AppointmentHistory';
 import CancelAppointment from '../Cancel/CancelAppointment';
 import Slot from '../TakeAppointment/Slot';
+import Register from '../Registration/Register';
 
 
 export default function PatientMenu() {
@@ -24,6 +25,7 @@ export default function PatientMenu() {
           if(res.data.status=='ok'){            
             console.log("success")
             setdatas(res.data.data)
+            window.localStorage.setItem("isLoggedIn",true)
           }
           
           
@@ -45,6 +47,8 @@ console.log(datas.usertype)
 
   console.log(datas)
   
+  const loggeduser=window.localStorage.getItem("isLoggedIn")
+  console.log(loggeduser)
  
 
   return (
@@ -52,7 +56,8 @@ console.log(datas.usertype)
       
       <Router>
           <Route  exact path='/home' >
-           <PatientHeader data={datas} />
+
+          {loggeduser=="true"?<PatientHeader data={datas} />:<Register/>}
           </Route>
           <Route exact path='/home/takeappointment'>
             <TakeAppointment/>

@@ -71,7 +71,7 @@ export default function RegisterMain() {
     console.log(inputs)
     
   try{
-     axios.post("https://hospo-backend.vercel.app/registration",inputs)
+     axios.post("http://localhost:5000/registration",inputs)
      .then((data)=>{
       if(data.data.error){
         alert(data.data.error)
