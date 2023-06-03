@@ -5,6 +5,7 @@ import axios from 'axios';
 import { Route, Router } from 'react-router-dom/cjs/react-router-dom.min';
 import PatientMenu from './MainmenuPatient/PatientMenu';
 export default function Main1() {
+// window.localStorage.setItem("isLoggedIn",false)
 
   const [usertype,setuserType]=useState();
 
@@ -13,7 +14,7 @@ export default function Main1() {
   async function submit(e){
     e.preventDefault();
     try{
-      await axios.post('https://hospo-backend.vercel.app/',{
+      await axios.post('http://localhost:5000/',{
         usertype,userid,password
       }).then(res=>{
         console.log(res.data)
