@@ -5,12 +5,6 @@ import { useState } from 'react';
 import Slot from './Slot';
 import axios from 'axios';
 export default function TakeAppointment() {
-  // useEffect(async()=>{
-  //   const getDistrict=await axios.get('http://localhost:5000/districtinfo')
-  //   .then(res=>{
-  //     console.log(res.data)
-  //   })
-  // },[])
 
 
 
@@ -22,7 +16,6 @@ export default function TakeAppointment() {
   let [inputs3, setinputs3] = useState({})
 
 
-  // const [district,setdistrict]=useState([]);
 
 
 
@@ -73,7 +66,6 @@ const handleClick3= (event) => {
 
   const handleSubmit=(e)=>{
     e.preventDefault()
-    console.log(inputs)
     inputs.HospitalType=selectType;
      window.localStorage.setItem("appdeatail",JSON.stringify(inputs));
 
@@ -82,7 +74,6 @@ const handleClick3= (event) => {
   }
   const handleSubmit2=(e)=>{
     e.preventDefault()
-    console.log(inputs2)
     inputs2.HospitalType=selectType;
      window.localStorage.setItem("appdeatail",JSON.stringify(inputs2));
 
@@ -91,7 +82,6 @@ const handleClick3= (event) => {
   }
   const handleSubmit3=(e)=>{
     e.preventDefault()
-    console.log(inputs3)
     inputs3.HospitalType=selectType;
      window.localStorage.setItem("appdeatail",JSON.stringify(inputs3));
     windowChange()
@@ -111,14 +101,26 @@ useEffect(()=>{
   })
 },[])
 
-console.log(district)
+
+const [doctor,setdoctor]=useState([]);
+
+
+useEffect(()=>{
+  axios.get("http://localhost:5000/privateinfo")
+  .then(res=>{
+    setdoctor(res.data);
+  })
+},[])
+
+
+
 
 const [hos,sethos]=useState([])
 
 useEffect(()=>{
   const dist=[];
   district.map((dis)=>{
-    if(dis.district==inputs.DistrictName){
+    if(dis.district==inputs.DistrictName && dis.hospitaltype==="Government"){
       dist.push(dis.hospitalname)
       
     }
@@ -126,13 +128,37 @@ useEffect(()=>{
   })
 },[inputs.DistrictName])
 
-// console.log(inputs.DistrictName)
-console.log(hos)
 
 
 
 
+const [prihos,setprihos]=useState([])
 
+useEffect(()=>{
+  const distpri=[];
+
+  district.map((dis)=>{
+    if(dis.district==inputs2.DistrictName && dis.hospitaltype=="private"){
+      distpri.push(dis.hospitalname)
+      
+    }
+    setprihos(distpri)
+  })
+},[inputs2.DistrictName])
+
+
+
+const [con,setcon]=useState([])
+useEffect(()=>{
+  const con=[];
+  doctor.map((dis)=>{
+    if(dis.district==inputs3.DistrictName && dis.usertype=="privateconsultant"){
+      con.push(dis.name)
+      
+    }
+    setcon(con)
+  })
+},[inputs3.DistrictName])
 
 
 
@@ -206,19 +232,26 @@ console.log(hos)
               <diV className='hos'>
                 <label>District</label>
                 <select name='DistrictName' onChange={handleClick2}  value={inputs2.DistrictName} required>
-                  <option></option>
-                  <option value="kannur">Kannur</option>
-                  <option value="kozhikode">Kozhikode</option>
-                  <option value="kottayam">kottayam</option>
+                <option>Select District</option>
+                  {
+                    district.map((dis,index)=>(
+                     <option value={dis.district}>{dis.district}</option>
+                    ))
+   
+                  }
                 </select>
               </diV>
               <div className='hos' name='HospitalName' onChange={handleClick2} value={inputs2.HospitalName}>
                 <label>Pri.Hospital Name</label>
                 <select required>
-                  <option></option>
-                  <option value="phc payyoli">Phc payyoli</option>
-                  <option value="phc kozhikode">phc Kozhikode</option>
-                  <option value="phc kottayam">phckottayam</option>
+                <option>Select Hospital</option>
+                  {
+                    prihos.map((dis,index)=>(
+                     <option value={dis}>{dis}</option>
+                    ))
+   
+                  }
+                 
                 </select>
               </div>
               <div className='hos'>
@@ -234,19 +267,25 @@ console.log(hos)
               <diV className='hos'>
                 <label>District</label>
                 <select onChange={handleClick3} name='DistrictName' value={inputs3.DistrictName} required>
-                  <option></option>
-                  <option value="kannur">Kannur</option>
-                  <option value="kozhikode">Kozhikode</option>
-                  <option value="kottayam">kottayam</option>
+                <option>Select District</option>
+                  {
+                    doctor.map((dis,index)=>(
+                     <option value={dis.district}>{dis.district}</option>
+                    ))
+   
+                  }
                 </select>
               </diV>
               <div className='hos'>
                 <label>Doctor Name</label>
                 <select   required onChange={handleClick3} name='DoctorName' value={inputs3.DoctorName} >
-                  <option></option>
-                  <option value="phc payyoli">Phc payyoli</option>
-                  <option value="phc kozhikode">phc Kozhikode</option>
-                  <option value="phc kottayam">phckottayam</option>
+                <option>Select Doctor</option>
+                  {
+                    con.map((dis,index)=>(
+                     <option value={dis}>{dis}</option>
+                    ))
+   
+                  }
                 </select>
               </div>
               <div className='hos'>
