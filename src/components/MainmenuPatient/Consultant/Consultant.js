@@ -2,7 +2,7 @@ import React from 'react'
 import ConsultantHeader from './ConsultantHeader';
 import axios from 'axios'
 import { BrowserRouter as Router,Routes,Route, Switch,Link } from 'react-router-dom';
-
+import Register from '../../Registration/Register';
 import { useEffect,useState } from 'react'
 export default function Consultant() {
   const [datas,setdatas]=useState({});
@@ -30,6 +30,15 @@ export default function Consultant() {
       }
     
   },[])
+  const logout=()=>{
+    window.localStorage.clear();
+    window.location.href='./'
+  }
+    
+    
+  
+    
+    const loggeduser=window.localStorage.getItem("isLoggedIn")
 
       console.log(datas)
     
@@ -38,7 +47,9 @@ export default function Consultant() {
         <Router>
         <Switch>
           <Route  exact path='/consultanthome' >
-           <ConsultantHeader data={datas} />
+          {loggeduser=="true"?<ConsultantHeader data={datas} />:<Register/>}
+
+           
           </Route>
         </Switch>
         </Router>

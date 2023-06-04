@@ -5,21 +5,24 @@ import { useState } from 'react';
 import Slot from './Slot';
 import axios from 'axios';
 export default function TakeAppointment() {
-  let [inputs, setinputs] = useState();
-  useEffect(async()=>{
-    const getDistrict=await axios.get('http://localhost:5000/districtinfo')
-    .then(res=>{
-      console.log(res.data)
-    })
-  },[])
+  // useEffect(async()=>{
+  //   const getDistrict=await axios.get('http://localhost:5000/districtinfo')
+  //   .then(res=>{
+  //     console.log(res.data)
+  //   })
+  // },[])
 
+
+
+  let [inputs, setinputs] = useState({});
+  
 
 
   let [inputs2, setinputs2] = useState({})
   let [inputs3, setinputs3] = useState({})
 
 
-  const [district,setdistrict]=useState([]);
+  // const [district,setdistrict]=useState([]);
 
 
 
@@ -98,6 +101,41 @@ const handleClick3= (event) => {
     window.location.href='./takeappointment/slot'
   }
 
+const [district,setdistrict]=useState([]);
+
+
+useEffect(()=>{
+  axios.get("http://localhost:5000/districtinfo")
+  .then(res=>{
+    setdistrict(res.data);
+  })
+},[])
+
+console.log(district)
+
+const [hos,sethos]=useState([])
+
+useEffect(()=>{
+  const dist=[];
+  district.map((dis)=>{
+    if(dis.district==inputs.DistrictName){
+      dist.push(dis.hospitalname)
+      
+    }
+    sethos(dist)
+  })
+},[inputs.DistrictName])
+
+// console.log(inputs.DistrictName)
+console.log(hos)
+
+
+
+
+
+
+
+
 
 
   return (
@@ -124,10 +162,6 @@ const handleClick3= (event) => {
                 <option value="Private1">Private Consultant</option>
               </select>
             </div>
-            
-            {/* <div className='appointmentcheck'>
-              <button onClick={createClass} className='appobtn'>{btnclick}</button>
-            </div> */}
           </div>
           
           <div>
@@ -135,19 +169,26 @@ const handleClick3= (event) => {
               <diV className='hos'>
                 <label>District</label>
                 <select required  onChange={handleClick} name='DistrictName' value={inputs.DistrictName}>
-                  <option></option>
-                  <option value="kannur">Kannur</option>
-                  <option value="kozhikode">Kozhikode</option>
-                  <option value="kottayam">kottayam</option>
+                  <option>Select District</option>
+                  {
+                    district.map((dis,index)=>(
+                     <option value={dis.district}>{dis.district}</option>
+                    ))
+   
+                  }
                 </select>
               </diV>
               <div className='hos'>
                 <label>Gov.Hospital Name</label>
                 <select onChange={handleClick} name='HospitalName' value={inputs.HospitalName} >
-                  <option></option>
-                  <option value="phc payyoli">Phc payyoli</option>
-                  <option value="phc kozhikode">phc Kozhikode</option>
-                  <option value="phc kottayam">phckottayam</option>
+                  <option>Select Hospital</option>
+                  {
+                    hos.map((dis,index)=>(
+                     <option value={dis}>{dis}</option>
+                    ))
+   
+                  }
+                 
                 </select>
               </div>
               <div className='hos'>

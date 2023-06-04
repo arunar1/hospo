@@ -28,6 +28,7 @@ export default function Main1() {
           alert("login successful")
           console.log(res.data.data)
           window.localStorage.setItem("token",res.data.data);
+          window.localStorage.setItem("isLoggedIn",true)
           // window.localStorage.setItem("userid",JSON.stringify(res.data.details));
           if(res.data.details.usertype=='patient')
           {

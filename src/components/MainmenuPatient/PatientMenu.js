@@ -15,7 +15,7 @@ export default function PatientMenu() {
   const [datas,setdatas]=useState({});
   useEffect(()=>{
     try{
-         axios.post('https://hospo-backend.vercel.app/home',{
+          axios.post('https://hospo-backend.vercel.app/home',{
           token:window.localStorage.getItem("token")
         }).then(res=>{
           
@@ -41,7 +41,10 @@ export default function PatientMenu() {
 console.log(datas.usertype)
 
   
-  
+const logout=()=>{
+  window.localStorage.clear();
+  window.location.href='./'
+}
   
   
 
@@ -56,23 +59,27 @@ console.log(datas.usertype)
       
       <Router>
           <Route  exact path='/home' >
-
           {loggeduser=="true"?<PatientHeader data={datas} />:<Register/>}
           </Route>
           <Route exact path='/home/takeappointment'>
-            <TakeAppointment/>
+          {loggeduser=="true"?<TakeAppointment/>:logout}
+            
           </Route>
           <Route exact path='/home/appointmenthistory'>
-            <AppointmentHistory/>
+          {loggeduser=="true"?<AppointmentHistory/>:logout}
+            
           </Route>
-          <Route path='/home/rescheduleappointment'>
-            <Rescheduleappointment/>
+          <Route exact path='/home/rescheduleappointment'>
+          {loggeduser=="true"?<Rescheduleappointment/>:logout}
+            
           </Route>
-          <Route path='/home/cancelappointment'>
-            <CancelAppointment/>
+          <Route exact path='/home/cancelappointment'>
+          {loggeduser=="true"?<CancelAppointment/>:logout}
+            
           </Route>
           <Route  exact path='/home/takeappointment/slot'>
-          <Slot/>
+          {loggeduser=="true"?<Slot/>:logout}
+          
           </Route>
       </Router>
     </div>
