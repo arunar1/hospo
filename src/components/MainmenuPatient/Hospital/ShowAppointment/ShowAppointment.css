@@ -1,0 +1,27 @@
+body{
+    background-color: lightblue;
+}
+.showappointment .showappointmentHeader{
+    height: 75px;
+    background-color: rgb(103, 66, 66);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.showappointment .showappointmentHeader h1{
+    margin-left: 30px;
+    color: white;
+}
+.showappointment .showappointmentHeader ul{
+   
+    list-style-type: none;
+}
+.showappointment .showappointmentHeader ul li .linker{
+    text-decoration: none;
+    position: relative;
+    right: 30px;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+
+}

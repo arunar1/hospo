@@ -3,8 +3,10 @@ import HospitalHeader from './HospitalHeader'
 import axios from 'axios'
 import { BrowserRouter as Router,Routes,Route, Switch,Link } from 'react-router-dom';
 import Register from '../../Registration/Register';
-
+import ShowAppointment from './ShowAppointment/Showppointment';
 import { useEffect,useState } from 'react'
+import SetAppointment from './SetAppointmentTime/SetAppointment';
+
 export default function Hospital() {
   const [datas,setdatas]=useState({});
   useEffect(()=>{
@@ -46,13 +48,15 @@ export default function Hospital() {
   return (
     <div>
         <Router>
-        <Switch>
           <Route  exact path='/hospitalhome' >
-           
            {loggeduser=="true"?<HospitalHeader data={datas} />:<Register/>}
-
           </Route>
-        </Switch>
+          <Route exact path='/hospitalhome/showappointment'>
+            <ShowAppointment/>
+          </Route>
+          <Route exact path='/hospitalhome/setappointment'>
+            <SetAppointment/>
+          </Route>
         </Router>
       
     </div>

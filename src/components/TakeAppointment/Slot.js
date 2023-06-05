@@ -2,27 +2,18 @@ import React, { useState, useEffect } from 'react'
 import './Slot.css'
 import { Link, Route, Router, Switch } from "react-router-dom";
 export default function Slot() {
-  const [activeButton, setActiveButton] = useState(0);
-  let active;
+  
 
-
-
-  const [selected, setselected] = useState({
-    "slotA": 0,
-    "slotB": 0,
-    "slotC": 0,
-    "slotD": 0,
-    "slotE": 0,
-    "slotF": 0,
-    "slotG": 0,
-    "slotH": 0,
-
-
-  })
 
   const formdata = JSON.parse(window.localStorage.getItem('appdeatail'));
   console.log(formdata)
+  const [timeschedule,settimeschedule]=useState()
+  
 
+  const choosetime=(e)=>{
+      settimeschedule(e.target.value)
+    
+  }
 
 
   const datas = [];
@@ -31,8 +22,15 @@ export default function Slot() {
     datas.push(item)
   }
 
-
-
+  const selectBtn=[
+  {id:'slota',time:"09:00-09:30"},
+  {id:'slotb',time:"09:30-10:00"},
+  {id:'slotc',time:"10:00-10:30"},
+  {id:'slotd',time:"10:30-11:00"},
+  {id:'slote',time:"11:30-12:00"},
+  {id:'slotf',time:"12:00-12:30"},
+  {id:'slotg',time:"12:30-01:00"}
+]
 
 
 
@@ -48,7 +46,11 @@ export default function Slot() {
       </div>
       <div className='containerSlot'>
         <div className='wrapper'>
-
+          {
+            selectBtn.map((btn,index)=>(
+              <button onClick={choosetime} value={btn.time} className='choosetime' id={btn.id}>{btn.time}</button>
+             ))
+          }
         </div>
         <div className='formcontainer'>
          <div>
@@ -71,7 +73,7 @@ export default function Slot() {
               </div>
               <div  className='formapp'>
                 <label>Time:</label>
-                <input type='text' value='' name=''></input>
+                <input type='text' value={timeschedule} name=''></input>
               </div>
               <div  className='formapp'>
                 <button type='submit'>Generate</button>

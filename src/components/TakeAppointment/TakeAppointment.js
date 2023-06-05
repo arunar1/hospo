@@ -66,7 +66,7 @@ const handleClick3= (event) => {
 
   const handleSubmit=(e)=>{
     e.preventDefault()
-    inputs.HospitalType=selectType;
+    inputs.HospitalType="Government Hospital";
      window.localStorage.setItem("appdeatail",JSON.stringify(inputs));
 
     windowChange()
@@ -74,7 +74,7 @@ const handleClick3= (event) => {
   }
   const handleSubmit2=(e)=>{
     e.preventDefault()
-    inputs2.HospitalType=selectType;
+    inputs2.HospitalType="Private Hospital";
      window.localStorage.setItem("appdeatail",JSON.stringify(inputs2));
 
     windowChange()
@@ -82,7 +82,7 @@ const handleClick3= (event) => {
   }
   const handleSubmit3=(e)=>{
     e.preventDefault()
-    inputs3.HospitalType=selectType;
+    inputs3.HospitalType="Private Consultant";
      window.localStorage.setItem("appdeatail",JSON.stringify(inputs3));
     windowChange()
     
@@ -241,9 +241,9 @@ useEffect(()=>{
                   }
                 </select>
               </diV>
-              <div className='hos' name='HospitalName' onChange={handleClick2} value={inputs2.HospitalName}>
+              <div className='hos'>
                 <label>Pri.Hospital Name</label>
-                <select required>
+                <select required  name='HospitalName' onChange={handleClick2} value={inputs2.HospitalName}> 
                 <option>Select Hospital</option>
                   {
                     prihos.map((dis,index)=>(

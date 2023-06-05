@@ -20,7 +20,7 @@
     display: flex;
     width: 50vw;
     flex-wrap: wrap;
-    padding-top: 20vh;
+    padding-top: 10vh;
 }
 
 body{
@@ -89,8 +89,15 @@ body{
     border: 2px solid black;
     position: relative;
     top: 20vh;
-    width: 400px;
+    width: 30vw;
     padding-left: 30px;
     border-radius: 10px;
     
+}
+
+.wrapper .choosetime{
+    margin: 20px;
+    background-color: blueviolet;
+    margin-left: 50px;
+    color: wheat;
 }

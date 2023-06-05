@@ -146,7 +146,12 @@ export default function RegisterMain() {
             alert(data.data.error)
           }
           else{
-            alert("Registered")
+            if(data.data.message){
+              alert(data.data.message)
+            }
+            else{
+              alert("Registered")
+            }
           }
     
          });
