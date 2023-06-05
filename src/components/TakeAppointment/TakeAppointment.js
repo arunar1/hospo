@@ -195,7 +195,7 @@ useEffect(()=>{
               <diV className='hos'>
                 <label>District</label>
                 <select required  onChange={handleClick} name='DistrictName' value={inputs.DistrictName}>
-                  <option>Select District</option>
+                  <option></option>
                   {
                     district.map((dis,index)=>(
                      <option value={dis.district}>{dis.district}</option>
@@ -206,8 +206,8 @@ useEffect(()=>{
               </diV>
               <div className='hos'>
                 <label>Gov.Hospital Name</label>
-                <select onChange={handleClick} name='HospitalName' value={inputs.HospitalName} >
-                  <option>Select Hospital</option>
+                <select onChange={handleClick} name='HospitalName' value={inputs.HospitalName}  required>
+                  <option></option>
                   {
                     hos.map((dis,index)=>(
                      <option value={dis}>{dis}</option>
@@ -232,7 +232,7 @@ useEffect(()=>{
               <diV className='hos'>
                 <label>District</label>
                 <select name='DistrictName' onChange={handleClick2}  value={inputs2.DistrictName} required>
-                <option>Select District</option>
+                <option></option>
                   {
                     district.map((dis,index)=>(
                      <option value={dis.district}>{dis.district}</option>
@@ -244,7 +244,7 @@ useEffect(()=>{
               <div className='hos'>
                 <label>Pri.Hospital Name</label>
                 <select required  name='HospitalName' onChange={handleClick2} value={inputs2.HospitalName}> 
-                <option>Select Hospital</option>
+                <option></option>
                   {
                     prihos.map((dis,index)=>(
                      <option value={dis}>{dis}</option>
@@ -267,7 +267,7 @@ useEffect(()=>{
               <diV className='hos'>
                 <label>District</label>
                 <select onChange={handleClick3} name='DistrictName' value={inputs3.DistrictName} required>
-                <option>Select District</option>
+                <option></option>
                   {
                     doctor.map((dis,index)=>(
                      <option value={dis.district}>{dis.district}</option>
@@ -279,7 +279,7 @@ useEffect(()=>{
               <div className='hos'>
                 <label>Doctor Name</label>
                 <select   required onChange={handleClick3} name='DoctorName' value={inputs3.DoctorName} >
-                <option>Select Doctor</option>
+                <option></option>
                   {
                     con.map((dis,index)=>(
                      <option value={dis}>{dis}</option>

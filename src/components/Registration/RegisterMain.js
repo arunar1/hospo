@@ -112,10 +112,18 @@ export default function RegisterMain() {
               alert(data.data.error)
             }
             else{
-              alert("Registered")
+              if(data.data.message){
+                alert(data.data.message)
+              }
+              else{
+                alert("Registered")
+              }
             }
+      
+           }
+            
      
-          });
+        );
          }
        catch(e){
          console.log(e)
@@ -141,6 +149,7 @@ export default function RegisterMain() {
       try{
          axios.post("http://localhost:5000/registration",inputspri)
          .then((data)=>{
+        
           
           if(data.data.error){
             alert(data.data.error)
@@ -290,7 +299,7 @@ export default function RegisterMain() {
                   <option value="private">Private</option>
                 </select></div>
               <div className='formReg'><label>Licence Id</label>
-                <input type='text' required onChange={handleClickhos} name='hlicence' value={inputshos.hlicence || ""} />
+                <input type='text' required onChange={handleClickhos} name='licence' value={inputshos.licence || ""} />
               </div>
               <div className='formReg'><label>Street Name</label>
                 <input type='text' required onChange={handleClickhos} name='hstreetname' value={inputshos.hstreetname || ""} /></div>
@@ -325,7 +334,7 @@ export default function RegisterMain() {
               <div className='formReg'><label>Category</label>
                 <input type='text' required onChange={handleClickpri} name='ccategory' value={inputspri.ccategory || ""} /></div>
               <div className='formReg'><label>Licence Id</label>
-                <input type='text' required onChange={handleClickpri} name='clicence' value={inputspri.clicence || ""} />
+                <input type='text' required onChange={handleClickpri} name='licence' value={inputspri.licence || ""} />
               </div>
               <div className='formReg'><label>Gender</label>
                 <select required onChange={handleClickpri} name='cgender' value={inputspri.cgneder}>
