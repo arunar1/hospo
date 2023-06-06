@@ -4,7 +4,7 @@ import { Link, Route, Router, Switch } from "react-router-dom";
 import axios from 'axios';
 
 export default function Slot(props) {
-  console.log(props)
+  
 
   const formdata = JSON.parse(window.localStorage.getItem('appdeatail'));
 
@@ -37,8 +37,7 @@ const [flag,setflag]=useState(true)
     appdetails.map((app)=>{
       if(app.slotid==slid && app.govhospitalname==formdata.HospitalName && app.date==formdata.Date ){
         count=count+1;
-        console.log(app)
-        console.log(app.name)
+        
       }
       if(app.patientname==props.details.name && app.govhospitalname==formdata.HospitalName && app.date==formdata.Date){
         setflag(false)  
@@ -48,14 +47,7 @@ const [flag,setflag]=useState(true)
     })
   },[timeschedule])
 
-  console.log(appdetails)
-  
-  console.log(counter);
 
-
-
-
-  console.log(formdata)
 
   
 
@@ -89,12 +81,12 @@ const handlesubmit=(e)=>{
         formdata.patientid=props.details.userId;
         formdata.slotid=slid;
         formdata.tokenid=counter;
-        console.log(formdata)
+        
         try {
               axios.post('http://localhost:5000/home/takeappointment/slot',{
                 formdata
             }).then(res=>{
-              console.log(res)
+              
               if(res.data.message=='token generated'){
                 alert("Token Generated");
                 window.location.href='/home'

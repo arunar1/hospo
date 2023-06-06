@@ -3,7 +3,6 @@ import './ProfileCard.css'
 
 export default function ProfileCard(props) {
  
-console.log(props)  
 const user=props.data;
 
   return (

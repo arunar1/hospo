@@ -17,16 +17,12 @@ export default function Main1() {
       await axios.post('http://localhost:5000/',{
         usertype,userid,password
       }).then(res=>{
-        console.log(res.data)
         if(res.data.message=='choose account type')
         {
           alert(res.data.message)
         }
        
-        console.log(res.data.details)
         if(res.data.status=='ok'){
-          alert("login successful")
-          console.log(res.data.data)
           window.localStorage.setItem("token",res.data.data);
           window.localStorage.setItem("isLoggedIn",true)
           // window.localStorage.setItem("userid",JSON.stringify(res.data.details));

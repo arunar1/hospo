@@ -68,7 +68,7 @@ export default function RegisterMain() {
     if((inputs.pphone).length==10){
     if((inputs.ppassword).length>=8){
     inputs.type='patient';
-    console.log(inputs)
+  
     
   try{
      axios.post("http://localhost:5000/registration",inputs)
@@ -104,7 +104,7 @@ export default function RegisterMain() {
     if((inputshos.hphone).length==10){
       if((inputshos.hpassword).length>=8){
         inputshos.type='hospital';
-        console.log(inputshos)
+  
         try{
           axios.post("http://localhost:5000/registration",inputshos)
           .then((data)=>{

@@ -19,7 +19,7 @@ export default function Hospital() {
           
           
           if(res.data.status=='ok'){            
-            console.log("success")
+            
             setdatas(res.data.data)
           }
           
@@ -33,7 +33,7 @@ export default function Hospital() {
       }
     
   },[])
-      console.log("success")
+
       const logout=()=>{
         window.localStorage.clear();
         window.location.href='./'

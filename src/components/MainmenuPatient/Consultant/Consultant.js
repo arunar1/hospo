@@ -16,7 +16,7 @@ export default function Consultant() {
           
           
           if(res.data.status=='ok'){            
-            console.log("success")
+          
             setdatas(res.data.data)
           }
           
@@ -40,7 +40,7 @@ export default function Consultant() {
     
     const loggeduser=window.localStorage.getItem("isLoggedIn")
 
-      console.log(datas)
+   
     
   return (
     <div>

@@ -5,17 +5,19 @@ import { Link } from 'react-router-dom'
 import './AppointmentHistory.css'
 import axios from 'axios'
 
-export default function AppointmentHistory() {
+export default function AppointmentHistory(props) {
 
   const [appdetails,setappdetails]=useState([]);
-
+  const senddata=props.details;
   useEffect(()=>{
     axios.get("http://localhost:5000/appointmentinfo")
     .then(res=>{
-      setappdetails(res.data);
+      setappdetails(res);
     })
   },[])
 
+
+  
 
   return (
     <div>
@@ -31,17 +33,21 @@ export default function AppointmentHistory() {
       <table>
         <thead>
           <tr>
+            <th>Sl no</th>
             <th>Date</th>
-            <th>Doctor</th>
+            <th>Hospital/Doctor</th>
+            <th>Time</th>
+            <th>Token</th>
           </tr>
         </thead>
         <tbody>
-          {appdetails.map(appointment => (
+          {/* {appdetails.map((appointment,index) => (
             <tr>
-              <td>{appointment.date}</td>
-              <td>{appointment.doctor_id.name}</td>
+              <td>{index+1}</td>
+              <td>{}</td>
+              <td>{}</td>
             </tr>
-          ))}
+          ))} */}
         </tbody>
       </table>
     </div>
@@ -50,3 +56,5 @@ export default function AppointmentHistory() {
     </div>
   )
 }
+
+

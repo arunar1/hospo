@@ -23,7 +23,7 @@ export default function PatientMenu() {
           
           
           if(res.data.status=='ok'){            
-            console.log("success")
+            
             setdatas(res.data.data)
             window.localStorage.setItem("isLoggedIn",true)
           }
@@ -38,7 +38,7 @@ export default function PatientMenu() {
       }
     
   },[datas])
-console.log(datas.usertype)
+
 
   
 const logout=()=>{
@@ -48,10 +48,10 @@ const logout=()=>{
   
   
 
-  console.log(datas)
+ 
   
   const loggeduser=window.localStorage.getItem("isLoggedIn")
-  console.log(loggeduser)
+  
  
 
   return (
@@ -66,7 +66,7 @@ const logout=()=>{
             
           </Route>
           <Route exact path='/home/appointmenthistory'>
-          {loggeduser=="true"?<AppointmentHistory data={datas} />:logout}
+          {loggeduser=="true"?<AppointmentHistory details={datas} />:logout}
             
           </Route>
           <Route exact path='/home/rescheduleappointment'>

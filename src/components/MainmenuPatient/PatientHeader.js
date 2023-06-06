@@ -4,7 +4,7 @@ import './PatientHeader.css'
 
 import ProfileCard from './ProfileCard';
 export default function PatientHeader(props) {
-  console.log(props.data)
+ 
 // const user=JSON.parse(window.localStorage.getItem("userid"))
 
 
