@@ -101,3 +101,8 @@ body{
     margin-left: 50px;
     color: wheat;
 }
+.formapp button:hover{
+    background-color:black;
+    color: white;
+    cursor: pointer;
+}

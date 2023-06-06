@@ -37,7 +37,7 @@ export default function PatientMenu() {
         console.log(e)
       }
     
-  },[])
+  },[datas])
 console.log(datas.usertype)
 
   
@@ -66,7 +66,7 @@ const logout=()=>{
             
           </Route>
           <Route exact path='/home/appointmenthistory'>
-          {loggeduser=="true"?<AppointmentHistory/>:logout}
+          {loggeduser=="true"?<AppointmentHistory data={datas} />:logout}
             
           </Route>
           <Route exact path='/home/rescheduleappointment'>
@@ -78,7 +78,7 @@ const logout=()=>{
             
           </Route>
           <Route  exact path='/home/takeappointment/slot'>
-          {loggeduser=="true"?<Slot/>:logout}
+          {loggeduser=="true"?<Slot details={datas}/>:logout}
           
           </Route>
       </Router>
