@@ -15,7 +15,7 @@ export default function PatientMenu() {
   const [datas,setdatas]=useState({});
   useEffect(()=>{
     try{
-          axios.post('http://localhost:5000/home',{
+          axios.post(`${process.env.REACT_APP_URL}/home`,{
           token:window.localStorage.getItem("token")
         }).then(res=>{
           
