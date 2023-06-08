@@ -8,19 +8,31 @@ import axios from 'axios'
 export default function AppointmentHistory(props) {
 
   const [appdetails,setappdetails]=useState([]);
-  const senddata=props.details;
   useEffect(()=>{
-    axios.get("http://localhost:5000/appointmentinfo")
+    axios.get(`${process.env.REACT_APP_URL}/appointmentinfo`)
     .then(res=>{
-      setappdetails(res);
+      setappdetails(res.data);
     })
   },[])
 
-
   
+const [appdata,setappdata]=useState([])
+
+  useEffect(()=>{
+    const  newdata=[];
+    appdetails.map((data)=>{
+        if(data.patientphone==props.details.userId){
+
+          newdata.push(data)
+        }
+        
+    },setappdata(newdata)
+    )
+  },[appdetails])
+
 
   return (
-    <div>
+    <div className='tablecontent'>
        <div className='History'>
         <div className='HistoryHeader'>
             <h1>Appointment History</h1>
@@ -29,25 +41,29 @@ export default function AppointmentHistory(props) {
             </ul>
         </div>
         <div>
-      <h1>Appointment History</h1>
+      
       <table>
         <thead>
           <tr>
             <th>Sl no</th>
             <th>Date</th>
             <th>Hospital/Doctor</th>
+            <th>Hospital Type</th>
             <th>Time</th>
             <th>Token</th>
           </tr>
         </thead>
         <tbody>
-          {/* {appdetails.map((appointment,index) => (
+          {appdata.map((appointment,index) => (
             <tr>
               <td>{index+1}</td>
-              <td>{}</td>
-              <td>{}</td>
+              <td>{appointment.date}</td>
+              <td>{appointment.govhospitalname}</td>
+              <td>{appointment.hospitaltype}</td>
+              <td>{appointment.time}</td>
+              <td>{appointment.token}</td>
             </tr>
-          ))} */}
+          ))}
         </tbody>
       </table>
     </div>

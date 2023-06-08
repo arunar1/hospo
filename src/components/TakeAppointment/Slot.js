@@ -24,7 +24,7 @@ export default function Slot(props) {
   }
 
   useEffect(()=>{
-    axios.get("http://localhost:5000/appointmentinfo")
+    axios.get(`${process.env.REACT_APP_URL}/appointmentinfo`)
     .then(res=>{
       setappdetails(res.data);
     })
@@ -80,10 +80,35 @@ const handlesubmit=(e)=>{
         formdata.patientName=props.details.name;
         formdata.patientid=props.details.userId;
         formdata.slotid=slid;
-        formdata.tokenid=counter;
+        if(slid==0){
+          formdata.tokenid='A'+JSON.stringify(counter+1);
+        }
+        else if(slid==1){
+          formdata.tokenid='B'+JSON.stringify(counter+1);
+        }
+        else if(slid==2){
+          formdata.tokenid='C'+JSON.stringify(counter+1);
+        }
+        else if(slid==3){
+          formdata.tokenid='D'+JSON.stringify(counter+1);
+        }
+        else if(slid==4){
+          formdata.tokenid='E'+JSON.stringify(counter+1);
+        }
+        else if(slid==5){
+          formdata.tokenid='F'+JSON.stringify(counter+1);
+        }
+        else if(slid==6){
+          formdata.tokenid='G'+JSON.stringify(counter+1);
+        }
+        else if(slid==7){
+          formdata.tokenid='H'+JSON.stringify(counter+1);
+        }
+        
+        console.log(formdata)
         
         try {
-              axios.post('http://localhost:5000/home/takeappointment/slot',{
+              axios.post(`${process.env.REACT_APP_URL}/home/takeappointment/slot`,{
                 formdata
             }).then(res=>{
               

@@ -14,7 +14,7 @@ export default function Main1() {
   async function submit(e){
     e.preventDefault();
     try{
-      await axios.post('http://localhost:5000/',{
+      await axios.post(`${process.env.REACT_APP_URL}/`,{
         usertype,userid,password
       }).then(res=>{
         if(res.data.message=='choose account type')

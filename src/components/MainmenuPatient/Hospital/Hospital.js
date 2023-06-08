@@ -11,7 +11,7 @@ export default function Hospital() {
   const [datas,setdatas]=useState({});
   useEffect(()=>{
     try{
-         axios.post('http://localhost:5000/hospitalhome',{
+         axios.post(`${process.env.REACT_APP_URL}/hospitalhome`,{
           token:window.localStorage.getItem("token")
         }).then(res=>{
           
@@ -52,7 +52,7 @@ export default function Hospital() {
            {loggeduser=="true"?<HospitalHeader data={datas} />:<Register/>}
           </Route>
           <Route exact path='/hospitalhome/showappointment'>
-            <ShowAppointment/>
+            <ShowAppointment details={datas}/>
           </Route>
           <Route exact path='/hospitalhome/setappointment'>
             <SetAppointment/>

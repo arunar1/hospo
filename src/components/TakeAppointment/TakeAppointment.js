@@ -95,7 +95,7 @@ const [district,setdistrict]=useState([]);
 
 
 useEffect(()=>{
-  axios.get("http://localhost:5000/districtinfo")
+  axios.get(`${process.env.REACT_APP_URL}/districtinfo`)
   .then(res=>{
     setdistrict(res.data);
   })
@@ -106,7 +106,7 @@ const [doctor,setdoctor]=useState([]);
 
 
 useEffect(()=>{
-  axios.get("http://localhost:5000/privateinfo")
+  axios.get(`${process.env.REACT_APP_URL}/privateinfo`)
   .then(res=>{
     setdoctor(res.data);
   })

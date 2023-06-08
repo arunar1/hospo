@@ -147,7 +147,7 @@ export default function RegisterMain() {
     if((inputspri.cphone).length==10){
       if((inputspri.cpassword).length>=8){
       try{
-         axios.post("http://localhost:5000/registration",inputspri)
+         axios.post(`${process.env.REACT_APP_URL}/registration`,inputspri)
          .then((data)=>{
         
           
@@ -262,8 +262,25 @@ export default function RegisterMain() {
                 <input type='text' required onChange={handleClick} name='phousename' value={inputs.phousename || ""} /></div>
               <div className='formReg'><label>Street Name</label>
                 <input type='text' required onChange={handleClick} name='pstreetname' value={inputs.pstreetname || ""} /></div>
+
               <div className='formReg'><label>District</label>
-                <input type='text' required onChange={handleClick} name='pdistrict' value={inputs.pdistrict || ""} /></div>
+                <select required onChange={handleClick} name='pdistrict' value={inputs.pdistrict} >
+                  <option></option>
+                  <option value="Alappuzha">	Alappuzha</option>
+                  <option value="Ernakulam">	Ernakulam</option>
+                  <option value="Idukki">		Idukki</option>
+                  <option value="Kannur">Kannur</option>
+                  <option value="Kasaragod">Kasaragod</option>
+                  <option value="Kollam">Kollam</option>
+                  <option value="Kottayam">Kottayam</option>
+                  <option value="Kozhikode">Kozhikode</option>
+                  <option value="Malappuram">Malappuram</option>
+                  <option value="Palakkad">	Palakkad</option>
+                  <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+                  <option value="Thrissur">Thrissur</option>
+                  <option value="	Wayanad">	Wayanad</option>
+                </select>
+                </div>
               <div className='formReg'><label>Pincode</label>
                 <input type='number' required onChange={handleClick} name='ppincode' value={inputs.ppincode || ""} /></div>
               <div className='formReg'>
@@ -303,9 +320,26 @@ export default function RegisterMain() {
               </div>
               <div className='formReg'><label>Street Name</label>
                 <input type='text' required onChange={handleClickhos} name='hstreetname' value={inputshos.hstreetname || ""} /></div>
-                <div className='formReg'><label>District</label>
-                <input type='text' required onChange={handleClickhos} name='hdistrict' value={inputshos.hdistrict || ""} />
-              </div>
+
+              <div className='formReg'><label>District</label>
+                <select required onChange={handleClickhos} name='hdistrict' value={inputshos.hdistrict} >
+                  <option></option>
+                  <option value="Alappuzha">	Alappuzha</option>
+                  <option value="Ernakulam">	Ernakulam</option>
+                  <option value="Idukki">		Idukki</option>
+                  <option value="Kannur">Kannur</option>
+                  <option value="Kasaragod">Kasaragod</option>
+                  <option value="Kollam">Kollam</option>
+                  <option value="Kottayam">Kottayam</option>
+                  <option value="Kozhikode">Kozhikode</option>
+                  <option value="Malappuram">Malappuram</option>
+                  <option value="Palakkad">	Palakkad</option>
+                  <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+                  <option value="Thrissur">Thrissur</option>
+                  <option value="	Wayanad">	Wayanad</option>
+                </select>
+                </div>
+
               <div className='formReg'><label>Pincode</label>
                 <input type='number' required onChange={handleClickhos} name='hpincode' value={inputshos.hpincode || ""} /></div>
                 
@@ -332,7 +366,25 @@ export default function RegisterMain() {
               <div className='formReg'><label>Phone No</label>
                 <input type='number' required onChange={handleClickpri} name='cphone' value={inputspri.cphone || ""} /></div>
               <div className='formReg'><label>Category</label>
-                <input type='text' required onChange={handleClickpri} name='ccategory' value={inputspri.ccategory || ""} /></div>
+              <select required onChange={handleClickpri} name='ccategory' value={inputspri.ccategory} >
+                  <option></option>
+                  <option value='Cardiologists'>Cardiologists</option>
+                  <option value='audiologists'>audiologists</option>
+                  <option value='dentists'>dentists</option>
+                  <option value='ENT specialists'>ENT specialists</option>
+                  <option value='gynecologists'>gynecologists</option>
+                  <option value='orthopedic surgeons'>orthopedic surgeons</option>
+                  <option value='pediatricians'>pediatricians</option>
+                  <option value='psychiatrists'>psychiatrists</option>
+                  <option value='radiologists'>radiologists</option>
+                  <option value='pulmonologists'>pulmonologists</option>
+                  <option value='endocrinologists'>endocrinologists</option>
+                  <option value='oncologists'> oncologists</option>
+                  <option value='neurologists'>neurologists</option>
+                  <option value=' cardiothoracic surgeons'> cardiothoracic surgeons</option>
+
+                </select>
+            </div>
               <div className='formReg'><label>Licence Id</label>
                 <input type='text' required onChange={handleClickpri} name='licence' value={inputspri.licence || ""} />
               </div>
@@ -347,9 +399,27 @@ export default function RegisterMain() {
               <div className='formReg' ><label>Password</label>
                 <input type='password' required onChange={handleClickpri} name='cpassword' value={inputspri.cpassword} /></div>
               <div className='formReg'><label>Street Name</label>
-                <input type='text' required onChange={handleClickpri} name='cstreetname' value={inputspri.cstreetname || ""} /></div>
-              <div className='formReg'><label>District</label>
-                <input type='text' required onChange={handleClickpri} name='cdistrict' value={inputspri.cdistrict || ""} /></div>
+                <input type='text' required onChange={handleClickpri} name='cstreetname' value={inputspri.cstreetname || ""} /></div>     
+                <div className='formReg'><label>District</label>
+                <select required onChange={handleClickpri} name='cdistrict' value={inputspri.cdistrict} >
+                  <option></option>
+                  <option value="Alappuzha">	Alappuzha</option>
+                  <option value="Ernakulam">	Ernakulam</option>
+                  <option value="Idukki">		Idukki</option>
+                  <option value="Kannur">Kannur</option>
+                  <option value="Kasaragod">Kasaragod</option>
+                  <option value="Kollam">Kollam</option>
+                  <option value="Kottayam">Kottayam</option>
+                  <option value="Kozhikode">Kozhikode</option>
+                  <option value="Malappuram">Malappuram</option>
+                  <option value="Palakkad">	Palakkad</option>
+                  <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+                  <option value="Thrissur">Thrissur</option>
+                  <option value="	Wayanad">	Wayanad</option>
+                </select>
+                </div>
+
+
               <div className='formReg'><label>Pincode</label>
                 <input type='number' required onChange={handleClickpri} name='cpincode' value={inputspri.cpincode || ""} /></div>
               <div className='formReg'>

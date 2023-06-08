@@ -25,3 +25,35 @@ body{
     font-size: 20px;
 
 }
+
+.tablecontent table tr{
+    background-color:lightblue;
+    
+    
+}
+.tablecontent table{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.tablecontent table, th, td {
+    border-bottom: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+  }
+  .tablecontent  th {
+    height: 85px;
+    background-color:rgba(103, 66, 66,.5);
+  }
+  .tablecontent td {
+    height: 85px;
+  }
+  .tablecontent table{
+    position: relative;
+    height: 100%;
+    top: 5px;
+  }
+.tablecontent tr:hover{
+    background-color: white;
+  }
