@@ -8,7 +8,7 @@ export default function Consultant() {
   const [datas,setdatas]=useState({});
   useEffect(()=>{
     try{
-         axios.post('http://localhost:5000/consultanthome',{
+         axios.post(`${process.env.REACT_APP_URL}/consultanthome`,{
           token:window.localStorage.getItem("token")
         }).then(res=>{
           

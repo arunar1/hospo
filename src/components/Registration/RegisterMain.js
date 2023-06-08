@@ -71,7 +71,7 @@ export default function RegisterMain() {
   
     
   try{
-     axios.post("http://localhost:5000/registration",inputs)
+     axios.post(`${process.env.REACT_APP_URL}/registration`,inputs)
      .then((data)=>{
       if(data.data.error){
         alert(data.data.error)
@@ -106,7 +106,7 @@ export default function RegisterMain() {
         inputshos.type='hospital';
   
         try{
-          axios.post("http://localhost:5000/registration",inputshos)
+          axios.post(`${process.env.REACT_APP_URL}/registration`,inputshos)
           .then((data)=>{
             if(data.data.error){
               alert(data.data.error)
