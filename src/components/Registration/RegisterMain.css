@@ -137,19 +137,23 @@ main.main1 .reg-button button.active{
 /* Mobile Phones */
 @media only screen and (max-width: 480px) {
     main.main1 .reg-button button {
-      margin: 15px;
+      margin: 5px;
       width: 120px;
-      height: 25px;
+      height: 20px;
       font-size: 12px;
+      position: relative;
+      top: 50px;
     }
   
     main.main1 form {
+        position: relative;
+        top: 150px;
       width: 90%;
       margin-left: 5%;
     }
-  
+    main.main1 
     main.main1 form caption {
-      width: 90%;
+      position: relative;
       font-size: 18px;
     }
   
@@ -214,7 +218,7 @@ main.main1 .reg-button button.active{
   }
   
   /* Large Desktops and Laptops */
-  /* @media only screen and (mi-width: 1025px) {
+  @media only screen and (mi-width: 1600px) {
     main.main1 .reg-button button {
       margin: 30px;
     }
@@ -224,7 +228,8 @@ main.main1 .reg-button button.active{
     }
   
     main.main1 form caption {
-      font-size: 20px;
+      font-size: 10px;
+      
     }
   
     main.main1 .form1 .formReg {
@@ -236,5 +241,5 @@ main.main1 .reg-button button.active{
       margin-left: 20%;
       font-size: 22px;
     }
-  } */
+  }
   

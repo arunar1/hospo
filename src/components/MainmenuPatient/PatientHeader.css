@@ -186,14 +186,17 @@
     }
   
     .navBar .topNav {
+        display: block;
       padding-left: 0px;
       position: relative;
       top: 10px;
     }
   
     .navBar .topNav .setting {
-      left: 0;
-      margin-right: 5px;
+      position: relative;
+      left: -100px;
+      bottom: 20px;
+
     }
   
     .navBar .topNav h1 {
