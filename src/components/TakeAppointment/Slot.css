@@ -161,7 +161,12 @@ body{
       
       padding-top: 7vh;
       display: flex;
+      
       flex-direction: column;
+    }
+    .wrapper button{
+        width: 160px;
+
     }
   
     .formcontainer form {
@@ -169,7 +174,7 @@ body{
       position: relative;
       width: 370px;
       top: 500px;
-      right: 230px;
+      right: 120px;
     }
   
     .slot {
@@ -195,7 +200,7 @@ body{
     }
   
     .formcontainer .formapp {
-      margin: 20px;
+      margin: 10px;
     }
   
     .formcontainer .formapp input {
@@ -207,7 +212,8 @@ body{
   
     .formcontainer form {
      
-      padding-left: 10px;
+      padding-left: 5px;
+      padding: 20px 0px;
     }
     
   }
