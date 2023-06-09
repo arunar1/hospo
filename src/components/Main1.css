@@ -147,3 +147,55 @@ main .main .reg-info .a,h2,p{
     color: white;
     
 }
+/* Mobile Phones */
+@media only screen and (max-width: 480px) {
+    main .Registration {
+      width: 100%;
+    }
+  
+    .main {
+      flex-direction: column;
+      align-items: center;
+      top: 90px;
+      width: 300px;
+      left: 85px;
+    }
+
+  
+    .main .Registration {
+      top: 150px;
+      
+    }
+  
+    .main .loginForm {
+    position: relative;
+      padding: 10px 5px;
+      top: 220px;
+      width: 300px;
+    }
+  
+    .loginForm .input-group {
+      width: 100%;
+    }
+  
+    .loginForm .submit-btn input,
+    .loginForm .submit-btn button,
+    .loginForm .loginselction {
+      width: 100%;
+    }
+  }
+  
+  /* Tablets and Small Desktops */
+  @media only screen and (min-width: 481px) and (max-width: 1024px) {
+    main .Registration {
+      width: 60%;
+    }
+  }
+  
+  /* Large Desktops and Laptops */
+  @media only screen and (min-width: 1025px) {
+    main .Registration {
+      width: 50%;
+    }
+  }
+  

@@ -129,3 +129,82 @@
 .selectsection .Private1{
     display: block;
 }
+
+@media only screen and (max-width: 1200px) {
+    .takeappointment .header h1 {
+      font-size: 24px;
+    }
+  
+    .selectsection {
+      top: 5vh;
+      left: 5vw;
+      width: 90vw;
+    }
+  
+    .selectsection label {
+      font-size: 18px;
+      left: -100px;
+    }
+  
+    .selectsection select,
+    .selectsection input {
+      width: 80%;
+    }
+  
+    .selectsection .hos {
+      padding: 30px;
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .takeappointment .header h1 {
+      font-size: 20px;
+    }
+  
+    .selectsection {
+      top: 5vh;
+      left: 5vw;
+      width: 90vw;
+    }
+  
+    .selectsection label {
+      font-size: 16px;
+      left: -80px;
+    }
+  
+    .selectsection select,
+    .selectsection input {
+      width: 70%;
+    }
+  
+    .selectsection .hos {
+      padding: 20px;
+    }
+  }
+  
+  @media only screen and (max-width: 576px) {
+    .takeappointment .header h1 {
+      font-size: 18px;
+    }
+  
+    .selectsection {
+      top: 5vh;
+      left: 5vw;
+      width: 90vw;
+    }
+  
+    .selectsection label {
+      font-size: 14px;
+      left: -60px;
+    }
+  
+    .selectsection select,
+    .selectsection input {
+      width: 60%;
+    }
+  
+    .selectsection .hos {
+      padding: 10px;
+    }
+  }
+  

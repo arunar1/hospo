@@ -106,3 +106,140 @@ body{
     color: white;
     cursor: pointer;
 }
+/* Mobile Phones */
+@media only screen and (max-width: 480px) {
+    .wrapper {
+      width: 90vw;
+      padding-top: 5vh;
+    }
+  
+    .formcontainer {
+      height: auto;
+      padding-bottom: 5vh;
+    }
+  
+    .formcontainer form {
+      width: 80vw;
+    }
+  
+    .slot {
+      width: 100px;
+      height: 30px;
+      margin: 10px;
+      font-size: 8px;
+    }
+  
+    .sloter .slotHeader h1 {
+      margin-left: 10px;
+      font-size: 16px;
+    }
+  
+    .sloter .slotHeader ul li .linker {
+      padding-right: 20px;
+      font-size: 12px;
+    }
+  
+    .formcontainer .formapp {
+      margin: 15px;
+    }
+  
+    .formcontainer .formapp input {
+      left: 80px;
+      top: 1px;
+      font-size: 12px;
+    }
+  
+    .formcontainer form {
+      width: 90vw;
+      padding-left: 10px;
+    }
+  }
+  
+  /* Tablets */
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    .wrapper {
+      width: 70vw;
+      padding-top: 7vh;
+    }
+  
+    .formcontainer form {
+      width: 40vw;
+    }
+  
+    .slot {
+      width: 150px;
+      height: 40px;
+      margin: 15px;
+      font-size: 10px;
+    }
+  
+    .sloter .slotHeader h1 {
+      margin-left: 20px;
+      font-size: 18px;
+    }
+  
+    .sloter .slotHeader ul li .linker {
+      padding-right: 30px;
+      font-size: 14px;
+    }
+  
+    .formcontainer .formapp {
+      margin: 20px;
+    }
+  
+    .formcontainer .formapp input {
+      left: 100px;
+      top: 2px;
+      font-size: 14px;
+    }
+  
+    .formcontainer form {
+      width: 50vw;
+      padding-left: 20px;
+    }
+  }
+  
+  /* Desktops */
+  @media only screen and (min-width: 769px) {
+    .wrapper {
+      width: 50vw;
+      padding-top: 10vh;
+    }
+  
+    .formcontainer form {
+      width: 30vw;
+    }
+  
+    .slot {
+      width: 200px;
+      height: 50px;
+      margin: 20px;
+      font-size: 12px;
+    }
+  
+    .sloter .slotHeader h1 {
+      margin-left: 30px;
+      font-size: 20px;
+    }
+  
+    .sloter .slotHeader ul li .linker {
+      padding-right: 40px;
+      font-size: 16px;
+    }
+  
+    .formcontainer .formapp {
+      margin: 30px;
+    }
+  
+    .formcontainer .formapp input {
+      left: 130px;
+      top: 2px;
+      font-size: 17px;
+    }
+  
+    .formcontainer form {
+      width: 30vw;
+      padding-left: 30px;
+    }
+  }
+  

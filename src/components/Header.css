@@ -35,7 +35,7 @@ header .nav a{
 
 }
 header .logo a{
-    background-color: black;
+    /* background-color: black; */
     color: white;
     padding-inline: 3px;
     padding-top: 3px;
@@ -48,3 +48,91 @@ header .logo a{
 header .logo a:hover{
     color: red;
 }
+
+/* Extra small devices (phones) */
+@media only screen and (max-width: 576px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+    }
+    header ul {
+      flex-direction: column;
+      margin-top: 20px;
+      color: black;
+      background-color: rgba(10, 8, 8,.75);
+      display: block;
+      width: 100%;
+    }
+  
+    header ul li {
+      margin: 10px;
+      
+    }
+  
+    header .logo {
+      margin-left: 0;
+    }
+  
+    header .logo h1 {
+      margin-left: 0;
+    }
+  
+    header .logo a {
+      font-size: 12px;
+      padding: 2px 5px;
+    }
+  
+    header .nav a {
+      font-size: 14px;
+      color: rgb(239, 230, 230);
+      display: block;
+      /* background-color: rgba(10, 8, 8,.75); */
+    }
+  }
+  
+  /* Small devices (phones, 576px - 767px) and up */
+  @media only screen and (min-width: 576px) {
+   
+    header ul li {
+      margin: 15px;
+    }
+  
+    header .logo h1 {
+      margin-left: 15px;
+    }
+  
+    header .logo a {
+      font-size: 14px;
+      padding: 3px 8px;
+    }
+  }
+  
+  /* Medium devices (tablets, 768px - 991px) and up */
+  @media only screen and (min-width: 768px) {
+    header ul li {
+      margin: 20px;
+    }
+  
+    header .logo h1 {
+      margin-left: 30px;
+    }
+  
+    header .logo a {
+      font-size: 16px;
+      padding: 5px 10px;
+    }
+  }
+  
+  /* Large devices (desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    header .logo h1 {
+      margin-left: 40px;
+    }
+  
+    header .logo a {
+      font-size: 18px;
+      padding: 8px 12px;
+    }
+  }
+  

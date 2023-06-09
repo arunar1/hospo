@@ -134,3 +134,107 @@ main.main1 .reg-button button.active{
     background-color: rgb(141, 80, 80);
     
 }
+/* Mobile Phones */
+@media only screen and (max-width: 480px) {
+    main.main1 .reg-button button {
+      margin: 15px;
+      width: 120px;
+      height: 25px;
+      font-size: 12px;
+    }
+  
+    main.main1 form {
+      width: 90%;
+      margin-left: 5%;
+    }
+  
+    main.main1 form caption {
+      width: 90%;
+      font-size: 18px;
+    }
+  
+    main.main1 .form1 .formReg {
+      flex-direction: column;
+      margin: 10px;
+      margin-left: 5%;
+    }
+  
+    main.main1 .form1 .formReg input,
+    main.main1 .form1 .formReg select {
+      left: 90px;
+      width: 70%;
+    }
+  
+    main.main1 .form1 .formtype {
+      margin-bottom: 30px;
+    }
+  
+    marquee {
+      top: 5vh;
+      width: 90%;
+      margin-left: 5%;
+      font-size: 16px;
+    }
+  }
+  
+  /* Tablets and Small Desktops */
+  @media only screen and (min-width: 481px) and (max-width: 1024px) {
+    main.main1 .reg-button button {
+      margin: 20px;
+      width: 140px;
+      height: 27px;
+    }
+  
+    main.main1 form {
+      width: 70%;
+      margin-left: 15%;
+    }
+  
+    main.main1 form caption {
+      font-size: 18px;
+    }
+  
+    main.main1 .form1 .formReg {
+      margin: 15px;
+      margin-left: 10vh;
+    }
+  
+    main.main1 .form1 .formReg input,
+    main.main1 .form1 .formReg select {
+      left: 120px;
+      width: 50%;
+    }
+  
+    marquee {
+      top: 8vh;
+      width: 70%;
+      margin-left: 15%;
+      font-size: 18px;
+    }
+  }
+  
+  /* Large Desktops and Laptops */
+  /* @media only screen and (mi-width: 1025px) {
+    main.main1 .reg-button button {
+      margin: 30px;
+    }
+  
+    main.main1 form {
+      margin-left: 25%;
+    }
+  
+    main.main1 form caption {
+      font-size: 20px;
+    }
+  
+    main.main1 .form1 .formReg {
+      margin-left: 15vh;
+    }
+  
+    marquee {
+      top: 10vh;
+      margin-left: 20%;
+      font-size: 22px;
+    }
+  } */
+  

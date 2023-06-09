@@ -75,8 +75,11 @@
 .navBar .topNav .setting{
     display: flex;
     position: relative;
-    left:60px;
+    left:40px;
     align-items: center;
+    display: flex;
+    justify-content: space-around;
+    width: 600px;
 }
 .navBar .topNav h1{
     position: relative;
@@ -95,7 +98,7 @@
 }
 
 .navBar .topNav .setting ul li{
-    margin: 50px;
+    margin: 10px;
 }
 .patientHeader .selection{
     overflow: hidden;
@@ -143,3 +146,121 @@
     color: wheat;
     cursor: pointer;
 }
+
+/* Small devices (up to 768px) */
+/* Small devices (up to 767px) */
+@media only screen and (max-width: 767px) {
+    .patientHeader {
+      flex-direction: column;
+      
+    }
+  
+    .navBar {
+      flex-direction: column;
+
+    }
+  
+    .mainSection {
+      position: static;
+      margin-top: 90px;
+      margin-left: 0;
+    }
+  
+    .headerPatient {
+      font-size: 24px;
+      position: relative;
+      top: 10px;
+      padding-bottom: 10px;
+    }
+  
+    .menubar ul {
+      flex-direction: row;
+      justify-content: center;
+      margin-left: 0;
+      padding: 0;
+    }
+  
+    .menubar ul li {
+      padding: 0;
+      margin: 0 2px;
+    }
+  
+    .navBar .topNav {
+      padding-left: 0px;
+      position: relative;
+      top: 10px;
+    }
+  
+    .navBar .topNav .setting {
+      left: 0;
+      margin-right: 5px;
+    }
+  
+    .navBar .topNav h1 {
+      font-size: 25px;
+      color: rgb(235, 228, 222);
+    }
+  
+    .navBar .topNav .setting ul {
+      left: 0;
+    }
+  
+    .patientHeader .selection ul {
+      height: auto;
+      align-items: center;
+      padding: 0px;
+    }
+    .patientHeader .selection{
+        position: relative;
+        top: 30px;
+    }
+  
+    .patientHeader .selection li {
+      margin: 10px 0;
+    }
+  
+    .MainMeanuButton .headerPatient {
+      height: 70px;
+    }
+  
+    .patientHeader .selection .selctionbutton {
+      width: 120px;
+      padding: 5px 10px;
+      font-size: 14px;
+    }
+  }
+  
+  /* Medium devices (768px to 991px) */
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .navBar .topNav {
+      padding-left: 100px;
+    }
+  }
+  
+  /* Large devices (992px and above) */
+  @media only screen and (min-width: 1600px) {
+    .patientHeader {
+      height: auto;
+    }
+  
+    .navBar {
+      height: auto;
+    }
+  
+    .mainSection {
+      position: static;
+      margin-top: 90px;
+      margin-left: 10px;
+    }
+  
+    .navBar .topNav {
+      padding-left: 150px;
+    }
+  
+    .patientHeader .selection ul {
+      height: auto;
+      align-items: center;
+      padding: 10px;
+    }
+  }
+  
