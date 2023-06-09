@@ -74,12 +74,12 @@
 }
 .navBar .topNav .setting{
     display: flex;
-    position: relative;
-    left:40px;
+    
+
     align-items: center;
     display: flex;
     justify-content: space-around;
-    width: 600px;
+   
 }
 .navBar .topNav h1{
     position: relative;
@@ -194,10 +194,14 @@
   
     .navBar .topNav .setting {
       position: relative;
-      left: -100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+     
       bottom: 20px;
 
     }
+    
   
     .navBar .topNav h1 {
       font-size: 25px;
@@ -205,7 +209,15 @@
     }
   
     .navBar .topNav .setting ul {
+        
       left: 0;
+    }
+    .navBar .topNav .setting button{
+       
+        position:absolute;
+        top: 390px;
+        left:110px;
+        z-index: 10;
     }
   
     .patientHeader .selection ul {

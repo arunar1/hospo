@@ -164,21 +164,27 @@
     .selectsection {
       top: 5vh;
       left: 5vw;
-      width: 90vw;
+      width: 60vw;
+    }
+    .selectsection .appointmentform{
+       
+
     }
   
     .selectsection label {
+    
       font-size: 16px;
-      left: -80px;
+      
+      
     }
   
     .selectsection select,
     .selectsection input {
-      width: 70%;
+      width: 20%;
     }
   
     .selectsection .hos {
-      padding: 20px;
+      padding: 10px;
     }
   }
   
@@ -195,7 +201,7 @@
   
     .selectsection label {
       font-size: 14px;
-      left: -60px;
+      left: -5px;
     }
   
     .selectsection select,

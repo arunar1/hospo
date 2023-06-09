@@ -156,21 +156,32 @@ body{
   }
   
   /* Tablets */
-  @media only screen and (min-width: 481px) and (max-width: 768px) {
+  @media only screen and (max-width: 768px) {
     .wrapper {
-      width: 70vw;
+      
       padding-top: 7vh;
+      display: flex;
+      flex-direction: column;
     }
   
     .formcontainer form {
-      width: 40vw;
+      display: block;
+      position: relative;
+      width: 370px;
+      top: 500px;
+      right: 230px;
     }
   
     .slot {
+    display: block;
+    width: 100%;
       width: 150px;
       height: 40px;
       margin: 15px;
       font-size: 10px;
+    }
+    .sloter{
+        width: 100%;
     }
   
     .sloter .slotHeader h1 {
@@ -188,22 +199,25 @@ body{
     }
   
     .formcontainer .formapp input {
-      left: 100px;
+      left: 150px;
       top: 2px;
       font-size: 14px;
+      width: 300px;
     }
   
     .formcontainer form {
-      width: 50vw;
-      padding-left: 20px;
+     
+      padding-left: 10px;
     }
+    
   }
   
   /* Desktops */
-  @media only screen and (min-width: 769px) {
+  /* @media only screen and (min-width: 769px) {
     .wrapper {
       width: 50vw;
       padding-top: 10vh;
+      
     }
   
     .formcontainer form {
@@ -242,4 +256,4 @@ body{
       padding-left: 30px;
     }
   }
-  
+   */

@@ -38,8 +38,9 @@ const logout=()=>{
               <ul>
                 <li>Account Type : Patient</li>
                 <li>User ID :{props.data.userId}</li>
-                <li><button  onClick={logout} className='logoutbtn'>LogOut</button></li>
+                
               </ul>
+              <button  onClick={logout} className='logoutbtn'>LogOut</button>
             </div>
           </div>
           <ProfileCard data={props.data}/>

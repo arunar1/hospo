@@ -141,7 +141,7 @@ const handlesubmit=(e)=>{
 
 
   return (
-    <>
+    <div>
       <div className='sloter'>
         <div className='slotHeader'>
           <h1>Choose Slot</h1>
@@ -178,13 +178,14 @@ const handlesubmit=(e)=>{
                 <input type='text' value={formdata[datas[2]]}></input>
               </div>
               <div  className='formapp'>
-                <label>Time:</label>
-                <input type='text' value={timeschedule} name=''></input>
-              </div>
-              <div  className='formapp'>
                 <label>Slot Left:</label>
                 <input type='text' value={10-counter} name=''></input>
               </div>
+              <div  className='formapp'>
+                <label>Time:</label>
+                <input type='text' value={timeschedule} name=''></input>
+              </div>
+             
               <div  className='formapp'>
                 <button type='submit'>Generate</button>
               </div>
@@ -192,6 +193,6 @@ const handlesubmit=(e)=>{
             </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
