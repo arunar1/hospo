@@ -4,9 +4,13 @@ import { Link,Route,Router,Switch } from "react-router-dom";
 import { useState } from 'react';
 import Slot from './Slot';
 import axios from 'axios';
+import moment from 'moment';
 export default function TakeAppointment() {
 
 
+  const myDate = new Date();
+  const formattedDate = moment(myDate).format('YYYY-MM-DD');
+  console.log(formattedDate);
 
   let [inputs, setinputs] = useState({});
   
@@ -219,7 +223,7 @@ useEffect(()=>{
               </div>
               <div className='hos'>
                 <label>Date</label>
-                <input type='date' required onChange={handleClick} name='Date' value={inputs.Date}></input>
+                <input type='date' min={formattedDate} required onChange={handleClick} name='Date' value={inputs.Date}></input>
               </div>
               <div className='hos'>
                 <input type='submit' className='subbtn' ></input>
@@ -256,7 +260,7 @@ useEffect(()=>{
               </div>
               <div className='hos'>
                 <label>Date</label>
-                <input type='date' required onChange={handleClick2} name='Date' value={inputs2.Date}></input>
+                <input type='date'  min={formattedDate} required onChange={handleClick2} name='Date' value={inputs2.Date}></input>
               </div>
               <div className='hos'>
                 <input type='submit' className='subbtn'></input>
@@ -290,7 +294,7 @@ useEffect(()=>{
               </div>
               <div className='hos'>
                 <label>Date</label>
-                <input type='date' required onChange={handleClick3} name='Date' value={inputs3.Date}></input>
+                <input type='date'  min={formattedDate} required onChange={handleClick3} name='Date' value={inputs3.Date}></input>
               </div>
               <div className='hos'>
                 <input type='submit' className='subbtn'></input>

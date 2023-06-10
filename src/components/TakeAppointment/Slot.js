@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './Slot.css'
 import { Link, Route, Router, Switch } from "react-router-dom";
 import axios from 'axios';
-
+import moment from 'moment'
 export default function Slot(props) {
   
 
