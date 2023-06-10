@@ -4,6 +4,7 @@ import  { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './AppointmentHistory.css'
 import axios from 'axios'
+import moment from 'moment'
 
 export default function AppointmentHistory(props) {
 
@@ -16,6 +17,7 @@ export default function AppointmentHistory(props) {
   },[])
 
   
+  
 const [appdata,setappdata]=useState([])
 
   useEffect(()=>{
@@ -25,6 +27,7 @@ const [appdata,setappdata]=useState([])
 
           newdata.push(data)
         }
+        newdata.sort((a,b)=>moment(b.date).diff(moment(a.date)))
         
     },setappdata(newdata)
     )

@@ -10,7 +10,7 @@ export default function TakeAppointment() {
 
   const myDate = new Date();
   const formattedDate = moment(myDate).format('YYYY-MM-DD');
-  console.log(formattedDate);
+
 
   let [inputs, setinputs] = useState({});
   

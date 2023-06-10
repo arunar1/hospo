@@ -70,11 +70,11 @@ const logout=()=>{
             
           </Route>
           <Route exact path='/home/rescheduleappointment'>
-          {loggeduser=="true"?<Rescheduleappointment/>:logout}
+          {loggeduser=="true"?<Rescheduleappointment details={datas}/>:logout}
             
           </Route>
           <Route exact path='/home/cancelappointment'>
-          {loggeduser=="true"?<CancelAppointment/>:logout}
+          {loggeduser=="true"?<CancelAppointment  details={datas} />:logout}
             
           </Route>
           <Route  exact path='/home/takeappointment/slot'>
