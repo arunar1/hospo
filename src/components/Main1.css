@@ -148,7 +148,7 @@ main .main .reg-info .a,h2,p{
     
 }
 /* Mobile Phones */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 580px) {
     main .Registration {
       width: 100%;
     }
@@ -164,7 +164,7 @@ main .main .reg-info .a,h2,p{
 
   
     .main .Registration {
-      top: 90px;
+      top: 100px;
       
     }
    
@@ -172,7 +172,7 @@ main .main .reg-info .a,h2,p{
     .main .loginForm {
     position: relative;
       padding: 10px 5px;
-      top: 100px;
+      top: 110px;
       width: 300px;
     }
   

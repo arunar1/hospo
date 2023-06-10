@@ -55,10 +55,14 @@ body{
 
 .formcontainer{
     height: 80vh;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
-    width: 50vw;
+    width: 30vw;
     font-size: 17px;
+    position: relative;
+    top:20vh;
+    left: 10vw;
+    
 }
 
 .formcontainer .formapp{
@@ -87,10 +91,10 @@ body{
 }
 .formcontainer form{
     border: 2px solid black;
-    position: relative;
-    top: 20vh;
-    width: 30vw;
-    padding-left: 30px;
+    /* position: relative;
+    top: 20vh; */
+    /* width: 30vw; */
+    padding-left: 10px;
     border-radius: 10px;
     
 }
@@ -107,7 +111,9 @@ body{
     cursor: pointer;
 }
 /* Mobile Phones */
-@media only screen and (max-width: 480px) {
+/* @media only screen and (max-width: 580px) {
+ 
+
     .wrapper {
       width: 90vw;
       padding-top: 5vh;
@@ -153,10 +159,17 @@ body{
       width: 90vw;
       padding-left: 10px;
     }
-  }
+  } */
   
   /* Tablets */
   @media only screen and (max-width: 768px) {
+    .containerSlot{
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      width: 250px;
+      
+    }
     .wrapper {
       
       padding-top: 7vh;
@@ -168,15 +181,6 @@ body{
         width: 160px;
 
     }
-  
-    .formcontainer form {
-      display: block;
-      position: relative;
-      width: 370px;
-      top: 500px;
-      right: 120px;
-    }
-  
     .slot {
     display: block;
     width: 100%;
@@ -195,19 +199,24 @@ body{
     }
   
     .sloter .slotHeader ul li .linker {
-      padding-right: 30px;
+      padding-right: 20px;
       font-size: 14px;
     }
+    
   
     .formcontainer .formapp {
       margin: 10px;
     }
+    .formcontainer form{
+      border: none;
+    
+    }
   
     .formcontainer .formapp input {
-      left: 150px;
+      left: 130px;
       top: 2px;
       font-size: 14px;
-      width: 300px;
+      width: 200px;
     }
   
     .formcontainer form {
@@ -215,6 +224,23 @@ body{
       padding-left: 5px;
       padding: 20px 0px;
     }
+    .formcontainer {
+      /* width: 500px; */
+      /* height: auto; */
+      /* border: 1px solid black; */
+      width: 400px;
+  }
+  .formcontainer {
+      height: 30vh;
+      /* display: flex; */
+      width: 30vw;
+      justify-content: center;
+      width: auto;
+      font-size: 17px;
+      position: relative;
+      top: 0vh;
+      left: 0vw;
+  }
     
   }
   

@@ -60,6 +60,7 @@ header .logo a:hover{
     header ul {
       flex-direction: column;
       margin-top: 20px;
+      padding: .2px 0;
       color: black;
       background-color: rgba(10, 8, 8,.75);
       display: block;
