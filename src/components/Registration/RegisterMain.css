@@ -200,7 +200,7 @@ main.main1 .reg-button button.active{
   
     main.main1 .form1 .formReg {
       margin: 15px;
-      margin-left: 10vh;
+      margin-left: 15vh;
     }
   
     main.main1 .form1 .formReg input,
@@ -218,7 +218,7 @@ main.main1 .reg-button button.active{
   }
   
   /* Large Desktops and Laptops */
-  @media only screen and (mi-width: 1600px) {
+  @media only screen and (min-width: 1600px) {
     main.main1 .reg-button button {
       margin: 30px;
     }
