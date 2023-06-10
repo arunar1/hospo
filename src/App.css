@@ -20,7 +20,7 @@ main{
   top:0px;
   background-color: rgb(164, 201, 230);
   /* height: 100vh; */
-  overflow: hidden;
+  /* overflow: hidden; */
   position: absolute;
   bottom: 0;
   left: 0;

@@ -101,7 +101,7 @@
     margin: 10px;
 }
 .patientHeader .selection{
-    overflow: hidden;
+    /* overflow: hidden; */
     font-weight: 500;
 }
 .patientHeader .selection ul{
