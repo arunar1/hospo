@@ -15,7 +15,7 @@
  }
  .hosprofileCard ul li span{
      position: absolute;
-     left: 130px;
+     left: 150px;
      font-weight: 500;
  }
  @media (max-width:767px){
@@ -25,6 +25,7 @@
       position: absolute;
       top: 15vh;
       left: 10vw;
+      line-height: 7px;
       font-family: 'Times New Roman';
     }
 

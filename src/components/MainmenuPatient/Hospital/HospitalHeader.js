@@ -35,7 +35,6 @@ const logout=()=>{
               <ul>
                 <li>Account Type : Hospital</li>
                 <li>User ID :{props.data.userId}</li>
-                <li>settings</li>
                 <li><button  onClick={logout} className='logoutbtn'>LogOut</button></li>
               </ul>
             </div>
