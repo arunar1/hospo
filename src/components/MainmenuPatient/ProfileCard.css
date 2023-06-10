@@ -19,7 +19,7 @@
     font-weight: 500;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .profileCard {
       width: 90%;
       height: auto;
@@ -38,4 +38,20 @@
       left: auto;
       margin-left: 10px;
     }
+  } */
+
+
+
+
+  @media (max-width:767px){
+    .profileCard {
+      width: 500px;
+      height: 400px;
+      position: absolute;
+      top: 10vh;
+      left: 10vw;
+      line-height: 7px;
+      font-family: 'Times New Roman';
+    }
+
   }

@@ -18,3 +18,14 @@
      left: 130px;
      font-weight: 500;
  }
+ @media (max-width:767px){
+    .hosprofileCard {
+      width: 500px;
+      height: 400px;
+      position: absolute;
+      top: 15vh;
+      left: 10vw;
+      font-family: 'Times New Roman';
+    }
+
+  }
