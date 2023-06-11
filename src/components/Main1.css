@@ -28,6 +28,9 @@ main .Registration{
 .main .reg-info a,h2,p{
     margin: 20px;
 }
+.main .reg-info{
+  margin-bottom: 10px;
+}
 .main .Registration{
     position: relative;
     top:60px;
