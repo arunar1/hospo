@@ -35,3 +35,19 @@ button.reschedulebtn:hover{
     background-color: black;
     color: white;
 }
+@media (max-width: 600px) {
+
+    .Reschedule .RescheduleHeader h1 {
+        margin-left: 20px;
+        font-size: 18px;
+    }
+    .Reschedule .RescheduleHeader ul li {
+
+       font-size: 16px;
+    }
+    
+    button.reschedulebtn {
+        font-size: 10px;
+        display: block;
+    }
+}

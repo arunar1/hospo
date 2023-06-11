@@ -39,3 +39,22 @@ body{
 
     }
 }
+@media (max-width: 768px) {
+    .Cancel .CancelHeader {
+        height: 60px;
+    }
+    
+    .Cancel .CancelHeader h1 {
+        margin-left: 20px;
+        font-size: 18px;
+    }
+    
+    .Cancel .CancelHeader ul li .linker {
+        font-size: 16px;
+    }
+    
+    .deletebtn {
+        width: 30px;
+        height: 30px;
+    }
+}
