@@ -48,6 +48,9 @@ const [appdata,setappdata]=useState([])
       }
      ).then(res=>{
        setdltres(res.data.data)
+       if(res.data.data){
+        window.location.href='/home/cancelappointment'
+       }
 
      })
  }
