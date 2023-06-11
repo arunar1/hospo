@@ -91,7 +91,7 @@ const [appdata,setappdata]=useState([])
               <td>{appointment.hospitaltype}</td>
               <td>{appointment.time}</td>
               <td>{appointment.token}</td>
-              <td><FontAwesomeIcon  icon={faTrash} onClick={()=>deleteuser(appointment._id)} /></td>
+              <td><FontAwesomeIcon className='deletebtn'  icon={faTrash} onClick={()=>deleteuser(appointment._id)} /></td>
             </tr>
           ))}
         </tbody>
