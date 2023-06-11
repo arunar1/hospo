@@ -48,16 +48,34 @@ header .logo a{
 header .logo a:hover{
     color: red;
 }
+header .fontaw{
+  display: none;
+}
+
 
 /* Extra small devices (phones) */
 @media only screen and (max-width: 576px) {
     header {
-      flex-direction: column;
+      /* flex-direction: column; */
       align-items: center;
       background-color:rgba(10, 8, 8);
       
     }
     header ul {
+      display: none;
+    }
+    header .fontaw{
+      display: block;
+      position: absolute;
+      right:0;
+      padding: 20px;
+      top: 9px;
+      width: 25px;
+      height: 25px;
+    
+    }  
+    .menu{
+      display: block;
       flex-direction: column;
       margin-top: 20px;
       padding: .2px 0;
@@ -65,6 +83,9 @@ header .logo a:hover{
       background-color: rgba(10, 8, 8,.75);
       display: block;
       width: 100%;
+      position: absolute;
+      left: 0;
+      
     }
   
     header ul li {
@@ -142,4 +163,7 @@ header .logo a:hover{
       padding: 8px 12px;
     }
   }
+  
+
+
   
