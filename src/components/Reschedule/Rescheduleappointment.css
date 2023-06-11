@@ -49,5 +49,6 @@ button.reschedulebtn:hover{
     button.reschedulebtn {
         font-size: 10px;
         display: block;
+        margin: 0;
     }
 }
