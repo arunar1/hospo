@@ -3,17 +3,19 @@ import { Link } from 'react-router-dom'
 import './CancelAppointment.css'
 import axios from 'axios'
 import moment from 'moment';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import  { useState, useEffect } from 'react'
 
 export default function CancelAppointment(props) {
-
+const [dltres,setdltres]=useState();
   const [appdetails,setappdetails]=useState([]);
   useEffect(()=>{
     axios.get(`${process.env.REACT_APP_URL}/appointmentinfo`)
     .then(res=>{
       setappdetails(res.data);
     })
-  },[])
+  },[dltres])
 
   const myDate = new Date();
   const formattedDate = moment(myDate).format('YYYY-MM-DD');
@@ -31,6 +33,29 @@ const [appdata,setappdata]=useState([])
     },setappdata(newdata)
     )
   },[appdetails])
+
+  const [appdlt,setappdlt]=useState('')
+
+
+
+  const deleteuser=(id)=>{
+    setappdlt(id)
+
+   if(appdlt){
+    if(window.confirm("Are you want to delete the appointment")){
+      axios.post(`${process.env.REACT_APP_URL}/deleteuserapp`,{
+       appdlt
+      }
+     ).then(res=>{
+       setdltres(res.data.data)
+
+     })
+ }
+   }
+    else{
+
+    }
+  }
 
   return (
     <div>
@@ -63,7 +88,7 @@ const [appdata,setappdata]=useState([])
               <td>{appointment.hospitaltype}</td>
               <td>{appointment.time}</td>
               <td>{appointment.token}</td>
-              <td>{<button>Cancel</button>}</td>
+              <td><FontAwesomeIcon  icon={faTrash} onClick={()=>deleteuser(appointment._id)} /></td>
             </tr>
           ))}
         </tbody>
