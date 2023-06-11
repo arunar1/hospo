@@ -40,7 +40,7 @@ const [appdata,setappdata]=useState([])
     setappdlt(id)
 
    if(appdlt){
-    if(window.confirm("Are you want to delete the appointment")){
+    if(window.confirm("Are you want to Reschedule the appointment")){
       axios.post(`${process.env.REACT_APP_URL}/deleteuserapp`,{
        appdlt
       }

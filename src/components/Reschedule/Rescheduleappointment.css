@@ -27,7 +27,7 @@ body{
 }
 button.reschedulebtn{
     width: 100px;
-    margin: 10px;
+    margin-inline: 20px;
     background-color: rgb(62, 61, 61);
     color: wheat;
 }
