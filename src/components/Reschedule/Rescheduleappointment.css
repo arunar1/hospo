@@ -28,5 +28,10 @@ body{
 button.reschedulebtn{
     width: 100px;
     padding: 10px;
-    background-color: brown;
+    background-color: rgb(62, 61, 61);
+    color: wheat;
+}
+button.reschedulebtn:hover{
+    background-color: black;
+    color: white;
 }
