@@ -26,34 +26,49 @@ body{
 
 }
 
-.tablecontent table tr{
+ table tr{
     background-color:lightblue;
     
     
 }
-.tablecontent table{
+ table{
     width: 100%;
     height: 100%;
     
 }
 
-.tablecontent table, th, td {
+ table, th, td {
     border-bottom: 1px solid black;
     border-collapse: collapse;
     text-align: center;
   }
-  .tablecontent  th {
+  th {
     height: 85px;
     background-color:rgba(103, 66, 66,.5);
   }
-  .tablecontent td {
+ td {
     height: 85px;
   }
-  .tablecontent table{
+ table{
     position: relative;
     height: 100%;
     top: 5px;
   }
-.tablecontent tr:hover{
+tr:hover{
     background-color: white;
   }
+  @media (max-width: 764px) {
+    table, th, td {
+      font-size: 12px;
+    }
+    
+    th, td {
+      height: 60px;
+      border: 1px solid black;
+    }
+    
+    th {
+      font-weight: bold;
+    }
+  }
+  
