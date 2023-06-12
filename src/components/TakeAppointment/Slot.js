@@ -73,7 +73,7 @@ const [flag,setflag]=useState(true)
   {id:'slotb',time:"09:30-10:00"},
   {id:'slotc',time:"10:00-10:30"},
   {id:'slotd',time:"10:30-11:00"},
-  {id:'sloth',time:"12:30-01:00"},
+  {id:'slote',time:"11:00-11:30"},
   {id:'slotf',time:"11:30-12:00"},
   {id:'slotg',time:"12:00-12:30"},
   {id:'sloth',time:"12:30-01:00"}
