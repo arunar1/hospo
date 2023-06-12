@@ -253,6 +253,7 @@ export default function RegisterMain() {
                   <option></option>
                   <option value="Male">Male</option>
                   <option value="Female">Female</option>
+                  <option value="Other">Other</option>
                 </select></div>
               <div className='formReg'><label>Email Id</label>
                 <input type='email' onChange={handleClick} name='pemail' value={inputs.pemail } /></div>
@@ -278,7 +279,7 @@ export default function RegisterMain() {
                   <option value="Palakkad">	Palakkad</option>
                   <option value="Thiruvananthapuram">Thiruvananthapuram</option>
                   <option value="Thrissur">Thrissur</option>
-                  <option value="	Wayanad">	Wayanad</option>
+                  <option value="Wayanad">	Wayanad</option>
                 </select>
                 </div>
               <div className='formReg'><label>Pincode</label>
@@ -336,7 +337,8 @@ export default function RegisterMain() {
                   <option value="Palakkad">	Palakkad</option>
                   <option value="Thiruvananthapuram">Thiruvananthapuram</option>
                   <option value="Thrissur">Thrissur</option>
-                  <option value="	Wayanad">	Wayanad</option>
+                  <option value="Wayanad">	Wayanad</option>
+                  <option value="Pathanamthitta">	Pathanamthitta</option>
                 </select>
                 </div>
 
@@ -381,7 +383,7 @@ export default function RegisterMain() {
                   <option value='endocrinologists'>endocrinologists</option>
                   <option value='oncologists'> oncologists</option>
                   <option value='neurologists'>neurologists</option>
-                  <option value=' cardiothoracic surgeons'> cardiothoracic surgeons</option>
+                  <option value='cardiothoracic surgeons'> cardiothoracic surgeons</option>
 
                 </select>
             </div>
@@ -393,6 +395,7 @@ export default function RegisterMain() {
                   <option></option>
                   <option value="Male">Male</option>
                   <option value="Female">Female</option>
+                  <option value="Other">Other</option>
                 </select></div>
               <div className='formReg'><label>Email</label>
                 <input type='email' required onChange={handleClickpri} name='cemail' value={inputspri.cemail} /></div>
@@ -405,7 +408,7 @@ export default function RegisterMain() {
                   <option></option>
                   <option value="Alappuzha">	Alappuzha</option>
                   <option value="Ernakulam">	Ernakulam</option>
-                  <option value="Idukki">		Idukki</option>
+                  <option value="Idukki">Idukki</option>
                   <option value="Kannur">Kannur</option>
                   <option value="Kasaragod">Kasaragod</option>
                   <option value="Kollam">Kollam</option>
@@ -415,7 +418,7 @@ export default function RegisterMain() {
                   <option value="Palakkad">	Palakkad</option>
                   <option value="Thiruvananthapuram">Thiruvananthapuram</option>
                   <option value="Thrissur">Thrissur</option>
-                  <option value="	Wayanad">	Wayanad</option>
+                  <option value="Wayanad">Wayanad</option>
                 </select>
                 </div>
 
