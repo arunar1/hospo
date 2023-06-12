@@ -34,7 +34,7 @@ const [appdata,setappdata]=useState([])
 
   const [appdlt,setappdlt]=useState('')
 
-
+console.log(appdetails)
 
   const deleteuser=(id)=>{
     setappdlt(id)
@@ -90,7 +90,7 @@ const [appdata,setappdata]=useState([])
               <td>{appointment.date}</td>
               <td>{appointment.govhospitalname}</td>
               <td>{appointment.hospitaltype}</td>
-              <td>{appointment.district}</td>
+              <td>{appointment.DistrictName}</td>
               <td>{appointment.time}</td>
               <td>{appointment.token}</td>
               <td>{<button className='reschedulebtn' onClick={()=>deleteuser(appointment._id)}>Reschedule</button>}</td>
