@@ -50,6 +50,9 @@ const [flag,setflag]=useState(true)
       if(app.patientname==props.details.name && app.govhospitalname==formdata.HospitalName && app.date==formdata.Date){
         setflag(false)  
       }
+      if(app.patientname==props.details.name && app.govhospitalname==formdata.DoctorName && app.date==formdata.Date){
+        setflag(false)  
+      }
       setcounter(count);
       
     })
