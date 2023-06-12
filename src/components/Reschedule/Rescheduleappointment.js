@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import './Rescheduleappointment.css'
 import axios from 'axios'
 import moment from 'moment';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faCalendarCheck} from '@fortawesome/free-solid-svg-icons';
 export default function Rescheduleappointment(props) {
 
   const [dltres,setdltres]=useState();
@@ -93,7 +95,7 @@ console.log(appdetails)
               <td>{appointment.DistrictName}</td>
               <td>{appointment.time}</td>
               <td>{appointment.token}</td>
-              <td>{<button className='reschedulebtn' onClick={()=>deleteuser(appointment._id)}>Reschedule</button>}</td>
+              <td>{<FontAwesomeIcon  icon={faCalendarCheck} className='reschedulebtn' onClick={()=>deleteuser(appointment._id)}/>}</td>
             </tr>
           ))}
         </tbody>

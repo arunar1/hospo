@@ -61,6 +61,9 @@ tr:hover{
     table, th, td {
       font-size: 12px;
     }
+    td{
+      font-size: 10px;
+    }
     
     th, td {
       height: 60px;
