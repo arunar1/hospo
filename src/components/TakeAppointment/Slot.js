@@ -27,6 +27,7 @@ const [sel,setsel]=useState();
 
       settimeschedule(e.target.value)
       setslid(e.target.id);
+      setsel(e.target.name)
   }
   
 
@@ -161,7 +162,7 @@ const handlesubmit=(e)=>{
         <div className='wrapper'>
           {
             selectBtn.map((btn,index)=>(
-              <button onClick={choosetime} key={index} value={btn.time} className={`${slid===btn.id?'new':'choosetime'}`} name={index} id={btn.id}>{btn.time}</button>
+              <button onClick={choosetime} key={index} value={btn.time} className={`${sel===btn.id?'new':'choosetime'}`} name={btn.id} id={index}>{btn.time}</button>
              ))
           }
         </div>
