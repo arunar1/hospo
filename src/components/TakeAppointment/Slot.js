@@ -105,7 +105,7 @@ const handlesubmit=(e)=>{
           formdata.tokenid='H'+JSON.stringify(counter+1);
         }
         
-        console.log(formdata)
+       
         
         try {
               axios.post(`${process.env.REACT_APP_URL}/home/takeappointment/slot`,{
@@ -138,7 +138,6 @@ const handlesubmit=(e)=>{
   }
 }
 
-console.log(datas)
 
 
   return (
