@@ -105,7 +105,7 @@ const handlesubmit=(e)=>{
           formdata.tokenid='H'+JSON.stringify(counter+1);
         }
         
-       
+        console.log(formdata)
         
         try {
               axios.post(`${process.env.REACT_APP_URL}/home/takeappointment/slot`,{
@@ -114,7 +114,7 @@ const handlesubmit=(e)=>{
               
               if(res.data.message=='token generated'){
                 alert("Token Generated");
-                // window.location.href='/home'
+                window.location.href='/home'
               }
             })
           
