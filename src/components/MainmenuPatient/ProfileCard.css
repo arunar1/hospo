@@ -52,6 +52,11 @@
       left: 10vw;
       line-height: 7px;
       font-family: 'Times New Roman';
+      
     }
+    .profileCard ul li{
+      font-size: 14px;
+    }
+    
 
   }

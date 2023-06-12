@@ -165,6 +165,33 @@ useEffect(()=>{
 },[inputs3.DistrictName])
 
 
+const [dist,setdist]=useState([]);
+useEffect(()=>{
+  const uniquedis=[];
+  district.map((dis)=>{
+    if(!uniquedis.includes(dis.district)){
+      uniquedis.push(dis.district)
+
+    }
+
+    setdist(uniquedis)
+  })
+},[selectType])
+
+
+const [distcon,setdistcon]=useState([]);
+useEffect(()=>{
+  const uniquedis=[];
+  doctor.map((dis)=>{
+    if(!uniquedis.includes(dis.district)){
+      uniquedis.push(dis.district)
+
+    }
+
+    setdistcon(uniquedis)
+  })
+},[selectType])
+
 
 
 
@@ -201,8 +228,8 @@ useEffect(()=>{
                 <select required  onChange={handleClick} name='DistrictName' value={inputs.DistrictName}>
                   <option></option>
                   {
-                    district.map((dis,index)=>(
-                     <option value={dis.district}>{dis.district}</option>
+                    dist.map((dis,index)=>(
+                     <option value={dis}>{dis}</option>
                     ))
    
                   }
@@ -237,9 +264,9 @@ useEffect(()=>{
                 <label>District</label>
                 <select name='DistrictName' onChange={handleClick2}  value={inputs2.DistrictName} required>
                 <option></option>
-                  {
-                    district.map((dis,index)=>(
-                     <option value={dis.district}>{dis.district}</option>
+                {
+                    dist.map((dis,index)=>(
+                     <option value={dis}>{dis}</option>
                     ))
    
                   }
@@ -273,8 +300,8 @@ useEffect(()=>{
                 <select onChange={handleClick3} name='DistrictName' value={inputs3.DistrictName} required>
                 <option></option>
                   {
-                    doctor.map((dis,index)=>(
-                     <option value={dis.district}>{dis.district}</option>
+                    distcon.map((dis,index)=>(
+                     <option value={dis}>{dis}</option>
                     ))
    
                   }
