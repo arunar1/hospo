@@ -77,6 +77,7 @@ const [appdata,setappdata]=useState([])
             <th>Date</th>
             <th>Hospital/Doctor</th>
             <th>Hospital Type</th>
+            <th>Place</th>
             <th>Time</th>
             <th>Token</th>
             <th>Reschedule</th>
@@ -89,6 +90,7 @@ const [appdata,setappdata]=useState([])
               <td>{appointment.date}</td>
               <td>{appointment.govhospitalname}</td>
               <td>{appointment.hospitaltype}</td>
+              <td>{appointment.district}</td>
               <td>{appointment.time}</td>
               <td>{appointment.token}</td>
               <td>{<button className='reschedulebtn' onClick={()=>deleteuser(appointment._id)}>Reschedule</button>}</td>
