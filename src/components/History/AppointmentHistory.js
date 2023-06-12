@@ -61,7 +61,7 @@ const [appdata,setappdata]=useState([])
             <tr>
               <td>{index+1}</td>
               <td>{appointment.date}</td>
-              <td>{appointment.govhospitalname}</td>
+              <td>{(appointment.category)?`${appointment.govhospitalname} - ${appointment.category}`:`${appointment.govhospitalname}`}</td>
               <td>{appointment.hospitaltype}</td>
               <td>{appointment.time}</td>
               <td>{appointment.token}</td>

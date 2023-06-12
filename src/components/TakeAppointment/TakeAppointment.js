@@ -151,20 +151,21 @@ useEffect(()=>{
 },[inputs2.DistrictName])
 
 
-
 const [con,setcon]=useState([])
 useEffect(()=>{
   const con=[];
   doctor.map((dis)=>{
-    if(dis.district==inputs3.DistrictName && dis.usertype=="privateconsultant"){
+    if(dis.district==inputs3.DistrictName && dis.usertype=="privateconsultant" && dis.category==inputs3.Category){
       con.push(dis.name)
       
     }
     setcon(con)
   })
-},[inputs3.DistrictName])
+},[inputs3.Category])
 
 
+
+//unique hos
 const [dist,setdist]=useState([]);
 useEffect(()=>{
   const uniquedis=[];
@@ -178,7 +179,7 @@ useEffect(()=>{
   })
 },[selectType])
 
-
+//unique doctoe district
 const [distcon,setdistcon]=useState([]);
 useEffect(()=>{
   const uniquedis=[];
@@ -193,7 +194,26 @@ useEffect(()=>{
 },[selectType])
 
 
+const [cat,setcat]=useState([]);
+useEffect(()=>{
+  const uniquedis=[];
+  doctor.map((dis)=>{
 
+    if(dis.district==inputs3.DistrictName){
+      if(!uniquedis.includes(dis.category)){
+        uniquedis.push(dis.category)
+  
+      }
+    }
+
+    
+
+    setcat(uniquedis)
+  })
+},[inputs3.DistrictName])
+
+console.log(cat)
+console.log(doctor)
 
   return (
     <>
@@ -307,6 +327,18 @@ useEffect(()=>{
                   }
                 </select>
               </diV>
+              <diV className='hos'>
+                <label>Category</label>
+                <select onChange={handleClick3} name='Category' value={inputs3.Category} required>
+                <option></option>
+                  {
+                    cat.map((dis,index)=>(
+                     <option value={dis}>{dis}</option>
+                    ))
+   
+                  }
+                  </select>
+                  </diV>
               <div className='hos'>
                 <label>Doctor Name</label>
                 <select   required onChange={handleClick3} name='DoctorName' value={inputs3.DoctorName} >
@@ -326,6 +358,7 @@ useEffect(()=>{
               <div className='hos'>
                 <input type='submit' className='subbtn'></input>
               </div>
+
             </form>
           </div>
 

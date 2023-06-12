@@ -114,7 +114,7 @@ const handlesubmit=(e)=>{
               
               if(res.data.message=='token generated'){
                 alert("Token Generated");
-                window.location.href='/home'
+                // window.location.href='/home'
               }
             })
           
@@ -138,6 +138,7 @@ const handlesubmit=(e)=>{
   }
 }
 
+console.log(datas)
 
 
   return (
@@ -161,6 +162,10 @@ const handlesubmit=(e)=>{
         <div className='formcontainer'>
          <div>
             <form onSubmit={handlesubmit}>
+            <div className='formapp'>
+                {formdata.Category?<label >{datas[4]}:</label>:''}
+                <input type='text' value={formdata[datas[4]]}></input>
+              </div>
               <div className='formapp'>
                 <label >{datas[3]}:</label>
                 <input type='text' value={formdata[datas[3]]}></input>
