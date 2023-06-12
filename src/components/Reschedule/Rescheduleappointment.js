@@ -36,7 +36,7 @@ const [appdata,setappdata]=useState([])
 
   const [appdlt,setappdlt]=useState('')
 
-console.log(appdetails)
+
 
   const deleteuser=(id)=>{
     setappdlt(id)
