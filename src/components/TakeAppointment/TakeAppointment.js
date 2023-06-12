@@ -212,8 +212,7 @@ useEffect(()=>{
   })
 },[inputs3.DistrictName])
 
-console.log(cat)
-console.log(doctor)
+
 
   return (
     <>
