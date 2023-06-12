@@ -18,10 +18,17 @@ export default function Slot(props) {
 
   const [slid,setslid]=useState()
 
+
+const [sel,setsel]=useState();
   const choosetime=(e)=>{
+    
+
+
+
       settimeschedule(e.target.value)
       setslid(e.target.id);
   }
+  
 
   useEffect(()=>{
     axios.get(`${process.env.REACT_APP_URL}/appointmentinfo`)
@@ -105,7 +112,6 @@ const handlesubmit=(e)=>{
           formdata.tokenid='H'+JSON.stringify(counter+1);
         }
         
-        console.log(formdata)
         
         try {
               axios.post(`${process.env.REACT_APP_URL}/home/takeappointment/slot`,{
@@ -154,7 +160,7 @@ const handlesubmit=(e)=>{
         <div className='wrapper'>
           {
             selectBtn.map((btn,index)=>(
-              <button onClick={choosetime} key={index} value={btn.time} className='choosetime' id={index}>{btn.time}</button>
+              <button onClick={choosetime} key={index} value={btn.time} className={`${slid===btn.id?'new':'choosetime'}`} name={index} id={btn.id}>{btn.time}</button>
              ))
           }
         </div>

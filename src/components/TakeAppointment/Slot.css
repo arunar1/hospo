@@ -84,6 +84,7 @@ body{
     font-size: 17px;
     font-weight: 560;
     color: blue;
+    width: 300px;
 }
 .formcontainer .formapp label{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -174,7 +175,8 @@ body{
       
       padding-top: 7vh;
       display: flex;
-      
+      justify-content: center;
+      align-items: center;
       flex-direction: column;
     }
     .wrapper button{
@@ -289,3 +291,10 @@ body{
     }
   }
    */
+
+   .new{
+    background-color: black;
+    margin: 20px;
+    margin-left: 50px;
+    color: wheat;
+  }
