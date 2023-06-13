@@ -159,7 +159,7 @@ export default function RegisterMain() {
               alert(data.data.message)
             }
             else{
-              alert("Registered")
+              alert("Registered and User Id is Phone number")
             }
           }
     
