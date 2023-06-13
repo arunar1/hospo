@@ -36,6 +36,9 @@ button.reschedulebtn:hover{
     color: white;
 }
 @media (max-width: 600px) {
+    .Reschedule .RescheduleHeader{
+        width: 100%;
+    }
 
     .Reschedule .RescheduleHeader h1 {
         margin-left: 20px;

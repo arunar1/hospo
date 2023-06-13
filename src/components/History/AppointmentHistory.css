@@ -59,8 +59,10 @@ tr:hover{
     background-color: white;
   }
   @media (max-width: 764px) {
+
     table, th, td {
       font-size: 12px;
+      width: auto;
     }
     td{
       font-size: 10px;
@@ -75,6 +77,29 @@ tr:hover{
       font-weight: bold;
     }
   }
+  
+  @media (max-width: 400px) {
+
+    table, th, td {
+      font-size: 12px;
+      width: auto;
+    }
+    td{
+      font-size: 10px;
+    }
+    
+    th, td {
+      width: auto;
+      height: 100px;
+      border: 1px solid black;
+    }
+    
+    th {
+      font-weight: bold;
+    }
+  }
+
+
   @media (max-width: 768px) {
     .History .HistoryHeader {
         height: 60px;
@@ -88,4 +113,11 @@ tr:hover{
     .History .HistoryHeader ul li .linker {
         font-size: 16px;
     }
+}
+
+@media (max-width: 350px) {
+  .History .HistoryHeader{
+    background-color: transparent;
+  }
+  
 }
