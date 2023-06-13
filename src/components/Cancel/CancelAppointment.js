@@ -9,9 +9,13 @@ import  { useState, useEffect } from 'react'
 
 export default function CancelAppointment(props) {
 const [dltres,setdltres]=useState();
+const token=window.localStorage.getItem("token");
+
   const [appdetails,setappdetails]=useState([]);
   useEffect(()=>{
-    axios.get(`${process.env.REACT_APP_URL}/appointmentinfo`)
+    axios.get(`${process.env.REACT_APP_URL}/appointmentinfo`,{
+      headers:{token}
+    })
     .then(res=>{
       setappdetails(res.data);
     })
@@ -45,6 +49,8 @@ const [appdata,setappdata]=useState([])
     if(window.confirm("Are you want to delete the appointment")){
       axios.post(`${process.env.REACT_APP_URL}/deleteuserapp`,{
        appdlt
+      },{
+        headers:{token}
       }
      ).then(res=>{
        setdltres(res.data.data)

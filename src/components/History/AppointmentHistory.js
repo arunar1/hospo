@@ -7,10 +7,14 @@ import axios from 'axios'
 import moment from 'moment'
 
 export default function AppointmentHistory(props) {
-
+const token=window.localStorage.getItem("token");
   const [appdetails,setappdetails]=useState([]);
   useEffect(()=>{
-    axios.get(`${process.env.REACT_APP_URL}/appointmentinfo`)
+    axios.get(`${process.env.REACT_APP_URL}/appointmentinfo`,{
+      headers:{token}
+    },{
+      headers:{token}
+    })
     .then(res=>{
       setappdetails(res.data);
     })

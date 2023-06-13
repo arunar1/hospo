@@ -7,6 +7,7 @@ import axios from 'axios';
 import moment from 'moment';
 export default function TakeAppointment() {
 
+  const token=window.localStorage.getItem("token");
 
   const myDate = new Date();
   const formattedDate = moment(myDate).format('YYYY-MM-DD');
@@ -99,7 +100,9 @@ const [district,setdistrict]=useState([]);
 
 
 useEffect(()=>{
-  axios.get(`${process.env.REACT_APP_URL}/districtinfo`)
+  axios.get(`${process.env.REACT_APP_URL}/districtinfo`,{
+    headers:{token}
+  })
   .then(res=>{
     setdistrict(res.data);
   })
@@ -110,7 +113,9 @@ const [doctor,setdoctor]=useState([]);
 
 
 useEffect(()=>{
-  axios.get(`${process.env.REACT_APP_URL}/privateinfo`)
+  axios.get(`${process.env.REACT_APP_URL}/privateinfo`,{
+    headers:{token}
+  })
   .then(res=>{
     setdoctor(res.data);
   })

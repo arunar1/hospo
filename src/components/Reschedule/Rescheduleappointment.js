@@ -10,8 +10,12 @@ export default function Rescheduleappointment(props) {
 
   const [dltres,setdltres]=useState();
   const [appdetails,setappdetails]=useState([]);
+  const token=window.localStorage.getItem("token");
+
   useEffect(()=>{
-    axios.get(`${process.env.REACT_APP_URL}/appointmentinfo`)
+    axios.get(`${process.env.REACT_APP_URL}/appointmentinfo`,{
+      headers:{token}
+    })
     .then(res=>{
       setappdetails(res.data);
     })
@@ -45,6 +49,9 @@ const [appdata,setappdata]=useState([])
     if(window.confirm("Are you want to Reschedule the appointment")){
       axios.post(`${process.env.REACT_APP_URL}/deleteuserapp`,{
        appdlt
+      },
+      {
+        headers:{token}
       }
      ).then(res=>{
        setdltres(res.data.data)

@@ -4,9 +4,13 @@ import './ShowAppointment.css'
 import { useEffect,useState } from 'react'
 import axios from 'axios'
 export default function ShowAppointment(props) {
+  const token=window.localStorage.getItem("token");
+
     const [appdetails,setappdetails]=useState([]);
   useEffect(()=>{
-    axios.get(`${process.env.REACT_APP_URL}/appointmentinfo`)
+    axios.get(`${process.env.REACT_APP_URL}/appointmentinfo`,{
+      headers:{token}
+    })
     .then(res=>{
       setappdetails(res.data);
     })
