@@ -115,9 +115,3 @@ tr:hover{
     }
 }
 
-@media (max-width: 350px) {
-  .History .HistoryHeader{
-    background-color: transparent;
-  }
-  
-}

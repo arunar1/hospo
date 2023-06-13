@@ -84,7 +84,7 @@ const [appdata,setappdata]=useState([])
           <tr>
             <th>Sl no</th>
             <th>Date</th>
-            <th>Hospital/Doctor</th>
+            <th>Hospital/ Doctor</th>
             <th>Hospital Type</th>
             <th>Place</th>
             <th>Time</th>
