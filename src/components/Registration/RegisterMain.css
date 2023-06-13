@@ -198,7 +198,8 @@ main.main1{
     main.main1 .reg-button button {
       margin: 20px;
       width: 140px;
-      height: 27px;
+      height: 30px;
+      border-radius:15px ;
       padding: auto;
     }
   
