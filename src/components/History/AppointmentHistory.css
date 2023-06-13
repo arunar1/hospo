@@ -53,6 +53,7 @@ body{
     position: relative;
     height: 100%;
     top: 5px;
+    padding-inline: 10px;
   }
 tr:hover{
     background-color: white;
