@@ -50,6 +50,7 @@ button.reschedulebtn:hover{
     .reschedulebtn {
         width: 20px;
         padding: 0;
+        padding-left: 20px;
         height: 30px;
         display: block;
         margin: 0;
