@@ -77,7 +77,7 @@ export default function RegisterMain() {
         alert(data.data.error)
       }
       else{
-        alert("registered")
+        alert("Registered  User Id : Phone number")
       }
       
 
@@ -116,7 +116,7 @@ export default function RegisterMain() {
                 alert(data.data.message)
               }
               else{
-                alert("Registered")
+                alert("Registered User Id : Phone number")
               }
             }
       
@@ -159,7 +159,7 @@ export default function RegisterMain() {
               alert(data.data.message)
             }
             else{
-              alert("Registered and User Id is Phone number")
+              alert("Registered User Id : Phone number")
             }
           }
     
