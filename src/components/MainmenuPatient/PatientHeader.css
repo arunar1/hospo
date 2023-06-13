@@ -246,37 +246,5 @@
     }
   }
   
-  /* Medium devices (768px to 991px) */
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-    .navBar .topNav {
-      padding-left: 100px;
-    }
-  }
-  
-  /* Large devices (992px and above) */
-  @media only screen and (min-width: 1600px) {
-    .patientHeader {
-      height: auto;
-    }
-  
-    .navBar {
-      height: auto;
-    }
-  
-    .mainSection {
-      position: static;
-      margin-top: 90px;
-      margin-left: 10px;
-    }
-  
-    .navBar .topNav {
-      padding-left: 150px;
-    }
-  
-    .patientHeader .selection ul {
-      height: auto;
-      align-items: center;
-      padding: 10px;
-    }
-  }
+ 
   
