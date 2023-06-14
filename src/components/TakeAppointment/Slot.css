@@ -118,6 +118,7 @@ body{
   @media only screen and (max-width: 768px) {
     .containerSlot{
       display: flex;
+      top: 0vh;
       flex-direction: column;
       justify-content: start;
       width: 250px;
@@ -168,6 +169,8 @@ body{
     .formcontainer{
       margin: 50px;
       margin-left: 150px;
+      position: relative;
+      top: 10vh;
     }
   
     .formcontainer .formapp input {
@@ -196,7 +199,7 @@ body{
       width: auto;
       font-size: 17px;
       position: relative;
-      top: 0vh;
+      top: 20vh;
       left: 0vw;
   }
     
