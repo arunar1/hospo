@@ -29,7 +29,7 @@ console.log(timeSlots)
     setNewTimeSlot({ startTime: '', endTime: '', slotsAvailable: '' });
   
     if(timeSlots.startTime && timeSlots.endTime){
-      xios.post(`${process.env.REACT_APP_URL}/appointmenttime`,{timeSlots,userid})
+      axios.post(`${process.env.REACT_APP_URL}/appointmenttime`,{timeSlots,userid})
     .then(res=>{
       console.log(res.data)
       if(res.data.staus=='ok'){
