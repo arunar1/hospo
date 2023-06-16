@@ -5,6 +5,7 @@ import { useEffect,useState } from 'react';
 import axios from 'axios';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { click } from '@testing-library/user-event/dist/click';
 export default function SetAppointment(props) {
 
 console.log(props)
@@ -13,7 +14,7 @@ console.log(props)
 
   const [timeSlots, setTimeSlots] = useState([]);
   const [newTimeSlot, setNewTimeSlot] = useState({ startTime: '', endTime: '', slotsAvailable: '' });
-
+  const [appdatas,setappdatas]=useState('')
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setNewTimeSlot((prevState) => ({
@@ -26,11 +27,16 @@ console.log(timeSlots)
     e.preventDefault();
     setTimeSlots(newTimeSlot);
     setNewTimeSlot({ startTime: '', endTime: '', slotsAvailable: '' });
+  
     axios.post(`${process.env.REACT_APP_URL}/appointmenttime`,{timeSlots,userid})
     .then(res=>{
-      console.log(res)
+      console.log(res.data)
+      if(res.data.staus=='ok'){
+        window.location.href='/hospitalhome/setappointment'
+      }
     })
-  };
+ 
+   }
   console.log(timeSlots)
   const token=window.localStorage.getItem("token");
   const [appdetails,setappdetails]=useState([]);
@@ -42,16 +48,17 @@ console.log(timeSlots)
       setappdetails(res.data);
       
     })
-  },[timeSlots])
+  },[appdatas])
   console.log(appdetails)
 
   const [appdata,setappdata]=useState([])
 
   useEffect(()=>{
     const  newdata=[];
-    appdetails.map((data,index,appdetails)=>{
+    appdetails.map((data,index)=>{
         if(data.userId==props.details.phoneno){
           data.timeslot._id=data._id
+          data.timeslot.index=index
           newdata.push(data.timeslot)
           
         }
@@ -59,9 +66,8 @@ console.log(timeSlots)
         
     },setappdata(newdata)
     )
-  },[appdetails])
+  },[timeSlots,appdetails])
   console.log(appdata)
-  const [dltres,setdltres]=useState();
   const [appdlt,setappdlt]=useState('')
   const deleteuser=(id)=>{
     setappdlt(id)
@@ -73,7 +79,10 @@ console.log(timeSlots)
         headers:{token}
       }
      ).then(res=>{
-       setdltres(res.data.data)
+      if(res.data.status=='ok'){
+        window.location.href='/hospitalhome/setappointment'
+      }
+       
        console.log(res)
      })
  }
@@ -134,7 +143,7 @@ console.log(appdata)
         />
       </div>
       <div>
-      <button type='submit' >Add Time Slot</button>
+      <button type='submit'  >Add Time Slot</button>
 
       </div>
         
