@@ -28,13 +28,15 @@ console.log(timeSlots)
     setTimeSlots(newTimeSlot);
     setNewTimeSlot({ startTime: '', endTime: '', slotsAvailable: '' });
   
-    axios.post(`${process.env.REACT_APP_URL}/appointmenttime`,{timeSlots,userid})
+    if(timeSlots.startTime && timeSlots.endTime){
+      xios.post(`${process.env.REACT_APP_URL}/appointmenttime`,{timeSlots,userid})
     .then(res=>{
       console.log(res.data)
       if(res.data.staus=='ok'){
         window.location.href='/hospitalhome/setappointment'
       }
     })
+    }
  
    }
   console.log(timeSlots)
