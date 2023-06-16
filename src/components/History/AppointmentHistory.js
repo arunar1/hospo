@@ -12,8 +12,6 @@ const token=window.localStorage.getItem("token");
   useEffect(()=>{
     axios.get(`${process.env.REACT_APP_URL}/appointmentinfo`,{
       headers:{token}
-    },{
-      headers:{token}
     })
     .then(res=>{
       setappdetails(res.data);

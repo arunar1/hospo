@@ -2,9 +2,17 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './SetAppointment.css'
 import { useEffect,useState } from 'react';
-export default function SetAppointment() {
+import axios from 'axios';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+export default function SetAppointment(props) {
+
+console.log(props)
+  const userid=props.details.phoneno;
+  console.log(userid)
+
   const [timeSlots, setTimeSlots] = useState([]);
-  const [newTimeSlot, setNewTimeSlot] = useState({ startTime: '', endTime: '', slotsAvailable: 0 });
+  const [newTimeSlot, setNewTimeSlot] = useState({ startTime: '', endTime: '', slotsAvailable: '' });
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -16,10 +24,68 @@ export default function SetAppointment() {
 console.log(timeSlots)
   const handleAddTimeSlot = (e) => {
     e.preventDefault();
-    setTimeSlots((prevSlots) => [...prevSlots, newTimeSlot]);
-    setNewTimeSlot({ startTime: '', endTime: '', slotsAvailable: 0 });
+    setTimeSlots(newTimeSlot);
+    setNewTimeSlot({ startTime: '', endTime: '', slotsAvailable: '' });
+    axios.post(`${process.env.REACT_APP_URL}/appointmenttime`,{timeSlots,userid})
+    .then(res=>{
+      console.log(res)
+    })
   };
   console.log(timeSlots)
+  const token=window.localStorage.getItem("token");
+  const [appdetails,setappdetails]=useState([]);
+  useEffect(()=>{
+    axios.get(`${process.env.REACT_APP_URL}/appointmenttimeslot`,{
+      headers:{token}
+    })
+    .then(res=>{
+      setappdetails(res.data);
+      
+    })
+  },[timeSlots])
+  console.log(appdetails)
+
+  const [appdata,setappdata]=useState([])
+
+  useEffect(()=>{
+    const  newdata=[];
+    appdetails.map((data,index,appdetails)=>{
+        if(data.userId==props.details.phoneno){
+          data.timeslot._id=data._id
+          newdata.push(data.timeslot)
+          
+        }
+        // newdata.sort((a,b)=>moment(b.date).diff(moment(a.date)))
+        
+    },setappdata(newdata)
+    )
+  },[appdetails])
+  console.log(appdata)
+  const [dltres,setdltres]=useState();
+  const [appdlt,setappdlt]=useState('')
+  const deleteuser=(id)=>{
+    setappdlt(id)
+   if(appdlt){
+    if(window.confirm("Are you want to delete the appointment")){
+      axios.post(`${process.env.REACT_APP_URL}/dltappointmenttimeslot`,{
+       appdlt
+      },{
+        headers:{token}
+      }
+     ).then(res=>{
+       setdltres(res.data.data)
+       console.log(res)
+     })
+ }
+   }
+    else{
+
+    }
+  }
+
+console.log(appdata)
+
+
   return (
     <div>
       <div className='setappointment'>
@@ -76,18 +142,21 @@ console.log(timeSlots)
       </form>
 
       <h2>Time Slots</h2>
-      {timeSlots.length === 0 ? (
+      {appdata.length === 0 ? (
         <p>No time slots added yet.</p>
       ) : (
         <ul >
-          {timeSlots.map((slot, index) => (
+          {appdata.map((slot, index) => (
             <li className='card' key={index}>
               <div>Start Time: {slot.startTime}</div>
               <div>End Time: {slot.endTime}</div>
               <div>Slots Available: {slot.slotsAvailable}</div>
+              <div><FontAwesomeIcon className='deletebtn positondlt'  icon={faTrash} onClick={()=>deleteuser(slot._id)}  /></div>
             </li>
+            
           ))}
         </ul>
+        
       )}
     </div>
         
