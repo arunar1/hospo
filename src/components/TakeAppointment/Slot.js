@@ -9,6 +9,7 @@ export default function Slot(props) {
   const formdata = JSON.parse(window.localStorage.getItem('appdeatail'));
 
   const [counter,setcounter]=useState(0);
+  const [availcounter,setavailcounter]=useState(0);
 
   const [getapp,setgetapp]=useState([])
 
@@ -18,9 +19,11 @@ export default function Slot(props) {
 
   const [slid,setslid]=useState()
 
+  const [code,setcode]=useState('');
+
 
 const [sel,setsel]=useState();
-  const choosetime=(e)=>{
+  const choosetime=(e,count,code)=>{
     
 
 
@@ -28,7 +31,13 @@ const [sel,setsel]=useState();
       settimeschedule(e.target.value)
       setslid(e.target.id);
       setsel(e.target.name)
+      setcode(code)
+      setavailcounter(count)
+  
+      
+      
   }
+  console.log(availcounter)
   
   const token=window.localStorage.getItem("token");
 
@@ -40,6 +49,19 @@ const [sel,setsel]=useState();
       setappdetails(res.data);
     })
   },[timeschedule])
+
+  const [apptimedetails,setapptimedetails]=useState([]);
+  useEffect(()=>{
+    axios.get(`${process.env.REACT_APP_URL}/appointmenttimeslot`,{
+      headers:{token}
+    })
+    .then(res=>{
+      setapptimedetails(res.data);
+      
+    })
+  },[])
+
+  console.log(apptimedetails)
 
 const [flag,setflag]=useState(true)
 
@@ -64,19 +86,33 @@ const [flag,setflag]=useState(true)
     })
   },[timeschedule])
 
-
-
-  
-
-
-
   const datas = [];
 
   for (const item in formdata) {
     datas.push(item)
   }
 
+  console.log(formdata)
+  console.log(apptimedetails)
 
+const [appdata,setappdata]=useState([])
+console.log(appdetails)
+  useEffect(()=>{
+    const  newdata=[];
+    apptimedetails.map((data,index)=>{
+        if(data.hospitalname==formdata.HospitalName){
+          newdata.push(data.timeslot)
+          
+        }
+        setappdata(newdata)
+        // newdata.sort((a,b)=>moment(b.date).diff(moment(a.date)))
+        
+    }
+    )
+  },[appdetails])
+
+
+  console.log(appdata)
 
   const selectBtn=[
   {id:'slota',time:"09:00-09:30"},
@@ -93,35 +129,36 @@ const handlesubmit=(e)=>{
   e.preventDefault()
   if(timeschedule){
     if(flag){
-      if(counter<=10){
+      if(counter<=Number(availcounter)){
         formdata.timeapp=timeschedule;
         formdata.patientName=props.details.name;
         formdata.patientid=props.details.userId;
         formdata.slotid=slid;
-        if(slid==0){
-          formdata.tokenid='A'+JSON.stringify(counter+1);
-        }
-        else if(slid==1){
-          formdata.tokenid='B'+JSON.stringify(counter+1);
-        }
-        else if(slid==2){
-          formdata.tokenid='C'+JSON.stringify(counter+1);
-        }
-        else if(slid==3){
-          formdata.tokenid='D'+JSON.stringify(counter+1);
-        }
-        else if(slid==4){
-          formdata.tokenid='E'+JSON.stringify(counter+1);
-        }
-        else if(slid==5){
-          formdata.tokenid='F'+JSON.stringify(counter+1);
-        }
-        else if(slid==6){
-          formdata.tokenid='G'+JSON.stringify(counter+1);
-        }
-        else if(slid==7){
-          formdata.tokenid='H'+JSON.stringify(counter+1);
-        }
+        // if(slid==0){
+        //   formdata.tokenid='A'+JSON.stringify(counter+1);
+        // }
+        // else if(slid==1){
+        //   formdata.tokenid='B'+JSON.stringify(counter+1);
+        // }
+        // else if(slid==2){
+        //   formdata.tokenid='C'+JSON.stringify(counter+1);
+        // }
+        // else if(slid==3){
+        //   formdata.tokenid='D'+JSON.stringify(counter+1);
+        // }
+        // else if(slid==4){
+        //   formdata.tokenid='E'+JSON.stringify(counter+1);
+        // }
+        // else if(slid==5){
+        //   formdata.tokenid='F'+JSON.stringify(counter+1);
+        // }
+        // else if(slid==6){
+        //   formdata.tokenid='G'+JSON.stringify(counter+1);
+        // }
+        // else if(slid==7){
+        //   formdata.tokenid='H'+JSON.stringify(counter+1);
+        // }
+        formdata.tokenid=code+JSON.stringify(counter+1);
         
         
         try {
@@ -157,6 +194,8 @@ const handlesubmit=(e)=>{
 
 
 
+
+
   return (
     <div>
       <div className='sloter'>
@@ -168,13 +207,15 @@ const handlesubmit=(e)=>{
         </div>
       </div>
       <div className='containerSlot'>
-        <div className='wrapper'>
+        {appdata.length>0?(
+          <div className='wrapper'>
           {
-            selectBtn.map((btn,index)=>(
-              <button onClick={choosetime} key={index} value={btn.time} className={`${sel===btn.id?'new':'choosetime'}`} name={btn.id} id={index}>{btn.time}</button>
+            appdata.map((btn,index)=>(
+              <button  onClick={(e) => choosetime(e,btn.slotsAvailable,btn.code)}  key={index} value={`${btn.startTime}-${btn.endTime}`} className={`${sel===btn.code?'new':'choosetime'}`} name={btn.code} id={index}>{`${btn.startTime}-${btn.endTime}`}</button>
              ))
           }
         </div>
+        ):(<h3>Currently No appointment time is scheduled</h3>)}
         <div className='formcontainer'>
          <div>
             <form onSubmit={handlesubmit}>
@@ -200,7 +241,7 @@ const handlesubmit=(e)=>{
               </div>
               <div  className='formapp'>
                 <label>Slot Left:</label>
-                <input type='text' value={10-counter} name=''></input>
+                <input type='text' value={Number(availcounter)-counter} name=''></input>
               </div>
               <div  className='formapp'>
                 <label>Time:</label>

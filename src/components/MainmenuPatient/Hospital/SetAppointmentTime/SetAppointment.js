@@ -14,8 +14,9 @@ console.log(props)
 
   const [timeSlots, setTimeSlots] = useState([]);
 
+const hospitalname=props.details.hospitalname;
 
-  const [newTimeSlot, setNewTimeSlot] = useState({ startTime: '', endTime: '', slotsAvailable: '' });
+  const [newTimeSlot, setNewTimeSlot] = useState({ startTime: '', endTime: '', slotsAvailable: '',code:'' });
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -29,12 +30,12 @@ console.log(timeSlots)
     e.preventDefault();
     setTimeSlots(newTimeSlot);
     
-  
-      axios.post(`${process.env.REACT_APP_URL}/appointmenttime`,{newTimeSlot,userid})
+
+      axios.post(`${process.env.REACT_APP_URL}/appointmenttime`,{newTimeSlot,userid,hospitalname})
     .then(res=>{
       console.log(res.data)
       if(res.data.staus=='ok'){
-        setNewTimeSlot({ startTime: '', endTime: '', slotsAvailable: '' });
+        setNewTimeSlot({ startTime: '', endTime: '', slotsAvailable: '',code:'' });
         window.location.href='/hospitalhome/setappointment'
       }
     })
@@ -55,14 +56,13 @@ console.log(timeSlots)
   },[newTimeSlot])
   console.log(appdetails)
 
-  const [appdata,setappdata]=useState([])
+const [appdata,setappdata]=useState([])
 console.log(appdetails)
   useEffect(()=>{
     const  newdata=[];
     appdetails.map((data,index)=>{
         if(data.userId==props.details.phoneno){
           data.timeslot._id=data._id
-
           data.timeslot.index=index
           newdata.push(data.timeslot)
           
@@ -148,6 +148,18 @@ console.log(appdata)
           required
         />
       </div>
+      <div className='settime'>
+        <label htmlFor="code">Slots code:</label>
+        <input
+          type="text"
+          id="code"
+          name="code"
+          value={newTimeSlot.code}
+          onChange={handleInputChange}
+          placeholder='A,B,C........'
+          required
+        />
+      </div>
       <div>
       <button type='submit'  >Add Time Slot</button>
 
@@ -166,6 +178,7 @@ console.log(appdata)
               <div>Start Time: {slot.startTime}</div>
               <div>End Time: {slot.endTime}</div>
               <div>Slots Available: {slot.slotsAvailable}</div>
+              <div>Slot Code: {slot.code}</div>
               <div><FontAwesomeIcon className='deletebtn positondlt'  icon={faTrash} onClick={()=>deleteuser(slot._id)}  /></div>
             </li>
             

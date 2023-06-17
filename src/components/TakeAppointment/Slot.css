@@ -102,6 +102,9 @@ body{
     border-radius: 10px;
     
 }
+h3{
+  padding: 60px;
+}
 
 .wrapper .choosetime{
     margin: 20px;
