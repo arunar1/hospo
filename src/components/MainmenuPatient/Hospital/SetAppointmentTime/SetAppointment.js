@@ -8,9 +8,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { click } from '@testing-library/user-event/dist/click';
 export default function SetAppointment(props) {
 
-console.log(props)
+// console.log(props)
   const userid=props.details.phoneno;
-  console.log(userid)
+  // console.log(userid)
 
   const [timeSlots, setTimeSlots] = useState([]);
 
@@ -25,7 +25,7 @@ const hospitalname=props.details.hospitalname;
       [name]: value
     }));
   };
-console.log(timeSlots)
+// console.log(timeSlots)
   const handleAddTimeSlot = (e) => {
     e.preventDefault();
     setTimeSlots(newTimeSlot);
@@ -33,7 +33,7 @@ console.log(timeSlots)
 
       axios.post(`${process.env.REACT_APP_URL}/appointmenttime`,{newTimeSlot,userid,hospitalname})
     .then(res=>{
-      console.log(res.data)
+      // console.log(res.data)
       if(res.data.staus=='ok'){
         setNewTimeSlot({ startTime: '', endTime: '', slotsAvailable: '',code:'' });
         window.location.href='/hospitalhome/setappointment'
@@ -42,7 +42,7 @@ console.log(timeSlots)
     
  
    }
-  console.log(timeSlots)
+  // console.log(timeSlots)
   const token=window.localStorage.getItem("token");
   const [appdetails,setappdetails]=useState([]);
   useEffect(()=>{
@@ -54,10 +54,10 @@ console.log(timeSlots)
       
     })
   },[newTimeSlot])
-  console.log(appdetails)
+  // console.log(appdetails)
 
 const [appdata,setappdata]=useState([])
-console.log(appdetails)
+// console.log(appdetails)
   useEffect(()=>{
     const  newdata=[];
     appdetails.map((data,index)=>{
@@ -73,7 +73,7 @@ console.log(appdetails)
     }
     )
   },[appdetails,newTimeSlot])
-  console.log(appdata)
+  // console.log(appdata)
   const [appdlt,setappdlt]=useState('')
   const deleteuser=(id)=>{
     setappdlt(id)
@@ -89,7 +89,7 @@ console.log(appdetails)
         window.location.href='/hospitalhome/setappointment'
       }
        
-       console.log(res)
+      //  console.log(res)
      })
  }
    }
@@ -98,7 +98,7 @@ console.log(appdetails)
     }
   }
 
-console.log(appdata)
+// console.log(appdata)
 
 
   return (
