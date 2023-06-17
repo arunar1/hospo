@@ -4,8 +4,11 @@ import axios from 'axios'
 import { BrowserRouter as Router,Routes,Route, Switch,Link } from 'react-router-dom';
 import Register from '../../Registration/Register';
 import { useEffect,useState } from 'react'
+import SetAppointment from '../Hospital/SetAppointmentTime/SetAppointment';
+import ShowAppointment from '../Hospital/ShowAppointment/Showppointment';
 export default function Consultant() {
   const [datas,setdatas]=useState({});
+
   useEffect(()=>{
     try{
          axios.post(`${process.env.REACT_APP_URL}/consultanthome`,{
@@ -45,13 +48,19 @@ export default function Consultant() {
   return (
     <div>
         <Router>
-        <Switch>
+       
           <Route  exact path='/consultanthome' >
           {loggeduser=="true"?<ConsultantHeader data={datas} />:<Register/>}
-
-           
           </Route>
-        </Switch>
+          <Route exact path='/consultanthome/showappointment'>
+           
+            {loggeduser=="true"? <ShowAppointment details={datas}/>:<Register/>}
+          </Route>
+          <Route exact path='/consultanthome/setappointment'>
+            
+            {loggeduser=="true"?<SetAppointment details={datas}/>:<Register/>}
+          </Route>
+      
         </Router>
       
     </div>
