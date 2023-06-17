@@ -37,7 +37,7 @@ const [sel,setsel]=useState();
       
       
   }
-  console.log(availcounter)
+  // console.log(availcounter)
   
   const token=window.localStorage.getItem("token");
 
@@ -61,7 +61,7 @@ const [sel,setsel]=useState();
     })
   },[])
 
-  console.log(apptimedetails)
+  // console.log(apptimedetails)
 
 const [flag,setflag]=useState(true)
 
@@ -92,11 +92,11 @@ const [flag,setflag]=useState(true)
     datas.push(item)
   }
 
-  console.log(formdata)
-  console.log(apptimedetails)
+  // console.log(formdata)
+  // console.log(apptimedetails)
 
 const [appdata,setappdata]=useState([])
-console.log(appdetails)
+// console.log(appdetails)
   useEffect(()=>{
     const  newdata=[];
     apptimedetails.map((data,index)=>{
@@ -112,7 +112,7 @@ console.log(appdetails)
   },[appdetails])
 
 
-  console.log(appdata)
+  // console.log(appdata)
 
   const selectBtn=[
   {id:'slota',time:"09:00-09:30"},
