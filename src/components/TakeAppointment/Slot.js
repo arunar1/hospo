@@ -59,7 +59,7 @@ const [sel,setsel]=useState();
       setapptimedetails(res.data);
       
     })
-  },[])
+  },[props.details])
 
   // console.log(apptimedetails)
 
@@ -160,15 +160,16 @@ const handlesubmit=(e)=>{
         // }
         formdata.tokenid=code+JSON.stringify(counter+1);
         
-        
         try {
+        
+              
               axios.post(`${process.env.REACT_APP_URL}/home/takeappointment/slot`,{
                 formdata
             }).then(res=>{
-              
+                window.location.href='/home'
               if(res.data.message=='token generated'){
                 alert("Token Generated");
-                window.location.href='/home'
+                
               }
               else{
                 alert("network error sorry please try later")
