@@ -13,8 +13,10 @@ console.log(props)
   console.log(userid)
 
   const [timeSlots, setTimeSlots] = useState([]);
+
+
   const [newTimeSlot, setNewTimeSlot] = useState({ startTime: '', endTime: '', slotsAvailable: '' });
-  const [appdatas,setappdatas]=useState('')
+
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setNewTimeSlot((prevState) => ({
@@ -26,17 +28,17 @@ console.log(timeSlots)
   const handleAddTimeSlot = (e) => {
     e.preventDefault();
     setTimeSlots(newTimeSlot);
-    setNewTimeSlot({ startTime: '', endTime: '', slotsAvailable: '' });
+    
   
-    if(timeSlots.startTime && timeSlots.endTime){
-      axios.post(`${process.env.REACT_APP_URL}/appointmenttime`,{timeSlots,userid})
+      axios.post(`${process.env.REACT_APP_URL}/appointmenttime`,{newTimeSlot,userid})
     .then(res=>{
       console.log(res.data)
       if(res.data.staus=='ok'){
+        setNewTimeSlot({ startTime: '', endTime: '', slotsAvailable: '' });
         window.location.href='/hospitalhome/setappointment'
       }
     })
-    }
+    
  
    }
   console.log(timeSlots)
@@ -50,31 +52,33 @@ console.log(timeSlots)
       setappdetails(res.data);
       
     })
-  },[appdatas])
+  },[newTimeSlot])
   console.log(appdetails)
 
   const [appdata,setappdata]=useState([])
-
+console.log(appdetails)
   useEffect(()=>{
     const  newdata=[];
     appdetails.map((data,index)=>{
         if(data.userId==props.details.phoneno){
           data.timeslot._id=data._id
+
           data.timeslot.index=index
           newdata.push(data.timeslot)
           
         }
+        setappdata(newdata)
         // newdata.sort((a,b)=>moment(b.date).diff(moment(a.date)))
         
-    },setappdata(newdata)
+    }
     )
-  },[timeSlots,appdetails])
+  },[appdetails])
   console.log(appdata)
   const [appdlt,setappdlt]=useState('')
   const deleteuser=(id)=>{
     setappdlt(id)
    if(appdlt){
-    if(window.confirm("Are you want to delete the appointment")){
+    if(window.confirm("Are you want to delete the appointment time")){
       axios.post(`${process.env.REACT_APP_URL}/dltappointmenttimeslot`,{
        appdlt
       },{
