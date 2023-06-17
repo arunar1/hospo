@@ -84,7 +84,7 @@ const [appdata,setappdata]=useState([])
         
     }
     )
-  },[appdetails,newTimeSlot])
+  },[appdetails])
   // console.log(appdata)
   const [appdlt,setappdlt]=useState('')
   const deleteuser=(id)=>{
