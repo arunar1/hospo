@@ -109,7 +109,7 @@ const [appdata,setappdata]=useState([])
         
     }
     )
-  },[appdetails])
+  },[formdata])
 
 
   console.log(appdata)
