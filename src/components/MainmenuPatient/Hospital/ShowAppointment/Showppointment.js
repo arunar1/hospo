@@ -22,7 +22,7 @@ const [appdata,setappdata]=useState([])
   useEffect(()=>{
     const  newdata=[];
     appdetails.map((data)=>{
-        if(data.govhospitalname==props.details.hospitalname){
+        if(data.govhospitalname==props.details.hospitalname || data.govhospitalname==props.details.name){
 
           newdata.push(data)
         }
