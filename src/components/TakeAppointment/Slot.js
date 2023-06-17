@@ -170,6 +170,11 @@ const handlesubmit=(e)=>{
                 alert("Token Generated");
                 window.location.href='/home'
               }
+              else{
+                alert("network error sorry please try later")
+                window.location.href='/home'
+
+              }
             })
           
         } catch (error) {
