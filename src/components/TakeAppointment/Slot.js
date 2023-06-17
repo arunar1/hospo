@@ -100,7 +100,7 @@ const [appdata,setappdata]=useState([])
   useEffect(()=>{
     const  newdata=[];
     apptimedetails.map((data,index)=>{
-        if(data.hospitalname==formdata.HospitalName){
+        if(data.hospitalname==formdata.HospitalName||data.hospitalname==formdata.DoctorName){
           newdata.push(data.timeslot)
           
         }
@@ -112,7 +112,7 @@ const [appdata,setappdata]=useState([])
   },[appdetails])
 
 
-  // console.log(appdata)
+  console.log(appdata)
 
   const selectBtn=[
   {id:'slota',time:"09:00-09:30"},

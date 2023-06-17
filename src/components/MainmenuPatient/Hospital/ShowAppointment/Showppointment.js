@@ -38,7 +38,7 @@ const [appdata,setappdata]=useState([])
         <div className='showappointmentHeader'>
             <h1>Show Appointments</h1>
             <ul>
-              <li><Link to="/hospitalhome" className='linker'>back</Link></li>
+            {props.details.usertype=='hospital'?<li><Link to="/hospitalhome" className='linker'>back</Link></li>:<li><Link to="/consultanthome" className='linker'>back</Link></li>}
             </ul>
         </div>
         <div>

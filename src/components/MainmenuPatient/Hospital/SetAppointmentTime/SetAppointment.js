@@ -8,13 +8,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { click } from '@testing-library/user-event/dist/click';
 export default function SetAppointment(props) {
 
-// console.log(props)
+console.log(props.details)
   const userid=props.details.phoneno;
   // console.log(userid)
 
   const [timeSlots, setTimeSlots] = useState([]);
 
-const hospitalname=props.details.hospitalname;
+let hospitalname='';
+if(props.details.usertype='privateconsultant'){
+  hospitalname=props.details.name;
+}
+else{
+  hospitalname=props.details.hospitalname
+}
 
   const [newTimeSlot, setNewTimeSlot] = useState({ startTime: '', endTime: '', slotsAvailable: '',code:'' });
 
@@ -36,7 +42,13 @@ const hospitalname=props.details.hospitalname;
       // console.log(res.data)
       if(res.data.staus=='ok'){
         setNewTimeSlot({ startTime: '', endTime: '', slotsAvailable: '',code:'' });
-        window.location.href='/hospitalhome/setappointment'
+        if(props.details.usertype=='hospital'){
+          window.location.href='/hospitalhome/setappointment'
+        }
+        else{
+          window.location.href='/consultanthome/setappointment'
+        }
+        
       }
     })
     
@@ -86,7 +98,13 @@ const [appdata,setappdata]=useState([])
       }
      ).then(res=>{
       if(res.data.status=='ok'){
-        window.location.href='/hospitalhome/setappointment'
+        if(props.details.usertype=='hospital'){
+          window.location.href='/hospitalhome/setappointment'
+        }
+        else{
+          window.location.href='/consultanthome/setappointment'
+        }
+        
       }
        
       //  console.log(res)
@@ -107,7 +125,7 @@ const [appdata,setappdata]=useState([])
         <div className='setappointmentHeader'>
             <h1>Set Appointment Time</h1>
             <ul>
-              <li><Link to="/hospitalhome" className='linker'>back</Link></li>
+              {props.details.usertype=='hospital'?<li><Link to="/hospitalhome" className='linker'>back</Link></li>:<li><Link to="/consultanthome" className='linker'>back</Link></li>}
             </ul>
         </div>
         <div>
