@@ -21,20 +21,19 @@
 
  @media (max-width: 768px) {
     .conprofileCard {
-      width: 300px;
-      height: 300px;
+      width: 500px;
+      height: 400px;
+      position: absolute;
       top: 10vh;
-      left: 5vw;
-      line-height: 20px;
-      font-size: 16px;
+      left: 10vw;
+      line-height: 17px;
+      font-family: 'Times New Roman';
     }
   
     .conprofileCard ul li {
-      font-size: 18px;
-      margin-top: 20px;
+      font-size: 12px;
+      margin-top: 10px;
     }
   
-    .conprofileCard ul li span {
-      left: 150px;
-    }
+    
   }
