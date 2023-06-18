@@ -25,3 +25,62 @@ body{
     font-size: 20px;
 
 }
+
+.setdate button{
+    width: 70px;
+    margin-left: 5vh;
+    background-color: blue;
+    color: wheat;
+    border-radius: 15px;
+}
+.setdate{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 3vh;
+
+}
+.setdate input{
+    width: 200px;
+    border-radius: 10px;
+    border: none;
+}
+.setdate button:hover{
+    background-color: black;
+    cursor: pointer;
+}
+.setdate h4{
+    padding-right: 50px;
+    position: relative;
+    top: 10px;
+    display: block;
+}
+@media (max-width: 768px) {
+    
+  
+    .showappointment .showappointmentHeader {
+      height: 60px;
+    }
+  
+    .showappointment .showappointmentHeader h1 {
+      margin-left: 10px;
+      font-size: 18px;
+    }
+  
+    .showappointment .showappointmentHeader ul li .linker {
+      font-size: 16px;
+    }
+    .setdate{
+        padding-inline: 20px;
+        justify-content: space-around;
+    }
+    .setdate button{
+        margin-left: 2vh;
+    }
+    .setdate h4{
+        padding-right:20px ;
+        position: relative;
+        top: 0px;
+    }
+  }

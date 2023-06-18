@@ -101,7 +101,7 @@
 }
 .background{
     background-color: lightblue;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 .takeappointment .header ul{

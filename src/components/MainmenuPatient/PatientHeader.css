@@ -82,6 +82,7 @@
    
 }
 .navBar .topNav h1{
+  padding-right: 50px;
     position: relative;
     /* left:150px; */
 }
