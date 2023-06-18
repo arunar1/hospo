@@ -25,7 +25,7 @@ const logout=()=>{
             <div className='selection'>
               <ul>
                 <li><Link to='/home/takeappointment' className='selctionbutton'>Take Appointment</Link></li>
-                <li><Link to='/home/appointmenthistory' className='selctionbutton'>Appointment Histroy</Link></li>
+                <li><Link to='/home/appointmenthistory' className='selctionbutton'>Show Appointments</Link></li>
                 <li><Link to='/home/rescheduleappointment' className='selctionbutton'>Reschedule Apppointment</Link></li>
                 <li><Link to='/home/cancelappointment' className='selctionbutton'>Cancel Appointment</Link></li>
               </ul>
