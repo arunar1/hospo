@@ -18,3 +18,23 @@
      left: 130px;
      font-weight: 500;
  }
+
+ @media (max-width: 768px) {
+    .conprofileCard {
+      width: 300px;
+      height: 300px;
+      top: 10vh;
+      left: 5vw;
+      line-height: 10px;
+      font-size: 16px;
+    }
+  
+    .conprofileCard ul li {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+  
+    .conprofileCard ul li span {
+      left: 100px;
+    }
+  }
