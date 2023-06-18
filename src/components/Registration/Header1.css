@@ -24,10 +24,27 @@
     box-sizing: border-box;
 }
 .reg header .nav a{
+    
     text-decoration: none;
-    color:white;
+    color:black;
     margin-right: 20px;
 
+}
+.rega{
+    background-color: rgb(212, 212, 233);
+    padding: 5px;
+    border-radius: 10px;
+    padding-left: 9px;
+    position: relative;
+    
+    
+}
+.rega a{
+    color: black;
+}
+.rega:hover{
+    background-color: darkblue;
+    color: wheat;
 }
 .reg header .logo a:hover{
     color: red;
