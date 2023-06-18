@@ -25,7 +25,7 @@
       height: 300px;
       top: 10vh;
       left: 5vw;
-      line-height: 10px;
+      line-height: 20px;
       font-size: 16px;
     }
   
@@ -35,6 +35,6 @@
     }
   
     .conprofileCard ul li span {
-      left: 100px;
+      left: 120px;
     }
   }
