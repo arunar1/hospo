@@ -277,7 +277,7 @@ useEffect(()=>{
                 <input type='date' min={formattedDate} required onChange={handleClick} name='Date' value={inputs.Date}></input>
               </div>
               <div className='hos'>
-                <input type='submit' className='subbtn' ></input>
+                <input type='submit' value='Submit' className='subbtn' ></input>
               </div>
 
             </form>
@@ -314,7 +314,7 @@ useEffect(()=>{
                 <input type='date'  min={formattedDate} required onChange={handleClick2} name='Date' value={inputs2.Date}></input>
               </div>
               <div className='hos'>
-                <input type='submit' className='subbtn'></input>
+                <input type='submit' value='Submit' className='subbtn'></input>
               </div>
 
             </form>
@@ -360,7 +360,7 @@ useEffect(()=>{
                 <input type='date'  min={formattedDate} required onChange={handleClick3} name='Date' value={inputs3.Date}></input>
               </div>
               <div className='hos'>
-                <input type='submit' className='subbtn'></input>
+                <input type='submit' value='Submit' className='subbtn'></input>
               </div>
 
             </form>

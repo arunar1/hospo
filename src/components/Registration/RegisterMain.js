@@ -286,7 +286,7 @@ export default function RegisterMain() {
                 <input type='number' required onChange={handleClick} name='ppincode' value={inputs.ppincode || ""} /></div>
               <div className='formReg'>
                 <input className='sub1 clear' type='reset' value='Clear' onClick={clears} />
-                <input className='sub1' type='submit' />
+                <input className='sub1' value='Submit' type='submit' />
               </div>
             </form>
           </div>
@@ -347,7 +347,7 @@ export default function RegisterMain() {
                 
               <div className='formReg'>
                 <input className='sub1 clear' type='reset' value='Clear' onClick={clears} />
-                <input className='sub1' type='submit' />
+                <input className='sub1' value='Submit' type='submit' />
               </div>
             </form>
           </div>
@@ -427,7 +427,7 @@ export default function RegisterMain() {
                 <input type='number' required onChange={handleClickpri} name='cpincode' value={inputspri.cpincode || ""} /></div>
               <div className='formReg'>
                 <input className='sub1 clear' type='reset' value='Clear' onClick={clears} />
-                <input className='sub1' type='submit' />
+                <input className='sub1' value='Submit' type='submit' />
               </div>
             </form>
           </div>
