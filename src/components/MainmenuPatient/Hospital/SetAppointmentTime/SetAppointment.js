@@ -15,12 +15,15 @@ console.log(props.details)
   const [timeSlots, setTimeSlots] = useState([]);
 
 let hospitalname;
-if(props.details.hospitaltype=='privateconsultant'){
+if(props.details.usertype=='privateconsultant'){
   hospitalname=props.details.name;
 }
 else{
   hospitalname=props.details.hospitalname
 }
+
+console.log(hospitalname)
+console.log(props)
 
   const [newTimeSlot, setNewTimeSlot] = useState({ startTime: '', endTime: '', slotsAvailable: '',code:'' });
 
