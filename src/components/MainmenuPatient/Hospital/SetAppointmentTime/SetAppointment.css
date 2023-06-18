@@ -96,3 +96,17 @@ body{
   }
   
 
+  @media (max-width: 768px) {
+    .setappointment .setappointmentHeader {
+      height: 60px;
+    }
+  
+    .setappointment .setappointmentHeader h1 {
+      margin-left: 10px;
+      font-size: 18px;
+    }
+  
+    .setappointment .setappointmentHeader ul li .linker {
+      font-size: 16px;
+    }
+  }
