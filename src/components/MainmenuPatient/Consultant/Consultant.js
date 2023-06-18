@@ -58,6 +58,10 @@ export default function Consultant() {
            
             {loggeduser=="true"? <ShowAppointment details={datas}/>:<Register/>}
           </Route>
+          <Route exact path='/consultanthome/setappointment'>
+           
+            {loggeduser=="true"? <SetAppointment details={datas}/>:<Register/>}
+          </Route>
           <Route exact path='/consultanthome/editappointment'>
             
             {loggeduser=="true"?<EditAppointment details={datas}/>:<Register/>}

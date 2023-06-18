@@ -55,6 +55,9 @@ export default function Hospital() {
           <Route exact path='/hospitalhome/showappointment'>
             <ShowAppointment details={datas}/>
           </Route>
+          <Route exact path='/hospitalhome/setappointment'>
+            <SetAppointment details={datas}/>
+          </Route>
           <Route exact path='/hospitalhome/editappointment'>
             <EditAppointment details={datas}/>
           </Route>
