@@ -22,8 +22,8 @@ else{
   hospitalname=props.details.hospitalname
 }
 
-console.log(hospitalname)
-console.log(props)
+// console.log(hospitalname)
+// console.log(props)
 
   const [newTimeSlot, setNewTimeSlot] = useState({ startTime: '', endTime: '', slotsAvailable: '',code:'' });
 
