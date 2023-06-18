@@ -23,7 +23,7 @@ top: 10vh;
     }
   
     .owner {
-      bottom: -10vh;
+      bottom: 0vh;
       margin-left: 10px;
       margin-bottom: 10px;
     }

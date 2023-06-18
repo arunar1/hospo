@@ -104,8 +104,7 @@ main.main1 .form1 .formReg .sub1.clear{
 marquee{
     position: relative;
     top: 10vh;
-    color: white;
-    width: 500px;
+    color: red;
     font-size: 20px;
     margin-left: 50px;
 }
