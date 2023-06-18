@@ -7,6 +7,8 @@ import axios from 'axios'
 import moment from 'moment'
 
 export default function AppointmentHistory(props) {
+  const [dates,setdates]=useState('');
+  const [view,setview]=useState()
 const token=window.localStorage.getItem("token");
   const [appdetails,setappdetails]=useState([]);
   useEffect(()=>{
@@ -16,7 +18,7 @@ const token=window.localStorage.getItem("token");
     .then(res=>{
       setappdetails(res.data);
     })
-  },[])
+  },[view])
 
   
   
@@ -25,7 +27,7 @@ const [appdata,setappdata]=useState([])
   useEffect(()=>{
     const  newdata=[];
     appdetails.map((data)=>{
-        if(data.patientphone==props.details.userId){
+        if((data.patientphone==props.details.userId) && data.date==view){
 
           newdata.push(data)
         }
@@ -34,6 +36,10 @@ const [appdata,setappdata]=useState([])
     },setappdata(newdata)
     )
   },[appdetails])
+
+  const select=()=>{
+    setview(dates)
+  }
 
 
   return (
@@ -45,8 +51,13 @@ const [appdata,setappdata]=useState([])
               <li><Link to="/home" className='linker'>back</Link></li>
             </ul>
         </div>
+        <div className='setdate'>
+        <h4>Select Date :</h4>
+          <input type='date'  name='select' onChange={(e)=>setdates(e.target.value)}/>
+          <button onClick={select}>select</button>
+        </div>
         <div>
-      
+      {appdata.length==0?(<h3>No appointments on {view}</h3>):(
       <table>
         <thead>
           <tr>
@@ -70,7 +81,7 @@ const [appdata,setappdata]=useState([])
             </tr>
           ))}
         </tbody>
-      </table>
+      </table>)}
     </div>
 
       </div>

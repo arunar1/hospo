@@ -25,7 +25,7 @@ const select=()=>{
   setview(dates)
 }
 
-console.log(view)
+// console.log(view)
   
 const [appdata,setappdata]=useState([])
 
