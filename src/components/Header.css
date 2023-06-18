@@ -113,7 +113,9 @@ header .fontaw{
     }
   
     header .logo a {
+      padding-top: 3px;
       font-size: 12px;
+      margin-inline: 5px;
     }
     header .nav{
         width: 100%;
