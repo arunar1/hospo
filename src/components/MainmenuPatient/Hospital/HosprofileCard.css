@@ -23,14 +23,15 @@
       width: 500px;
       height: 400px;
       position: absolute;
-      top: 10vh;
+      top: 15vh;
       left: 10vw;
-      line-height: 17px;
+      line-height: 7px;
       font-family: 'Times New Roman';
     }
     .hosprofileCard ul li{
-      font-size: 12px;
-      margin-top: 10px;
+      font-size: 18px;
+      margin-top: 20px;
+      line-height: 20px;
     }
 
   }
