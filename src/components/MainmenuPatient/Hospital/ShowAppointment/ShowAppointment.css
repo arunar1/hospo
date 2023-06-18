@@ -78,7 +78,7 @@ body{
     .setdate button{
         margin-left: 2vh;
     }
-    .setdate h4{
+    .setdate h4,h3{
         padding-right:20px ;
         position: relative;
         top: 0px;

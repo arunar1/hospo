@@ -1,0 +1,120 @@
+body{
+    background-color: lightblue;
+}
+.History .HistoryHeader{
+    height: 75px;
+    background-color: rgb(103, 66, 66);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.History .HistoryHeader h1{
+    margin-left: 30px;
+    color: white;
+}
+.History .HistoryHeader ul{
+   
+    list-style-type: none;
+}
+.History .HistoryHeader ul li .linker{
+    text-decoration: none;
+    position: relative;
+    right: 30px;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+
+}
+
+ table tr{
+    background-color:lightblue;
+    
+    
+}
+ table{
+ 
+  
+    width: 100%;
+    height: 100%;
+    
+}
+
+ table, th, td {
+    border-bottom: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+  }
+  th {
+    height: 85px;
+    background-color:rgba(103, 66, 66,.5);
+  }
+ td {
+    height: 85px;
+  }
+ table{
+    position: relative;
+    height: 100%;
+    top: 10vh;
+    padding-inline: 10px;
+  }
+tr:hover{
+    background-color: white;
+  }
+  @media (max-width: 764px) {
+    table{
+      position: relative;
+      top: 10vh;
+    }
+    table, th, td {
+      font-size: 12px;
+    }
+    td{
+      font-size: 10px;
+    }
+    
+    th, td {
+      height: 60px;
+      border: 1px solid black;
+    }
+    
+    th {
+      font-weight: bold;
+    }
+  }
+  
+  @media (max-width: 400px) {
+
+    table, th, td {
+      font-size: 12px;
+    }
+    td{
+      font-size: 10px;
+    }
+    
+    th, td {
+      width: auto;
+      height: 100px;
+      border: 1px solid black;
+    }
+    
+    th {
+      font-weight: bold;
+    }
+  }
+
+
+  @media (max-width: 768px) {
+    .History .HistoryHeader {
+        height: 60px;
+    }
+    
+    .History .HistoryHeader h1 {
+        margin-left: 20px;
+        font-size: 18px;
+    }
+    
+    .History .HistoryHeader ul li .linker {
+        font-size: 16px;
+    }
+}
+
