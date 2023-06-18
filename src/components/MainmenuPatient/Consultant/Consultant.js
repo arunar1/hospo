@@ -6,6 +6,8 @@ import Register from '../../Registration/Register';
 import { useEffect,useState } from 'react'
 import SetAppointment from '../Hospital/SetAppointmentTime/SetAppointment';
 import ShowAppointment from '../Hospital/ShowAppointment/Showppointment';
+import EditAppointment from '../Hospital/EditAppointment/EditAppointment';
+
 export default function Consultant() {
   const [datas,setdatas]=useState({});
 
@@ -56,9 +58,9 @@ export default function Consultant() {
            
             {loggeduser=="true"? <ShowAppointment details={datas}/>:<Register/>}
           </Route>
-          <Route exact path='/consultanthome/setappointment'>
+          <Route exact path='/consultanthome/editappointment'>
             
-            {loggeduser=="true"?<SetAppointment details={datas}/>:<Register/>}
+            {loggeduser=="true"?<EditAppointment details={datas}/>:<Register/>}
           </Route>
       
         </Router>
