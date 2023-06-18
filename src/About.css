@@ -7,9 +7,9 @@
 .owner{
     position: absolute;
     bottom: -20vh;
-    margin-left: 20vw;
+    /* margin-left: 20vw; */
     margin-bottom: 20px;
-    width: 50%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,7 +20,7 @@ top: 10vh;
 
 }
 marquee{
-    color: red;
+    color: rgba(255,0,0,.5);
     font-size: 20px;
     margin-left: 50px;
     
