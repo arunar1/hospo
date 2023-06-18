@@ -14,8 +14,8 @@ console.log(props.details)
 
   const [timeSlots, setTimeSlots] = useState([]);
 
-let hospitalname='';
-if(props.details.usertype='privateconsultant'){
+let hospitalname;
+if(props.details.hospitaltype=='privateconsultant'){
   hospitalname=props.details.name;
 }
 else{
