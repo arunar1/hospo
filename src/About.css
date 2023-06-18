@@ -1,0 +1,35 @@
+ ul.about{
+    padding: 5vh;
+    line-height: 34px;
+
+}
+
+.owner{
+    position: absolute;
+    bottom: -20vh;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.About{
+position: relative;
+top: 10vh;   
+
+}
+
+@media screen and (max-width: 768px) {
+    ul.about {
+      padding: 2vh;
+      line-height: 24px;
+    }
+  
+    .owner {
+      bottom: -10vh;
+      margin-left: 10px;
+      margin-bottom: 10px;
+    }
+  
+    .About {
+      top: 5vh;
+    }
+  }
+  
