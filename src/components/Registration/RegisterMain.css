@@ -193,4 +193,11 @@ main.main1{
     
   }
   
-
+@media (min-width:900px){
+    main.main1{
+        background: url('./hoslo1.jpg');
+        object-fit: fill;
+        width: 100%;
+        height: 100%;
+    }
+}
