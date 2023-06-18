@@ -33,7 +33,7 @@ marquee{
     }
   
     .owner {
-      bottom: 0vh;
+      bottom: -10vh;
       margin-left: 10px;
       margin-bottom: 10px;
     }
