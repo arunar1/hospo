@@ -101,13 +101,7 @@ main.main1 .form1 .formReg .sub1.clear{
    margin-right: 42px;
 
 }
-marquee{
-    position: relative;
-    top: 10vh;
-    color: red;
-    font-size: 20px;
-    margin-left: 50px;
-}
+
 
 .displayForm1,.displayForm2,.displayForm3{
     display: none;
@@ -169,12 +163,12 @@ main.main1{
       margin-bottom: 30px;
     }
   
-    marquee {
+    /* marquee {
       top: 5vh;
       width: 90%;
       margin-left: 5%;
       font-size: 16px;
-    }
+    } */
   }
   main.main1{
     background: none;
