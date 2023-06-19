@@ -7,7 +7,7 @@ import ShowAppointment from './ShowAppointment/Showppointment';
 import { useEffect,useState } from 'react'
 import SetAppointment from './SetAppointmentTime/SetAppointment';
 import EditAppointment from './EditAppointment/EditAppointment';
-
+import Allapp from './Allapp';
 export default function Hospital() {
   const [datas,setdatas]=useState({});
   useEffect(()=>{
@@ -60,6 +60,9 @@ export default function Hospital() {
           </Route>
           <Route exact path='/hospitalhome/editappointment'>
             <EditAppointment details={datas}/>
+          </Route>
+          <Route exact path='/hospitalhome/allappointment'>
+            <Allapp details={datas}/>
           </Route>
         </Router>
       

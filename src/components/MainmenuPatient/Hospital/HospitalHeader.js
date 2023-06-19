@@ -23,6 +23,7 @@ const logout=()=>{
             <div className='selection'>
               <ul>
                 <li><Link to='/hospitalhome/showappointment' className='selctionbutton'>Show Appointment</Link></li>
+                <li><Link to='/hospitalhome/allappointment' className='selctionbutton'>Show All Appointment</Link></li>
                 <li><Link to='/hospitalhome/setappointment' className='selctionbutton'>Set Appointment Time</Link></li>
                 <li><Link to='/hospitalhome/editappointment' className='selctionbutton'>Edit Appointment</Link></li>
               </ul>
