@@ -1,212 +1,208 @@
 main{
-    background: url('./doctor-appointment.jpg');
-    background-repeat: no-repeat;
-    object-fit: cover;
-    background-size: cover;
-    
+  background: url('./doctor-appointment.jpg');
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-size: cover;
+  
 }
 main .Registration{
-    width: 50%;
+  width: 50%;
 }
 .main{
-    display: flex;
-    justify-content: space-around;
-    position: relative;
-    top:40vh;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  top:40vh;
 
 }
 .main .a{
-    background-color: rgb(94, 12, 12);
-    padding:10px 20px;
-    border-radius: 15px;
-    color: white;
-    position:relative;
-    top: 15px;
-    text-decoration: none;
+  background-color: rgb(94, 12, 12);
+  padding:10px 20px;
+  border-radius: 15px;
+  color: white;
+  position:relative;
+  top: 15px;
+  text-decoration: none;
 
 }
 .main .reg-info a,h2,p{
-    margin: 20px;
+  margin: 20px;
 }
 .main .reg-info{
-  margin-bottom: 10px;
+margin-bottom: 10px;
 }
 .main .Registration{
-    position: relative;
-    top:60px;
-    background-color: rgba(10, 8, 8,.45);
-    border-radius: 25px;
-    padding: 20px;
-    height: 200px;
-    color: white;
-   
+  position: relative;
+  top:60px;
+  background-color: rgba(10, 8, 8,.45);
+  border-radius: 25px;
+  padding: 20px;
+  height: 200px;
+  color: white;
 }
 
-    
+  
 
 .main .loginForm{
-    padding: 10px;
-    padding-top: 10px;
-    padding-bottom: 20px;
-    border: 1px solid black;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color:rgba(10, 8, 8,.45) ;
-    padding-inline: 20px;
+  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  border: 1px solid black;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:rgba(10, 8, 8,.45) ;
+  padding-inline: 20px;
 }
 .main .loginForm caption{
-    margin-top: 16px;
-    font-size: 22px;
-    font-weight: 500;
-    color: white;
-    margin-bottom: 15px;
-    font-weight: 900;
-    
+  margin-top: 16px;
+  font-size: 22px;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 15px;
+  font-weight: 900;
+  
 }
 
 main .main .reg-info .a:hover{
-    background-color: black;
+  background-color: black;
 }
 main .main .reg-info .a,h2,p{
-    font-weight: 900;
-    /* transition: 2s ease; */
+  font-weight: 900;
+  /* transition: 2s ease; */
 }
 
 .loginForm .input-group{
-    width: 300px;
-    margin: 40px auto;
-    display: flex;
-    flex-direction: column;
-    position: relative;
+  width: 300px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 .loginForm .input-group label{
-    color: black;
-    font-size: 14px;
-    position: absolute;
-    top: 5px;
-    padding-left: 11px;
-    transition: 0.5s ease-in-out;
-   
+  color: black;
+  font-size: 14px;
+  position: absolute;
+  top: 5px;
+  padding-left: 11px;
+  transition: 0.5s ease-in-out;
+ 
 
 }
 .loginForm .input-group input,button{
-    border: none;
-    padding: 7px;
-    outline: none;
-    border-bottom: 1px solid #c9c98a;
-    font-weight: 900;
+  border: none;
+  padding: 7px;
+  outline: none;
+  border-bottom: 1px solid #c9c98a;
+  font-weight: 900;
 }
 .loginForm .input-group .loginselction{
-    padding: 8px;
-    outline: none;
-    border-bottom: 1px solid #c9c98a;
-    font-weight: 900;
-    background-color: white;
-    position: absolute;
-    top:-45px;
-    left: -3px;
-    border-radius: 0px;
-    margin-top: 20px;
-    color: black;
-    padding: 2px;
+  padding: 8px;
+  outline: none;
+  border-bottom: 1px solid #c9c98a;
+  font-weight: 900;
+  background-color: white;
+  position: absolute;
+  top:-45px;
+  left: -3px;
+  border-radius: 0px;
+  margin-top: 20px;
+  color: black;
+  padding: 2px;
 }
 
 .loginForm .input-group input:focus ~label,
 .loginForm .input-group input:valid ~label{
-    color: red;
-    top: -23px;
-    font-size: 16px;
-    color:white;
-    padding-left: 0;
-    
+  color: red;
+  top: -23px;
+  font-size: 16px;
+  color:white;
+  padding-left: 0;
+  
 
 }
 .loginForm .input-group input:focus ,
 .loginForm .input-group input:valid {
-    border-color: blue;
+  border-color: blue;
 
 }
 
 
 .loginForm .submit-btn input,button,.loginselction{
-    background-color: aqua;
-    border: none;
-    padding: 10px;
-    /* margin-top: 15px; */
-    border-radius: 5px;
-    width: 300px;
-    cursor: pointer;
+  background-color: aqua;
+  border: none;
+  padding: 10px;
+  /* margin-top: 15px; */
+  border-radius: 5px;
+  width: 300px;
+  cursor: pointer;
 
 }
 .loginForm .submit-btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .loginForm .submit-btn button:hover{
-    box-shadow: 0px 3px 6px rgb(18, 15, 15);
-    background-color: rgba(8, 8, 15, 0.25);
-    color: white;
-    
+  box-shadow: 0px 3px 6px rgb(18, 15, 15);
+  background-color: rgba(8, 8, 15, 0.25);
+  color: white;
+  
 }
 /* Mobile Phones */
 @media only screen and (max-width: 580px) {
- 
-    main .Registration {
-      width: 100%;
-    }
-  
-    .main {
-      flex-direction: column;
-      align-items: center;
-      top: 90px;
-      justify-content: center;
-      width: 300px;
-      width: 100%;
-    }
-
-  
-    .main .Registration {
-      top: 100px;
-      height: auto;
-      width: 300px;
-      
-    }
-   
-  
-    .main .loginForm {
-    position: relative;
-      padding: 10px 5px;
-      top: 110px;
-      width: 300px;
-      height: auto;
-    }
-  
-    .loginForm .input-group {
-      width: 100%;
-    }
-  
-    .loginForm .submit-btn input,
-    .loginForm .submit-btn button,
-    .loginForm .loginselction {
-      width: 100%;
-    }
+  main .Registration {
+    width: 100%;
   }
-  
-  /* Tablets and Small Desktops */
-  /* @media only screen and (min-width: 481px) and (max-width: 1024px) {
-    main .Registration {
-      width: 60%;
-    }
-  } */
 
-  
-  /* Large Desktops and Laptops */
-  /* @media only screen and (min-width: 1025px) {
-    main .Registration {
-      width: 50%;
-    }
-  } */
-  
+  .main {
+    flex-direction: column;
+    align-items: center;
+    top: 90px;
+    justify-content: center;
+    width: 300px;
+    width: 100%;
+  }
+
+
+  .main .Registration {
+    top: 100px;
+    height: auto;    
+  }
+ 
+
+  .main .loginForm {
+  position: relative;
+    padding: 10px 5px;
+    top: 110px;
+    width: 300px;
+    height: auto;
+  }
+
+  .loginForm .input-group {
+    width: 100%;
+  }
+
+  .loginForm .submit-btn input,
+  .loginForm .submit-btn button,
+  .loginForm .loginselction {
+    width: 100%;
+  }
+}
+
+/* Tablets and Small Desktops */
+/* @media only screen and (min-width: 481px) and (max-width: 1024px) {
+  main .Registration {
+    width: 60%;
+  }
+} */
+
+
+/* Large Desktops and Laptops */
+/* @media only screen and (min-width: 1025px) {
+  main .Registration {
+    width: 50%;
+  }
+} */
+
