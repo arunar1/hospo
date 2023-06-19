@@ -39,6 +39,7 @@ main .Registration{
     padding: 20px;
     height: 200px;
     color: white;
+    width: 300px;
 }
 
     
@@ -152,10 +153,7 @@ main .main .reg-info .a,h2,p{
 }
 /* Mobile Phones */
 @media only screen and (max-width: 580px) {
-  main{
-    background-image: url('./alexandr-podvalny-tE7_jvK-_YU-unsplash.jpg');
-    max-width: 593px;
-  }
+ 
     main .Registration {
       width: 100%;
     }
@@ -173,7 +171,6 @@ main .main .reg-info .a,h2,p{
     .main .Registration {
       top: 100px;
       height: auto;
-      border-radius: 0px;
       
     }
    
@@ -182,9 +179,8 @@ main .main .reg-info .a,h2,p{
     position: relative;
       padding: 10px 5px;
       top: 110px;
-      width: 100%;
+      width: 300px;
       height: auto;
-      border-radius: 0;
     }
   
     .loginForm .input-group {
@@ -195,9 +191,6 @@ main .main .reg-info .a,h2,p{
     .loginForm .submit-btn button,
     .loginForm .loginselction {
       width: 100%;
-    }
-    .loginForm form{
-      width: 80%;
     }
   }
   
