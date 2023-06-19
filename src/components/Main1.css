@@ -152,6 +152,10 @@ main .main .reg-info .a,h2,p{
 }
 /* Mobile Phones */
 @media only screen and (max-width: 580px) {
+  main{
+    background-image: url('./alexandr-podvalny-tE7_jvK-_YU-unsplash.jpg');
+    max-width: 493px;
+  }
     main .Registration {
       width: 100%;
     }
