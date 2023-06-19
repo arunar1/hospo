@@ -63,7 +63,7 @@ export default function Main1() {
         <div className='Registration'>
           <div className='reg-info'>
             <h2>Welcome to Hospo</h2>
-            <p>Hospital Appointment Scheduler developed by Hospo team</p>
+            <p>We Are Here to Serve You, Take appointment in a single click</p>
             <Link class='a' to='/registration'>Registration</Link>
           </div>
         </div>
