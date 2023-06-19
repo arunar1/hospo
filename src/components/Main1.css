@@ -197,17 +197,17 @@ main .main .reg-info .a,h2,p{
   }
   
   /* Tablets and Small Desktops */
-  @media only screen and (min-width: 481px) and (max-width: 1024px) {
+  /* @media only screen and (min-width: 481px) and (max-width: 1024px) {
     main .Registration {
       width: 60%;
     }
-  }
+  } */
 
   
   /* Large Desktops and Laptops */
-  @media only screen and (min-width: 1025px) {
+  /* @media only screen and (min-width: 1025px) {
     main .Registration {
       width: 50%;
     }
-  }
+  } */
   
