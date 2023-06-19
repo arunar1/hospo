@@ -39,7 +39,7 @@ main .Registration{
     padding: 20px;
     height: 200px;
     color: white;
-    width: 300px;
+   
 }
 
     
@@ -171,6 +171,7 @@ main .main .reg-info .a,h2,p{
     .main .Registration {
       top: 100px;
       height: auto;
+      width: 300px;
       
     }
    
