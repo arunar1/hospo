@@ -78,7 +78,7 @@ const [appdata,setappdata]=useState([])
             {appdata.map((appointment,index) => (
               <tr>
                 <td>{index+1}</td>
-                <td>{appointment.date}</td>
+                <td>{moment(appointment.date).format('DD-MM-YYYY')}</td>
                 <td>{appointment.patientname}</td>
                 <td>{appointment.patientphone}</td>
                 <td>{appointment.time}</td>

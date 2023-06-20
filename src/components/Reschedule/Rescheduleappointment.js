@@ -96,7 +96,7 @@ const [appdata,setappdata]=useState([])
           {appdata.map((appointment,index) => (
             <tr>
               <td>{index+1}</td>
-              <td>{appointment.date}</td>
+              <td>{moment(appointment.date).format('DD-MM-YYYY')}</td>
               <td>{(appointment.category)?`${appointment.govhospitalname} - ${appointment.category}`:`${appointment.govhospitalname}`}</td>
               <td>{appointment.hospitaltype}</td>
               <td>{appointment.DistrictName}</td>
