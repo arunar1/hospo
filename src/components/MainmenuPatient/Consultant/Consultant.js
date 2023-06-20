@@ -7,7 +7,7 @@ import { useEffect,useState } from 'react'
 import SetAppointment from '../Hospital/SetAppointmentTime/SetAppointment';
 import ShowAppointment from '../Hospital/ShowAppointment/Showppointment';
 import EditAppointment from '../Hospital/EditAppointment/EditAppointment';
-
+import Allapp from '../Hospital/Allapp';
 export default function Consultant() {
   const [datas,setdatas]=useState({});
 
@@ -65,6 +65,9 @@ export default function Consultant() {
           <Route exact path='/consultanthome/editappointment'>
             
             {loggeduser=="true"?<EditAppointment details={datas}/>:<Register/>}
+          </Route>
+          <Route exact path='/consultanthome/allappointment'>
+            <Allapp details={datas}/>
           </Route>
       
         </Router>

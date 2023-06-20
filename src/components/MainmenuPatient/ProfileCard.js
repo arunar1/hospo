@@ -10,7 +10,7 @@ const user=props.data;
         <div className='profileCard'>
             <ul>
                 <li>Name <span>: {user.name}</span></li>
-                <li>Age <span>:{user.age}</span></li>
+                <li>Age <span>: {user.age}</span></li>
                 <li>Gender <span>: {user.gender}</span></li>
                 <li>Email Id<span>: {user.email}</span></li>
                 <li>Phone No <span>: {user.phoneno}</span></li>
