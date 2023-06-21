@@ -57,7 +57,7 @@ const [appdata,setappdata]=useState([])
           <button onClick={select}>select</button>
         </div>
         <div>
-      {appdata.length==0?(<h3>No appointments on {view}</h3>):(
+      {appdata.length==0?(<h3>No appointments on  {moment(view).format('DD-MM-YYYY')}</h3>):(
       <table>
         <thead>
           <tr>
