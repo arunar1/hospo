@@ -108,7 +108,7 @@ const [flag,setflag]=useState(true)
 
 
 const [appdata,setappdata]=useState([])
-console.log(appdetails)
+// console.log(appdetails)
   useEffect(()=>{
     const  newdata=[];
     apptimedetails.map((data,index)=>{
@@ -139,9 +139,9 @@ console.log(appdetails)
 const handlesubmit=(e)=>{
   e.preventDefault()
   if(timeschedule){
-    console.log(formdata)
-    console.log(flag)
-    console.log(counter)
+    // console.log(formdata)
+    // console.log(flag)
+    // console.log(counter)
     if(flag){
       if(counter<=Number(availcounter)){
         formdata.timeapp=timeschedule;
@@ -196,7 +196,7 @@ const show=()=>{
     setset(current=>!current)
 }
 
-console.log(set)
+// console.log(set)
 
 
   return (
