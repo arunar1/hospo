@@ -9,7 +9,7 @@ import AppointmentHistory from '../History/AppointmentHistory';
 import CancelAppointment from '../Cancel/CancelAppointment';
 import Slot from '../TakeAppointment/Slot';
 import Register from '../Registration/Register';
-
+import Rescheduleslot from '../Reschedule/Rescheduleslot';
 
 export default function PatientMenu() {
   const [datas,setdatas]=useState({});
@@ -80,6 +80,10 @@ const logout=()=>{
           <Route  exact path='/home/takeappointment/slot'>
           {loggeduser=="true"?<Slot details={datas}/>:logout}
           
+          </Route>
+          <Route exact path='/home/rescheduleappointment/reschdule'>
+          {loggeduser=="true"?<Rescheduleslot details={datas}/>:logout}
+            
           </Route>
       </Router>
     </div>

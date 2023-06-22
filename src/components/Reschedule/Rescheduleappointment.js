@@ -44,28 +44,30 @@ const [appdata,setappdata]=useState([])
 
   const deleteuser=(id)=>{
     setappdlt(id)
+    window.localStorage.setItem('resid',id)
+    window.location.href='/home/rescheduleappointment/reschdule'
 
-   if(appdlt){
-    if(window.confirm("Are you want to Reschedule the appointment")){
-      axios.post(`${process.env.REACT_APP_URL}/deleteuserapp`,{
-       appdlt
-      },
-      {
-        headers:{token}
-      }
-     ).then(res=>{
-       setdltres(res.data.data)
-       if(res.data.data='Appointment Cancelled'){
-        window.location.href='/home/takeappointment'
-       }
+//    if(appdlt){
+//     if(window.confirm("Are you want to Reschedule the appointment")){
+//       axios.post(`${process.env.REACT_APP_URL}/deleteuserapp`,{
+//        appdlt
+//       },
+//       {
+//         headers:{token}
+//       }
+//      ).then(res=>{
+//        setdltres(res.data.data)
+//        if(res.data.data='Appointment Cancelled'){
+//         window.location.href='/home/takeappointment'
+//        }
 
-     })
+//      })
+//  }
+//    }
+//     else{
+
+//     }
  }
-   }
-    else{
-
-    }
-  }
 
 
 
