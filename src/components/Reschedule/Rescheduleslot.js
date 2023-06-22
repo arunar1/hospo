@@ -83,7 +83,8 @@ const [flag,setflag]=useState(true)
   useEffect(()=>{
     let count=0;
     appdetails.map((app)=>{
-      if(app.slotid==slid && app.govhospitalname==formdata.govhospitalname&& app.date==formdata.Date ){
+        // console.log((app.slotid==slid && app.govhospitalname==formdata.govhospitalname && app.date==formdata.date));
+      if(app.slotid==slid && app.govhospitalname==formdata.govhospitalname&& app.date==formdata.date ){
         count=count+1;
       }
       
@@ -196,7 +197,8 @@ const show=()=>{
 }
 
 // console.log(set)
-
+console.log(counter)
+console.log(slid)
 
   return (
     <div>
