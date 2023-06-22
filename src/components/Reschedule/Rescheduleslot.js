@@ -104,7 +104,7 @@ const [flag,setflag]=useState(true)
   }
 
   // console.log(formdata)
-  console.log(apptimedetails)
+//   console.log(apptimedetails)
 
 
 const [appdata,setappdata]=useState([])
@@ -156,15 +156,14 @@ const handlesubmit=(e)=>{
               axios.post(`${process.env.REACT_APP_URL}/rescheduleappointment`,{
                 formdata
             }).then(res=>{
-                // console.log(res)
-                alert(res)
-              if(res.data.message=='token generated'){
-                alert("Token Generated");
+                // console.log(res.data)
+              if(res.data=='Appointment rescheduled successfully!'){
+                alert(res.data);
+                window.location.href='/home/rescheduleappointment'
                 
               }
               else{
-                alert("Rescheduled")
-                // alert("network error sorry please try later")
+                 alert("network error sorry please try later")
                 window.location.href='/home'
 
               }
