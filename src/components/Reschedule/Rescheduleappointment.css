@@ -59,3 +59,8 @@ button.reschedulebtn:hover{
         margin: 0;
     }
 }
+
+.resbtn{
+    background-color: black;
+    color: wheat;
+}

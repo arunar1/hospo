@@ -197,8 +197,10 @@ const show=()=>{
 }
 
 // console.log(set)
-console.log(counter)
-console.log(slid)
+// console.log(counter)
+// console.log(slid)
+console.log(formdata)
+console.log(datas)
 
   return (
     <div>
@@ -219,7 +221,7 @@ console.log(slid)
              ))
           }
         </div>
-        ):(<h3><button  onClick={show}>Double click Show Slots</button></h3>)}
+        ):(<h3><button className='resbtn'  onClick={show}>Double click Show Slots</button></h3>)}
         <div className='formcontainer'>
          <div>
             <form onSubmit={handlesubmit}>
@@ -243,6 +245,15 @@ console.log(slid)
                 <label>{datas[2]}:</label>
                 <input type='text' value={formdata[datas[2]]}></input>
               </div> */}
+              <div  className='formapp'>
+                <label>Hospital/Doctor :</label>
+                <input type='text' value={formdata[datas[5]]}></input>
+              </div>
+              
+              <div  className='formapp'>
+                <label>Date:</label>
+                <input type='text' value={formdata[datas[6]]}></input>
+              </div>
               <div  className='formapp'>
                 <label>Slot Left:</label>
                 <input type='text' value={Number(availcounter)-counter} name=''></input>
