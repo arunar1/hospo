@@ -74,7 +74,7 @@ useEffect(()=>{
         }
 
     })
-},[props.details])
+},[set,props.details])
 // console.log(formdata)
 
 const [flag,setflag]=useState(true)
