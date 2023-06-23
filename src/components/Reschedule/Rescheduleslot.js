@@ -206,7 +206,7 @@ console.log(datas)
     <div>
       <div className='sloter'>
         <div className='slotHeader'>
-          <h1>Choose Slot</h1>
+          <h1>Choose Reschedule Time Slot</h1>
           <ul>
             <li><Link to="/home/rescheduleappointment" className='linker'>back</Link></li>
           </ul>
