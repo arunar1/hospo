@@ -50,7 +50,7 @@ const [sel,setsel]=useState();
     .then(res=>{
       setappdetails(res.data);
     })
-  },[timeschedule])
+  },[timeschedule,set])
 
   const [apptimedetails,setapptimedetails]=useState([]);
   useEffect(()=>{
