@@ -97,7 +97,7 @@ const [appdata,setappdata]=useState([])
     <div>
       <div className='Cancel'>
         <div className='CancelHeader'>
-            <h1>Edit Appointment</h1>
+            <h1>Delete Appointment</h1>
             <ul>
             {props.details.usertype=='privateconsultant'?<li><Link to="/consultanthome" className='linker'>back</Link></li>:<li><Link to="/hospitalhome" className='linker'>back</Link></li>}
             </ul>
