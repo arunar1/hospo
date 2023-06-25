@@ -38,7 +38,7 @@ const [appdata,setappdata]=useState([])
     //   newdata.sort((a,b)=>moment(b.date).diff(moment(a.date)))
     }
     )
-  },[appdetails,view])
+  },[appdetails,view,dltres])
 
   const [appdlt,setappdlt]=useState('')
 
@@ -69,6 +69,26 @@ const [appdata,setappdata]=useState([])
 
     }
   }
+  const deleteusers=()=>{
+    if(appdata.length>0){
+      if(window.confirm("Are you want to delete all appointment")){
+        axios.post(`${process.env.REACT_APP_URL}/deleteall`,{
+         appdata
+        },{
+          headers:{token}
+        }
+       ).then(res=>{
+         setdltres(res.data.data)
+         console.log(res.data)
+        //  if(res.data.data='Appointment Cancelled'){
+        //   window.location.href='/home/cancelappointment'
+        //  }
+  
+       })
+   }
+
+    }
+  }
 //   console.log(appdata)
 //   console.log(props.details)
 //   console.log(view)
@@ -84,9 +104,13 @@ const [appdata,setappdata]=useState([])
         </div>
         
         <div className='setdate'>
-        <h4>Select Date :</h4>
-          <input type='date'  name='select' onChange={(e)=>setdates(e.target.value)}/>
-          <button onClick={select}>select</button>
+          <div><h4>Select Date :</h4></div>
+          <div><input type='date'  name='select' onChange={(e)=>setdates(e.target.value)}/></div>
+          <div className='select'><button onClick={select}>select</button></div>
+          <div className='dltall'><button   onClick={deleteusers}>Delete All</button></div>
+          
+          
+          
         </div>
         <div>
         {appdata.length==0?(<h3>No appointments on {view}</h3>):(

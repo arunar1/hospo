@@ -57,9 +57,9 @@ const [appdata,setappdata]=useState([])
         </div>
         
         <div className='setdate'>
-        <h4>Select Date :</h4>
-          <input type='date'  name='select' onChange={(e)=>setdates(e.target.value)}/>
-          <button onClick={select}>select</button>
+        <div><h4>Select Date :</h4></div>
+          <div><input type='date'  name='select' onChange={(e)=>setdates(e.target.value)}/></div>
+          <div className='select'><button onClick={select}>select</button></div>
         </div>
         <div>
         {appdata.length==0?(<h3>No appointments on {moment(view).format('DD-MM-YYYY')}</h3>):(
