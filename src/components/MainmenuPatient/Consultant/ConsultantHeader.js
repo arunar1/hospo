@@ -22,7 +22,7 @@ const logout=()=>{
                 <li><Link to='/consultanthome/showappointment' className='selctionbutton'>Show Appointment</Link></li>
                 <li><Link to='/consultanthome/allappointment' className='selctionbutton'>Show All Appointment</Link></li>
                 <li><Link to='/consultanthome/setappointment' className='selctionbutton'>Set Appointment Time</Link></li>
-                <li><Link to='/consultanthome/editappointment' className='selctionbutton'>Edit Appointment</Link></li>
+                <li><Link to='/consultanthome/editappointment' className='selctionbutton'>Delete Appointment</Link></li>
               </ul>
             </div>
         </div>
