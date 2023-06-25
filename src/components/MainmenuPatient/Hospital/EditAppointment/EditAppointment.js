@@ -79,6 +79,7 @@ const [appdata,setappdata]=useState([])
         }
        ).then(res=>{
          setdltres(res.data)
+         alert(res.data)
         //  console.log(res.data)
         //  if(res.data.data='Appointment Cancelled'){
         //   window.location.href='/home/cancelappointment'
