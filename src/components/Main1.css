@@ -152,7 +152,7 @@ main .main .reg-info .a,h2,p{
 }
 .forgotpass{
   position: relative;
-  top: 20px;
+  top: -20px;
   display: flex;
   justify-content: center;
 }
