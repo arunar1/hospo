@@ -150,6 +150,21 @@ main .main .reg-info .a,h2,p{
   color: white;
   
 }
+.forgotpass{
+  position: relative;
+  top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.forgotpass .forgot{
+  color: white;
+  text-decoration: none;
+}
+.forgotpass .forgot:hover{
+  color: blue;
+}
+
+
 /* Mobile Phones */
 @media only screen and (max-width: 580px) {
   main .Registration {

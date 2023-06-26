@@ -11,7 +11,7 @@ import Hospital from './components/MainmenuPatient/Hospital/Hospital';
 import Consultant from './components/MainmenuPatient/Consultant/Consultant';
 import About from './About';
 import Contactus from './Contactus';
-
+import Forgotpass from './components/Forgotpass/Forgotpass';
 function App() {
   return (
     <div>
@@ -41,6 +41,10 @@ function App() {
           </Route>
           <Route path='/consultanthome'>
             <Consultant/>
+          </Route>
+          <Route path='/forgotpassword'>
+            <Header1/>
+            <Forgotpass/>
           </Route>
      
       </Router>

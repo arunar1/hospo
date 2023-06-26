@@ -86,10 +86,16 @@ export default function Main1() {
               <input type="password" id="password" required onChange={(e)=>(setPassword(e.target.value))}/>
                 <label for="password">Password</label>
             </div>
+           
+            
             <div class="submit-btn">
               <button  class="submit" onClick={submit}>Log in</button>
             </div>
+            <div className='forgotpass'>
+            <Link to='/forgotpassword' className='forgot'>Forgot Password</Link>
+            </div>
           </form>
+         
       </div>
       </div>
 
