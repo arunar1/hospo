@@ -76,6 +76,7 @@ const [appdata,setappdata]=useState([])
             </ul>
         </div>
         <div>
+        {appdata.length==0?(<h3>No appointments on {view}</h3>):(
         <table>
         <thead>
           <tr>
@@ -101,7 +102,7 @@ const [appdata,setappdata]=useState([])
             </tr>
           ))}
         </tbody>
-      </table>
+      </table>)}
         </div>
       </div>
     </div>
