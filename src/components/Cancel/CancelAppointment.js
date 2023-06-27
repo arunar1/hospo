@@ -76,7 +76,7 @@ const [appdata,setappdata]=useState([])
             </ul>
         </div>
         <div>
-        {appdata.length==0?(<h3>No appointments on {view}</h3>):(
+        {appdata.length==0?(<h3>No appointments</h3>):(
         <table>
         <thead>
           <tr>
