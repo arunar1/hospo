@@ -279,7 +279,8 @@ export default function RegisterMain() {
                   <option value="Palakkad">	Palakkad</option>
                   <option value="Thiruvananthapuram">Thiruvananthapuram</option>
                   <option value="Thrissur">Thrissur</option>
-                  <option value="Wayanad">	Wayanad</option>
+                  <option value="Wayanad">Wayanad</option>
+                  <option value="Pathanamthitta">	Pathanamthitta</option>
                 </select>
                 </div>
               <div className='formReg'><label>Pincode</label>
@@ -370,6 +371,7 @@ export default function RegisterMain() {
               <div className='formReg'><label>Category</label>
               <select required onChange={handleClickpri} name='ccategory' value={inputspri.ccategory} >
                   <option></option>
+                  <option value='General'>General</option>
                   <option value='Cardiologists'>Cardiologists</option>
                   <option value='audiologists'>audiologists</option>
                   <option value='dentists'>dentists</option>
@@ -419,6 +421,7 @@ export default function RegisterMain() {
                   <option value="Thiruvananthapuram">Thiruvananthapuram</option>
                   <option value="Thrissur">Thrissur</option>
                   <option value="Wayanad">Wayanad</option>
+                  <option value="Pathanamthitta">	Pathanamthitta</option>
                 </select>
                 </div>
 
