@@ -3,7 +3,7 @@ import './About.css'
 export default function About() {
   return (
     <div className='About'>
-      <h4 className='owner'><marquee>Developed by Arun - @r</marquee></h4>
+      <h4 className='owner'><marquee>Developed by @r</marquee></h4>
       <br/>
       <p> A hospital appointment scheduler is a system or software designed to efficiently manage and organize patient appointments in a hospital or healthcare setting. It automates the process of scheduling, rescheduling, and canceling appointments, making it easier for both healthcare providers and patients to coordinate their visits.
 
