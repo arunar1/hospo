@@ -162,6 +162,7 @@ main .main .reg-info .a,h2,p{
 }
 .forgotpass .forgot:hover{
   color: lightblue;
+  border: 1px solid white;
 }
 
 
