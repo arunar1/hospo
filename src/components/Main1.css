@@ -184,7 +184,8 @@ main .main .reg-info .a,h2,p{
 
   .main .Registration {
     top: 100px;
-    height: auto;    
+    height: auto; 
+    display: none;  
   }
  
 

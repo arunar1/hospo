@@ -4,7 +4,7 @@ export default function Forgotpass() {
   return (
     <div className='pass'>
         <div className='passfor'>
-            <h3>forgot password is not enabled under development</h3>
+            <h3>Forgot Password is not enabled under development</h3>
         </div>
       
     </div>
