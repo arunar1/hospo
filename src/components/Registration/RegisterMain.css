@@ -102,6 +102,10 @@ main.main1 .form1 .formReg .sub1.clear{
 
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
 
 .displayForm1,.displayForm2,.displayForm3{
     display: none;
