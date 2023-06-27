@@ -19,7 +19,7 @@ export default function Rescheduleappointment(props) {
     .then(res=>{
       setappdetails(res.data);
     })
-  },[dltres])
+  },[dltres,props.details])
 
   const myDate = new Date();
   const formattedDate = moment(myDate).format('YYYY-MM-DD');
@@ -36,7 +36,7 @@ const [appdata,setappdata]=useState([])
       newdata.sort((a,b)=>moment(b.date).diff(moment(a.date)))
     },setappdata(newdata)
     )
-  },[appdetails])
+  },[appdetails,props.details])
 
   const [appdlt,setappdlt]=useState('')
 
