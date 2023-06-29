@@ -46,7 +46,7 @@ const [appdata,setappdata]=useState([])
     <div className='tablecontent'>
        <div className='History'>
         <div className='HistoryHeader'>
-            <h1>All Appointment </h1>
+            <h1> Appointments </h1>
             <ul>
               <li><Link to="/home" className='linker'>back</Link></li>
             </ul>
