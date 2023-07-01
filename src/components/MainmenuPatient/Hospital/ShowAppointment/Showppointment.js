@@ -19,7 +19,7 @@ export default function ShowAppointment(props) {
     .then(res=>{
       setappdetails(res.data);
     })
-  },[view])
+  },[view,dates])
 
 const select=()=>{
   setview(dates)
@@ -40,7 +40,7 @@ const [appdata,setappdata]=useState([])
         
     },setappdata(newdata)
     )
-  },[view,props.details,dates])
+  },[view,props.details])
 
 
   
