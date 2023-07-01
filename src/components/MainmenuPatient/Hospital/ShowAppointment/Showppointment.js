@@ -11,7 +11,7 @@ export default function ShowAppointment(props) {
   const token=window.localStorage.getItem("token");
   const [dates,setdates]=useState('');
     const [appdetails,setappdetails]=useState([]);
-    const [view,setview]=useState()
+    const [view,setview]=useState(formattedDate)
   useEffect(()=>{
     axios.get(`${process.env.REACT_APP_URL}/appointmentinfo`,{
       headers:{token}
@@ -19,7 +19,7 @@ export default function ShowAppointment(props) {
     .then(res=>{
       setappdetails(res.data);
     })
-  },[view,dates])
+  },[view])
 
 const select=()=>{
   setview(dates)
@@ -40,7 +40,7 @@ const [appdata,setappdata]=useState([])
         
     },setappdata(newdata)
     )
-  },[view,props.details,dates])
+  },[view,props.details])
 
 
   
