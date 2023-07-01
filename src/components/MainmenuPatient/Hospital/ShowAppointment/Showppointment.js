@@ -40,7 +40,7 @@ const [appdata,setappdata]=useState([])
         
     },setappdata(newdata)
     )
-  },[view,props.details,1])
+  },[view,props.details])
 
 
   
