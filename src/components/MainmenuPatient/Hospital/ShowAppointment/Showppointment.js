@@ -19,7 +19,7 @@ export default function ShowAppointment(props) {
     .then(res=>{
       setappdetails(res.data);
     })
-  },[view])
+  },[view,props.details])
 
 const select=()=>{
   setview(dates)
