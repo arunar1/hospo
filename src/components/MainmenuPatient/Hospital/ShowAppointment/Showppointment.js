@@ -42,7 +42,7 @@ const [appdata,setappdata]=useState([])
     )
   },[view,props.details,appdetails])
 
-window.location.reload();
+// window.location.reload()
   
 
 
