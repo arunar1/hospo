@@ -44,6 +44,7 @@ const [appdata,setappdata]=useState([])
 
 if(props.details.usertype=='privateconsultant'){
   window.location.href='/consultanthome/showappointment'
+  alert('Refresh')
 }
 else{
   window.location.href='/hospitalhome/showappointment'
