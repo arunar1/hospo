@@ -42,14 +42,7 @@ const [appdata,setappdata]=useState([])
     )
   },[view,props.details,appdetails])
 
-if(props.details.usertype=='privateconsultant'){
-  window.location.href='/consultanthome/showappointment'
-  alert('Refresh')
-}
-else{
-  window.location.href='/hospitalhome/showappointment'
 
-}
   
 
 
