@@ -7,8 +7,12 @@ import axios from 'axios'
 import moment from 'moment'
 
 export default function AppointmentHistory(props) {
+  const myDate = new Date();
+  const formattedDate = moment(myDate).format('YYYY-MM-DD');
   const [dates,setdates]=useState('');
-  const [view,setview]=useState()
+  const [view,setview]=useState(formattedDate)
+
+  // const [view,setview]=useState()
 const token=window.localStorage.getItem("token");
   const [appdetails,setappdetails]=useState([]);
   useEffect(()=>{
@@ -18,7 +22,7 @@ const token=window.localStorage.getItem("token");
     .then(res=>{
       setappdetails(res.data);
     })
-  },[view])
+  },[view,formattedDate])
 
   
   
