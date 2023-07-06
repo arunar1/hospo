@@ -5,8 +5,10 @@ import { useEffect,useState } from 'react'
 import axios from 'axios'
 import moment from 'moment'
 export default function ShowAppointment(props) {
+  const [sloter,setsloter]=useState();
   const myDate = new Date();
   const formattedDate = moment(myDate).format('YYYY-MM-DD');
+  const [dist,setdist]=useState([]);
 
   const token=window.localStorage.getItem("token");
   const [dates,setdates]=useState('');
@@ -19,15 +21,19 @@ export default function ShowAppointment(props) {
     .then(res=>{
       setappdetails(res.data);
     })
-  },[view,formattedDate])
+  },[view,formattedDate,sloter])
 
 const select=()=>{
   setview(dates)
 }
 
+
+
 // console.log(view)
+
   
 const [appdata,setappdata]=useState([])
+const [sappdata,setsappdata]=useState([])
 
   useEffect(()=>{
     const  newdata=[];
@@ -42,9 +48,44 @@ const [appdata,setappdata]=useState([])
     )
   },[view,props.details,appdetails])
 
-// window.location.reload()
-  
 
+  useEffect(()=>{
+    const  newdata=[];
+    appdetails.map((data)=>{
+      console.log(sloter)
+      
+        if((data.govhospitalname==props.details.hospitalname || data.govhospitalname==props.details.name) && data.date==view && data.time==sloter){
+          console.log(sloter,data.time)
+
+          newdata.push(data)
+        }
+        
+    },setsappdata(newdata)
+    )
+  },[sloter,props.details,appdetails])
+console.log(sappdata)
+// window.location.reload()
+// const handleClick=(e)=>{
+//   setsloter(e.target.value)
+//   console.log(sloter)
+
+// }
+
+useEffect(()=>{
+  const uniquedis=[];
+  appdata.map((dis)=>{
+    if(!uniquedis.includes(dis.time)){
+      uniquedis.push(dis.time)
+
+    }
+
+    setdist(uniquedis)
+  })
+},[appdetails])
+  
+console.log(sloter)
+console.log(appdata)
+console.log(dist)
 
   return (
     <div>
@@ -59,6 +100,13 @@ const [appdata,setappdata]=useState([])
         <div className='setdate'>
         <div><h4>Select Date :</h4></div>
           <div><input type='date'  name='select' onChange={(e)=>setdates(e.target.value)}/></div>
+          <div><select onChange={(e)=>setsloter(e.target.value)} >
+            <option>All</option>
+            {dist.map((data)=>(
+              <option value={data}>{data}</option>
+            ))}
+        
+            </select></div>
           <div className='select'><button onClick={select}>select</button></div>
         </div>
         <div>
@@ -74,18 +122,33 @@ const [appdata,setappdata]=useState([])
               <th>Token</th>
             </tr>
           </thead>
+         {sappdata.length==0?(
+           <tbody>
+           {appdata.map((appointment,index) => (
+             <tr>
+               <td>{index+1}</td>
+               <td>{moment(appointment.date).format('DD-MM-YYYY')}</td>
+               <td>{appointment.patientname}</td>
+               <td>{appointment.patientphone}</td>
+               <td>{appointment.time}</td>
+               <td>{appointment.token}</td>
+             </tr>
+           ))}
+         </tbody>
+         ):(
           <tbody>
-            {appdata.map((appointment,index) => (
-              <tr>
-                <td>{index+1}</td>
-                <td>{moment(appointment.date).format('DD-MM-YYYY')}</td>
-                <td>{appointment.patientname}</td>
-                <td>{appointment.patientphone}</td>
-                <td>{appointment.time}</td>
-                <td>{appointment.token}</td>
-              </tr>
-            ))}
-          </tbody>
+          {sappdata.map((appointment,index) => (
+            <tr>
+              <td>{index+1}</td>
+              <td>{moment(appointment.date).format('DD-MM-YYYY')}</td>
+              <td>{appointment.patientname}</td>
+              <td>{appointment.patientphone}</td>
+              <td>{appointment.time}</td>
+              <td>{appointment.token}</td>
+            </tr>
+          ))}
+        </tbody>
+         )}
         </table>
           
         )}
