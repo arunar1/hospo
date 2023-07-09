@@ -1,6 +1,6 @@
 .patientHeader{
     display: flex;
-    height:100vh;
+    height:100%;
     font-family: 'Times New Roman';
 }
 .patientHeader ul{
@@ -30,7 +30,7 @@
 }
 .mainSection{
     width:100vw;
-    height:100vh;
+    height:100%;
     background-color:rgb(75, 141, 163);
     position: absolute;
     top:90px;
