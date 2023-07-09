@@ -100,7 +100,7 @@ console.log(dist)
         <div className='setdate'>
         <div><h4>Select Date :</h4></div>
           <div><input type='date'  name='select' onChange={(e)=>setdates(e.target.value)}/></div>
-          <div><select onChange={(e)=>setsloter(e.target.value)} >
+          <div className='shapp'><select onChange={(e)=>setsloter(e.target.value)} >
             <option>All</option>
             {dist.map((data)=>(
               <option value={data}>{data}</option>

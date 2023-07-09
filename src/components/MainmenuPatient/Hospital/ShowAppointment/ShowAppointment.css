@@ -72,6 +72,10 @@ body{
     .showappointment .showappointmentHeader {
       height: 60px;
     }
+    .shapp{
+        position: relative;
+        top: 30px;
+    }
   
     .showappointment .showappointmentHeader h1 {
       margin-left: 10px;
