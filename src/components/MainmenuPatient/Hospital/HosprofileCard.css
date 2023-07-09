@@ -20,10 +20,10 @@
  }
  @media (max-width:767px){
     .hosprofileCard {
-      width: 500px;
+      width: 350px;
       height: 400px;
       position: absolute;
-      top: 15vh;
+      top: 20vh;
       left: 10vw;
       line-height: 7px;
       font-family: 'Times New Roman';

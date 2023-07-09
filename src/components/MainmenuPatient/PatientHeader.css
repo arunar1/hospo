@@ -21,7 +21,7 @@
     flex-grow: 10;
     position: relative;
     background-color:lightblue;
-    overflow: hidden;
+    /* overflow: hidden; */
     /* border-left: 5px solid white; */
     
 }
@@ -249,15 +249,15 @@
     }
     .patientHeader {
       display: flex;
-      height: 200vh;
+      height: auto;
       font-family: 'Times New Roman';
   }
   .patientHeader .selection {
     position: relative;
-    top: 106px;
+    top: 10px;
   }
   .MainMeanuButton{
-    height: 100vh;
+    height: 59vh;
   }
   }
   
