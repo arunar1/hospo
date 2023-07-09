@@ -65,6 +65,18 @@ body{
     top: 10px;
     display: block;
 }
+@media (max-width: 968px){
+
+    .shapp{
+        position: absolute;
+        top: 6vh;
+        left: 0px;
+    }
+    .shapp select{
+        padding-right: 10px;
+    }
+
+}
 
 @media (max-width: 768px) {
     
@@ -72,9 +84,7 @@ body{
     .showappointment .showappointmentHeader {
       height: 60px;
     }
-    .shapp{
-        position: relative;
-    }
+    
   
     .showappointment .showappointmentHeader h1 {
       margin-left: 10px;
@@ -95,6 +105,10 @@ body{
         padding-right:20px ;
         position: relative;
         top: 0px;
+    }
+    .select{
+        padding-right: 30px;
+
     }
   }
 
