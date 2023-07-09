@@ -128,7 +128,7 @@ main.main1 .reg-button button.active{
 @media(max-width: 630px) {
 main.main1{
   object-fit: fill;
-  height: 37vh;
+  height: 32vh;
 
 }
     main.main1 .reg-button button {
