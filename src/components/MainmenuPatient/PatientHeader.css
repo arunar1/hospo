@@ -249,12 +249,15 @@
     }
     .patientHeader {
       display: flex;
-      height: 126vh;
+      height: 200vh;
       font-family: 'Times New Roman';
   }
   .patientHeader .selection {
     position: relative;
-    top: 39px;
+    top: 106px;
+  }
+  .MainMeanuButton{
+    height: 100vh;
   }
   }
   
