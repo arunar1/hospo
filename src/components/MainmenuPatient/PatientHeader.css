@@ -249,12 +249,12 @@
     }
     .patientHeader {
       display: flex;
-      height: 330vh;
+      height: 167vh;
       font-family: 'Times New Roman';
   }
   .patientHeader .selection {
     position: relative;
-    top: 126px;
+    top: 39px;
   }
   }
   
