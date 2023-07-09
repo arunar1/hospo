@@ -125,9 +125,11 @@ main.main1 .reg-button button.active{
     
 }
 /* Mobile Phones */
-@media only screen and (max-width: 480px) {
+@media(max-width: 630px) {
 main.main1{
   object-fit: fill;
+  height: 37vh;
+
 }
     main.main1 .reg-button button {
       margin: 5px;
@@ -144,6 +146,8 @@ main.main1{
         top: 200px;
       width: 90%;
       margin-left: 5%;
+      background-color: black;
+      padding-inline: 20px;
     }
     main.main1 
     main.main1 form caption {
@@ -176,10 +180,7 @@ main.main1{
     } */
   }
   main.main1{
-    background: none;
     background-color: black;
-    width: 100%;
-    height: 100%;
     
   }
   
