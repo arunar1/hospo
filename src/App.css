@@ -25,6 +25,7 @@ main{
   bottom: 0;
   left: 0;
   right: 0;
+  height: 108vh;
 }
 footer{
   background-color: rgba(10, 8, 8,.25);
