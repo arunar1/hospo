@@ -73,7 +73,7 @@ body{
       height: 60px;
     }
     .shapp{
-        top: 60px;
+        position: relative;
     }
   
     .showappointment .showappointmentHeader h1 {
