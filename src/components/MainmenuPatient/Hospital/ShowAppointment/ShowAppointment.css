@@ -65,6 +65,9 @@ body{
     top: 10px;
     display: block;
 }
+.shapp select{
+    color: black;
+}
 @media (max-width: 968px){
 
     .shapp{
