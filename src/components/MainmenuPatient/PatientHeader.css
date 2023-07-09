@@ -249,7 +249,7 @@
     }
     .patientHeader {
       display: flex;
-      height: 167vh;
+      height: 126vh;
       font-family: 'Times New Roman';
   }
   .patientHeader .selection {
