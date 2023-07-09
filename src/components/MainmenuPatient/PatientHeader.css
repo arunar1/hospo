@@ -152,6 +152,8 @@
 /* Small devices (up to 768px) */
 /* Small devices (up to 767px) */
 @media only screen and (max-width: 767px) {
+
+  
     .patientHeader {
       flex-direction: column;
       
@@ -245,6 +247,15 @@
       padding: 5px 10px;
       font-size: 14px;
     }
+    .patientHeader {
+      display: flex;
+      height: 330vh;
+      font-family: 'Times New Roman';
+  }
+  .patientHeader .selection {
+    position: relative;
+    top: 126px;
+  }
   }
   
  
