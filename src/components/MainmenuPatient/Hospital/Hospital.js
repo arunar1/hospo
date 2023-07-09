@@ -8,6 +8,7 @@ import { useEffect,useState } from 'react'
 import SetAppointment from './SetAppointmentTime/SetAppointment';
 import EditAppointment from './EditAppointment/EditAppointment';
 import Allapp from './Allapp';
+import SetCalender from './SetCalender/SetCalender';
 export default function Hospital() {
   const [datas,setdatas]=useState({});
   useEffect(()=>{
@@ -63,6 +64,9 @@ export default function Hospital() {
           </Route>
           <Route exact path='/hospitalhome/allappointment'>
             <Allapp details={datas}/>
+          </Route>
+          <Route exact path='/hospitalhome/setcalender'>
+            <SetCalender details={datas}/>
           </Route>
         </Router>
       

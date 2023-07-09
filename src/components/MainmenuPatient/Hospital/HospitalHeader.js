@@ -26,6 +26,7 @@ const logout=()=>{
                 <li><Link to='/hospitalhome/allappointment' className='selctionbutton'>Show All Appointment</Link></li>
                 <li><Link to='/hospitalhome/setappointment' className='selctionbutton'>Set Appointment Time</Link></li>
                 <li><Link to='/hospitalhome/editappointment' className='selctionbutton'>Delete Appointment</Link></li>
+                <li><Link to='/hospitalhome/setcalender' className='selctionbutton'>Set Appointment Calender</Link></li>
               </ul>
             </div>
         </div>
