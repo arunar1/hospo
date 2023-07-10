@@ -147,7 +147,7 @@
 }
 .navBar .topNav .setting .logoutbtn:hover{
     background-color: blueviolet;
-    color: rgb(199, 81, 27);
+    color: wheat;
     cursor: pointer;
 }
 
