@@ -28,18 +28,19 @@
 
   @media (max-width:767px){
     .profileCard {
-      width: 500px;
+      width: 350px;
       height: 400px;
       position: absolute;
       top: 20vh;
       left: 10vw;
-      line-height: 17px;
+      line-height: 7px;
       font-family: 'Times New Roman';
       
     }
     .profileCard ul li{
-      font-size: 14px;
-      margin-top: 10px;
+      font-size: 12px;
+      margin-top: 20px;
+      line-height: 20px;
     }
     
 
