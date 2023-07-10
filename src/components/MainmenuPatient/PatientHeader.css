@@ -142,6 +142,7 @@
 .navBar .topNav .setting .logoutbtn{
     width:auto;
     margin-right: 20px;
+    background-color: brown;
 }
 .navBar .topNav .setting .logoutbtn:hover{
     background-color: blueviolet;
