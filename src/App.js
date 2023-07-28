@@ -12,6 +12,7 @@ import Consultant from './components/MainmenuPatient/Consultant/Consultant';
 import About from './About';
 import Contactus from './Contactus';
 import Forgotpass from './components/Forgotpass/Forgotpass';
+import Authentication from './components/Authentication/Authentication';
 function App() {
   return (
     <div>
@@ -22,7 +23,7 @@ function App() {
             <Main />
             <Footer />
           </Route>
-          <Route path='/registration'>
+          <Route exact path='/registration'>
             <Register/>
           </Route>
           <Route path='/about'>
@@ -45,6 +46,10 @@ function App() {
           <Route path='/forgotpassword'>
             <Header1/>
             <Forgotpass/>
+          </Route>
+          <Route path='/registration/authentication'>
+            <Header1/>
+            <Authentication/>
           </Route>
      
       </Router>

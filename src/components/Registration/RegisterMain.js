@@ -68,6 +68,7 @@ export default function RegisterMain() {
     if((inputs.pphone).length==10){
     if((inputs.ppassword).length>=8){
     inputs.type='patient';
+    window.location.href='/registration/authentication'
   
     
   try{
@@ -100,11 +101,11 @@ export default function RegisterMain() {
 }
 
   const handleSubmithos = (e) => {
+    
     e.preventDefault()
     if((inputshos.hphone).length==10){
       if((inputshos.hpassword).length>=8){
         inputshos.type='hospital';
-  
         try{
           axios.post(`${process.env.REACT_APP_URL}/registration`,inputshos)
           .then((data)=>{

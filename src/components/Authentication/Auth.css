@@ -1,0 +1,22 @@
+.authcontainer{
+    padding-top: 20vh;
+    padding-left: 10vw;
+}
+.authemail,.authphone{
+    position: relative;
+    padding-top: 20px;
+    font-size: 20px;
+}
+.authbtn{
+    background-color: blue;
+    position: absolute;
+    width: 120px;
+    height: 30px;
+    left: 30vw;
+}
+.authcontainer input{
+    position: absolute;
+    left: 20vw;
+    width: 120px;
+    height: 30px;
+}
