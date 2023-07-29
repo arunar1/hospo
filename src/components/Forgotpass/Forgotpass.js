@@ -7,9 +7,9 @@ export default function Forgotpass() {
             <form >
             
               <label>
-                Email:
+                User ID:
               </label>
-              <input type='email'/>
+              <input type='number'/>
               <input type='submit'/>
           
             </form>
