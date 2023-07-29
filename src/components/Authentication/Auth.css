@@ -10,9 +10,9 @@
 .authbtn{
     background-color: blue;
     position: absolute;
-    width: 120px;
+    width: 80px;
     height: 30px;
-    left: 30vw;
+    left: 20vw;
 }
 .authcontainer input{
     position: absolute;

@@ -68,7 +68,7 @@ export default function RegisterMain() {
     if((inputs.pphone).length==10){
     if((inputs.ppassword).length>=8){
     inputs.type='patient';
-    window.location.href='/registration/authentication'
+    //window.location.href='/registration/authentication'
   
     
   try{
