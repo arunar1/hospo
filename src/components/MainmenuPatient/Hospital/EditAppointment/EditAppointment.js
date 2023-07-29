@@ -20,7 +20,7 @@ const [view,setview]=useState()
     .then(res=>{
       setappdetails(res.data);
     })
-  },[dltres])
+  },[dltres,view])
 
   const myDate = new Date();
   const formattedDate = moment(myDate).format('YYYY-MM-DD');
