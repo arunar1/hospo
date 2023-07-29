@@ -233,7 +233,7 @@
     }
     .patientHeader .selection{
         position: relative;
-        top: 30px;
+        top: 7vh;
     }
   
     .patientHeader .selection li {
