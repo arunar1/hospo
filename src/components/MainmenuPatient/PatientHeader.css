@@ -254,10 +254,7 @@
       height: auto;
       font-family: 'Times New Roman';
   }
-  .patientHeader .selection {
-    position: relative;
-    top: 20px;
-  }
+  
   .MainMeanuButton{
     height: 59vh;
   }
