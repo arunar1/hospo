@@ -7,6 +7,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import  { useState, useEffect } from 'react'
 
 export default function EditAppointment(props) {
+  const [sappdata,setsappdata]=useState([])
+  const [dist,setdist]=useState([]);
+  const [sloter,setsloter]=useState();
+
 const [dltres,setdltres]=useState();
 const token=window.localStorage.getItem("token");
 const [dates,setdates]=useState('');
@@ -39,6 +43,23 @@ const [appdata,setappdata]=useState([])
     }
     )
   },[appdetails,view,dltres])
+
+  useEffect(()=>{
+    const  newdata=[];
+    appdetails.map((data)=>{
+      console.log(sloter)
+      
+        if((data.govhospitalname==props.details.hospitalname || data.govhospitalname==props.details.name) && data.date==view && data.time==sloter){
+          console.log(sloter,data.time)
+
+          newdata.push(data)
+        }
+        
+    },setsappdata(newdata)
+    )
+  },[sloter,props.details,appdetails])
+
+
 
   const [appdlt,setappdlt]=useState('')
 
@@ -90,6 +111,19 @@ const [appdata,setappdata]=useState([])
 
     }
   }
+
+  useEffect(()=>{
+    const uniquedis=[];
+    appdata.map((dis)=>{
+      if(!uniquedis.includes(dis.time)){
+        uniquedis.push(dis.time)
+  
+      }
+  
+      setdist(uniquedis)
+    })
+  },[appdetails])
+
 //   console.log(appdata)
 //   console.log(props.details)
 //   console.log(view)
@@ -107,13 +141,20 @@ const [appdata,setappdata]=useState([])
         <div className='setdate'>
           <div><h4>Select Date :</h4></div>
           <div><input type='date'  name='select' onChange={(e)=>setdates(e.target.value)}/></div>
+          <div className='shapp'><select onChange={(e)=>setsloter(e.target.value)} >
+            <option>All</option>
+            {dist.map((data)=>(
+              <option value={data}>{data}</option>
+            ))}
+        
+            </select></div>
           <div className='select'><button onClick={select}>select</button></div>
           <div className='dltall'><button   onClick={deleteusers}>Delete All</button></div>
           
           
           
         </div>
-        <div>
+        {/* <div>
         {appdata.length==0?(<h3>No appointments on {view}</h3>):(
           <table>
           <thead>
@@ -140,6 +181,54 @@ const [appdata,setappdata]=useState([])
               </tr>
             ))}
           </tbody>
+        </table>
+          
+        )}
+        </div> */}
+
+        <div>
+        {appdata.length==0?(<h3>No appointments on {moment(view).format('DD-MM-YYYY')}</h3>):(
+          <table>
+          <thead>
+            <tr>
+              <th>Sl no</th>
+              <th>Date of Appointment</th>
+              <th>Patient Name</th>
+              <th>Contact Number</th>
+              <th>Time</th>
+              <th>Token</th>
+              <th></th>
+            </tr>
+          </thead>
+         {sappdata.length==0?(
+           <tbody>
+           {appdata.map((appointment,index) => (
+             <tr>
+               <td>{index+1}</td>
+               <td>{moment(appointment.date).format('DD-MM-YYYY')}</td>
+               <td>{appointment.patientname}</td>
+               <td>{appointment.patientphone}</td>
+               <td>{appointment.time}</td>
+               <td>{appointment.token}</td>
+               <td><FontAwesomeIcon className='deletebtn'  icon={faTrash} onClick={()=>deleteuser(appointment._id)} /></td>
+             </tr>
+           ))}
+         </tbody>
+         ):(
+          <tbody>
+          {sappdata.map((appointment,index) => (
+            <tr>
+              <td>{index+1}</td>
+              <td>{moment(appointment.date).format('DD-MM-YYYY')}</td>
+              <td>{appointment.patientname}</td>
+              <td>{appointment.patientphone}</td>
+              <td>{appointment.time}</td>
+              <td>{appointment.token}</td>
+              <td><FontAwesomeIcon className='deletebtn'  icon={faTrash} onClick={()=>deleteuser(appointment._id)} /></td>
+            </tr>
+          ))}
+        </tbody>
+         )}
         </table>
           
         )}
