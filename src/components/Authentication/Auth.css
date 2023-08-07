@@ -76,6 +76,7 @@
         width: 60px;
         height: 25px;
         left: 40vw;
+        margin-left: 10px;
     }
 
     .authcontainer input {
