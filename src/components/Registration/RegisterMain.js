@@ -69,7 +69,8 @@ export default function RegisterMain() {
     if((inputs.ppassword).length>=8){
     inputs.type='patient';
     window.localStorage.setItem('phone',inputs.pphone)
-    //window.location.href='/registration/authentication'
+    window.localStorage.setItem('email',inputs.pemail)
+    window.location.href='/registration/authentication'
   
     
   try{
@@ -108,6 +109,8 @@ export default function RegisterMain() {
       if((inputshos.hpassword).length>=8){
         inputshos.type='hospital';
         window.localStorage.setItem('phone',inputshos.hphone)
+        window.localStorage.setItem('email',inputshos.hemail)
+        window.location.href='/registration/authentication'
         try{
           axios.post(`${process.env.REACT_APP_URL}/registration`,inputshos)
           .then((data)=>{
@@ -150,6 +153,8 @@ export default function RegisterMain() {
     if((inputspri.cphone).length==10){
       if((inputspri.cpassword).length>=8){
         window.localStorage.setItem('phone',inputspri.cphone)
+        window.localStorage.setItem('email',inputspri.cemail)
+        window.location.href='/registration/authentication'
       try{
          axios.post(`${process.env.REACT_APP_URL}/registration`,inputspri)
          .then((data)=>{
