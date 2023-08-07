@@ -10,7 +10,7 @@ export default function Forgotpass() {
                 User ID:
               </label>
               <input type='number'/>
-              <input type='submit'/>
+              <input type='submit' value='submit'/>
           
             </form>
         </div>
