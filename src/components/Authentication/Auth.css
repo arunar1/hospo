@@ -61,6 +61,11 @@
     margin-top: 20px;
 }
 
+.btnclick:hover{
+    background-color: black;
+    color: white;
+}
+
 /* Media query for devices with a maximum width of 768 pixels */
 @media (max-width: 768px) {
     .authcontainer {
