@@ -1,4 +1,4 @@
-.authcontainer{
+/* .authcontainer{
     padding-top: 20vh;
     padding-left: 10vw;
     
@@ -26,4 +26,66 @@
     background-color: red;
     margin-left: 10vw;
     margin-top: 20px;
+} */
+/* Default styles for larger screens */
+.authcontainer {
+    padding-top: 20vh;
+    padding-left: 10vw;
+}
+
+.authemail, .authphone {
+    position: relative;
+    padding-top: 25px;
+    font-size: 20px;
+}
+
+.authbtn {
+    background-color: blue;
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    left: 50vw;
+}
+
+.authcontainer input {
+    position: absolute;
+    left: 25vw;
+    width: 180px;
+    height: 30px;
+}
+
+.btnclick {
+    width: 50px;
+    background-color: red;
+    margin-left: 10vw;
+    margin-top: 20px;
+}
+
+/* Media query for devices with a maximum width of 768 pixels */
+@media (max-width: 768px) {
+    .authcontainer {
+        padding-top: 10vh;
+        padding-left: 5vw;
+    }
+
+    .authemail, .authphone {
+        font-size: 16px;
+    }
+
+    .authbtn {
+        width: 60px;
+        height: 25px;
+        left: 40vw;
+    }
+
+    .authcontainer input {
+        width: 140px;
+        height: 25px;
+        left: 15vw;
+    }
+
+    .btnclick {
+        margin-left: 5vw;
+        margin-top: 10px;
+    }
 }
