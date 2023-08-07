@@ -1,10 +1,11 @@
 .authcontainer{
     padding-top: 20vh;
     padding-left: 10vw;
+    
 }
 .authemail,.authphone{
     position: relative;
-    padding-top: 20px;
+    padding-top: 25px;
     font-size: 20px;
 }
 .authbtn{
